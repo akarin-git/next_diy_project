@@ -1,5 +1,6 @@
 html,
 body {
+  background:#ffffe0;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,4 +14,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.mts {
+  margin-top: 0.75rem;
+}
+
+.error {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #ff6a7c;
+  margin-top: 1rem;
 }
