@@ -2,7 +2,7 @@ import Input from '../components/Base/Input';
 import Button from '../components/Base/Button';
 import { useState } from "react";
 
-const SigninForm = () =>  {
+const SigninForm = ({onSubmit,isSending}) =>  {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
@@ -10,7 +10,7 @@ const SigninForm = () =>  {
         // alert('hi');
         e.preventDefault();
         // console.log(email,password);
-        onSubmit({email,password});
+        onSubmit({ email,password });
        
     }
 
@@ -28,7 +28,7 @@ const SigninForm = () =>  {
                 type="password"
                 onChange={setPassword}
             />
-            <Button className="mts">
+            <Button className="mts" disabled={isSending}>
             ログイン
             </Button>
         </form>

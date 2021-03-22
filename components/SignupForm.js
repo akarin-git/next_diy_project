@@ -11,8 +11,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
 
     const submit = (e) => {
         e.preventDefault();
-        onSubmit({ name,email,password,role });
-        // console.log(onSubmit);
+        onSubmit({ name,email,password,role});
     }
 
     return (
