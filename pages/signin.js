@@ -1,12 +1,6 @@
-import SigninForm from '../../components/SigninForm';
-import { useAppRouter,useAppAxiosExecute} from "../../hooks";
+import SigninForm from '../components/SigninForm';
+import { useAppRouter,useAppAxiosExecute} from "../hooks";
 import { useEffect } from "react";
-
-export const getServerSideProps = async (context) => ({
-    props:{
-        layout:true
-    }
-})
 
 
 export default function SignUp() {
@@ -23,8 +17,8 @@ const [
 
 useEffect(() => {
    if(data && process.browser){
-       window.localStorage.setItem("hanly_access_token",data.access_token);
-       router.push("/")
+       window.localStorage.setItem("Fab_loop_token",data.access_token);
+       router.push("/form")
    }
 }, [data])
 

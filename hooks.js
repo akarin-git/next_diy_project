@@ -1,10 +1,22 @@
 import { useContext,useState } from "react";
 import { useRouter } from "next/router";
 import useAxios from "axios-hooks";
-// import Context from "./context";
+import Context from "./context";
 import { axios } from "./plugins";
-// import { API_ENDPOINT } from "./constants"; 
+import { API_ENDPOINT } from "./constants"; 
 
+export const useAppContext = () => {
+  return useContext(Context);
+};
+
+export const useAppAxios = ({ url, method = "GET" }) => {
+    const [{ data, loading}, refetch] = useAxios({
+        method,
+        url: API_ENDPOINT + url,
+    });
+    console.log(data);
+    return [{ data, loading }, refetch];
+  };
 
 export const useAppAxiosExecute = ({
     method = "GET",
@@ -23,7 +35,7 @@ export const useAppAxiosExecute = ({
             try {
                 const headers = {
                     Authorization:
-                    "Bearer" + 
+                    "Bearer " + 
                     (process.browser
                     ? window.localStorage.getItem("Fab_loop_token")
                     : ""),
@@ -34,6 +46,7 @@ export const useAppAxiosExecute = ({
                         headers,
                     });
                 } else {
+                    console.log(payload);
                     result = await axios({
                         method,
                         url,
@@ -61,6 +74,7 @@ export const useAppAxiosExecute = ({
             },
             excute,
         ];
+        // console.log(data);
     };
 
 export const useAppRouter = () => {
@@ -69,7 +83,7 @@ export const useAppRouter = () => {
         router,
         {
             needAuth:
-            router.route !== "/" &&
+            // router.route !== "/" &&
             router.route !== "/signup" &&
             router.route !== "/signin",
         },
