@@ -7,11 +7,9 @@ const SigninForm = ({onSubmit,isSending}) =>  {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
-    const role = 1;
-
     const submit = (e) => {
         e.preventDefault();
-        onSubmit({ name,email,password,role});
+        onSubmit({ name,email,password});
     }
 
     return (

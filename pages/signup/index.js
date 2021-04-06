@@ -3,13 +3,6 @@ import SignupForm from '../../components/SignupForm';
 import Button from '../../components/Base/Button';
 import { useAppRouter,useAppAxiosExecute } from "../../hooks";
 
-// レイアウトありはtrueにすることでlayout style適用する
-export const getServerSideProps = async (context) => ({
-    props:{
-        layout:true
-    }
-})
-
 
 export default function SignUp() {
 const [router] = useAppRouter();
