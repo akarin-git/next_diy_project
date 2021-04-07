@@ -1,6 +1,8 @@
 import Input from '../components/Base/Input';
+import FileInput from '../components/Base/FileInput';
 import Button from '../components/Base/Button';
 import { useState } from "react";
+// import { MDBFileInput } from "mdbreact";
 
 export default function PostForm({onSubmit}) {
     const [title,setTitle] = useState("");
@@ -19,14 +21,20 @@ export default function PostForm({onSubmit}) {
     const [goodsA,setGoodsA] = useState("");
     const [goodsB,setGoodsB] = useState("");
     const [goodsC,setGoodsC] = useState("");
-    const [iamge_path,setImagepath] = useState("");
+
+     const handleChange = (e) => {
+        //  console.log(e.target.files[0]);
+        //  setImagePath(e.target.files[0]);
+        // console.log(files[0]);
+        setImagePath(e.target.files[0]);
+  };
 
      const submit = (e) => {
         e.preventDefault();
         onSubmit({
             title,category,web_page,descriptionA,descriptionB,
             descriptionC,materialA,materialB,materialC,
-            amountA,amountB,amountC,goodsA,goodsB,goodsC,
+            amountA,amountB,amountC,goodsA,goodsB,goodsC,image_path
          });
     }
     
@@ -122,13 +130,14 @@ export default function PostForm({onSubmit}) {
                 type="text"
                 onChange={setGoodsC}
             />
-             <Input
-                value={image_path}
+              <input
+                // multiple
+                accept="image/*"
                 placeholder="画像"
                 type="file"
-                onChange={setImagepath}
+                onChange={handleChange}
             />
-             
+             {/* <img src={imageUrl} alt="uploaded" /> */}
             <Button className="mts">
             送信
             </Button>
