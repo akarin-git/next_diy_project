@@ -83,13 +83,13 @@ export const useAppRouter = () => {
         router,
         {
             needAuth:
-            // router.route !== "/" &&
+            router.route !== "/" &&
             router.route !== "/signup" &&
-            router.route !== "/signin" &&
-            router.route !== "/recipe" &&
-            router.route !== "/recipe/[id]" &&
-            router.route !== "/category/craft" &&
-            router.route !== "/category/handmade" ,
+            router.route !== "/signin" ,
+            // router.route !== "/recipe" &&
+            // router.route !== "/recipe/[id]" &&
+            // router.route !== "/category/craft" &&
+            // router.route !== "/category/handmade" ,
         },
     ];
 };

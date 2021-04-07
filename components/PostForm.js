@@ -132,7 +132,7 @@ export default function PostForm({onSubmit}) {
             />
               <input
                 // multiple
-                accept="image/*"
+                // accept="image/*"
                 placeholder="画像"
                 type="file"
                 onChange={handleChange}
