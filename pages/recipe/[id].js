@@ -10,7 +10,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Recipe({staticPost,id}) {
     // console.log(staticPost);
-    const router = useRouter();
+    // const router = useRouter();
     // swr
     const { data:post ,mutate } = useSWR(
         `${API_ENDPOINT}/api/image/show/${id}`,
