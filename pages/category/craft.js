@@ -3,7 +3,7 @@ import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
 import Layout from '../../components/Layout';
-import Card from '../../components/Card';
+import RcCard from '../../components/RcCard';
 
 
 // swr
@@ -16,13 +16,17 @@ export default function handmade({craftPosts}) {
         initialData:craftPosts,
     });
 
+    useEffect(() => {
+        mutate();
+    },[]);
+
     const filteredPosts = posts?.sort(
         (a,b) => new Date(b.created_at) - new Date(a.created_at)
     );
     return (
         <Layout>
             {filteredPosts &&
-            filteredPosts.map((post) => <Card key={post.id} post={post}/>)}
+            filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
         </Layout>
     )
 }

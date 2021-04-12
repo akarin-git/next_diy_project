@@ -1,17 +1,26 @@
+import Head from 'next/head'
+import Link from 'next/link'
+import MainNav from "../components/MainNav";
 
 
-export default function Layout({children}) {
+export default function Layout({children,title = "fab loop"}) {
     return (
     <>
-    <div className="container">{children}</div>
-    <style jsx>
-    {`
-        .container {
-            width:80%;
-            margin:20px auto;
-        }
-    `}
-        </style>
+        <Head>
+                <title>{title}</title>
+        </Head>
+        <header>
+        <MainNav />
+        </header>
+        <main>
+        {children}
+        </main>
+        <footer>
+        </footer>
+
+    <style JSX>
+    
+    </style>
     </>
     );
 }

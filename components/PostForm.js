@@ -4,7 +4,9 @@ import Button from '../components/Base/Button';
 import { useState } from "react";
 // import { MDBFileInput } from "mdbreact";
 
-export default function PostForm({onSubmit}) {
+// 投稿フォーム
+
+export default function PostForm({onSubmit,isSending}) {
     const [title,setTitle] = useState("");
     const [category,setCategory] = useState("");
     const [web_page,setWebPage] = useState("");
@@ -131,14 +133,15 @@ export default function PostForm({onSubmit}) {
                 onChange={setGoodsC}
             />
               <input
-                // multiple
-                // accept="image/*"
+                multiple
+                accept="image/*"
+                name="image_path"
                 placeholder="画像"
                 type="file"
                 onChange={handleChange}
             />
              {/* <img src={imageUrl} alt="uploaded" /> */}
-            <Button className="mts">
+            <Button className="mts"　disabled={isSending}>
             送信
             </Button>
         </form>

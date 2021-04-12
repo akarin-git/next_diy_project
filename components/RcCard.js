@@ -1,0 +1,107 @@
+import {
+  chakra,
+  Box,
+  Image,
+  Flex,
+  useColorModeValue,
+  Text
+} from "@chakra-ui/react";
+import Link from 'next/link';
+
+export default function RcCard({post}) {
+    return (
+        <div>
+      <Flex
+        bg="white"
+        p={[1,5,5,5]}
+        w="full"
+        alignItems="center"
+        justifyContent="center"
+        >
+    <Link href={`/recipe/${post.id}`}>
+      <Box
+        mx="auto"
+        rounded="lg"
+        shadow="xl"
+        bg="white"
+        w={[350,350,300]}
+        _hover={{ mt: 1 ,mb:-1}}
+      >
+        <Image
+          roundedTop="lg"
+          w="full"
+          h={60}
+          fit="cover"
+          src={post.image_path}
+          alt="Article"
+        />
+
+        <Box p={6}>
+          <Box>
+            <chakra.span
+              fontSize="xs"
+              textTransform="uppercase"
+              color={useColorModeValue("brand.600", "brand.400")}
+            >
+              Product
+            </chakra.span>
+            <Text
+              display="block"
+              color={useColorModeValue("gray.800", "white")}
+              fontWeight="bold"
+              fontSize={["2xl","xl","md"]}
+              mt={2}
+              _hover={{ color: "gray.600", textDecor: "underline" }}
+              href="#"
+            >
+              {post.title}
+            </Text>
+            <chakra.p
+              mt={2}
+              fontSize={["sm","sm","xs"]}
+              color={useColorModeValue("gray.600", "gray.400")}
+            >
+            {/* {post} */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
+              parturient et sem ipsum volutpat vel. Natoque sem et aliquam
+              
+            </chakra.p>
+          </Box>
+
+          <Box mt={4}>
+            <Flex alignItems="center">
+              <Flex alignItems="center">
+                <Image
+                  h={10}
+                  fit="cover"
+                  rounded="full"
+                  src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60"
+                  alt="Avatar"
+                />
+                <Text
+                  mx={2}
+                  fontSize={["md","md","xs"]}
+                  fontWeight="bold"
+                  color={useColorModeValue("gray.700", "gray.200")}
+                  href="#"
+                >
+                {post.user_id}
+                  {/* Jone Doe */}
+                </Text>
+              </Flex>
+              <chakra.span
+                mx={1}
+                fontSize="sm"
+                color={useColorModeValue("gray.600", "gray.300")}
+              >
+                21 SEP 2015
+              </chakra.span>
+            </Flex>
+          </Box>
+        </Box>
+      </Box>
+      </Link>
+    </Flex>
+        </div>
+    )
+}
