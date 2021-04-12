@@ -41,12 +41,12 @@ useEffect(() => {
 
     return (
         <>
-         <Button variant="ghost">
+        <Link href={`/`}>
+            <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
-                <Link href={`/`}>
                 <Text>back</Text>
-                </Link>
             </Button>
+        </Link>
         <Container w="full" align="center">
             <Box mt={["10","6"]}>
               <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
