@@ -20,7 +20,7 @@ import { motion } from 'framer-motion';
 export default function MainNav() {
     const bg = useColorModeValue("white", "gray.800");
     const mobileNav = useDisclosure();
-
+  
 
     return (
         <>

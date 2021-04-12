@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import {
   Flex,
   Box,
   Image,
   chakra,
-  Link,
   useColorModeValue
 } from "@chakra-ui/react";
 
@@ -17,6 +17,7 @@ export default function UserCard() {
              alignItems="center"
              justifyContent="center"
             >
+            <Link href="/mypage">
              <Box
                w="md"
                mx="auto"
@@ -42,7 +43,7 @@ export default function UserCard() {
 
                <chakra.h2
                     color={useColorModeValue("gray.800", "white")}
-                    fontSize={{ base: "2xl", md: "3xl" }}
+                    fontSize={{ base: "xl", md: "2xl" }}
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
@@ -65,6 +66,7 @@ export default function UserCard() {
                     </Link>
                </Flex>
              </Box>
+             </Link>
             </Flex> 
         </>
     )

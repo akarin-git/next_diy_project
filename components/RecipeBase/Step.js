@@ -14,14 +14,14 @@ export default function Step() {
             <Box flex="1">
                 <AlertTitle>Esey!</AlertTitle>
                     <AlertDescription display="block">
-                            3hで作れます　3step
+                        3hで作れます　3step
                     </AlertDescription>
             </Box>
             <AlertIcon />
             <Box flex="1">
                 <AlertTitle>Esey!</AlertTitle>
                     <AlertDescription display="block">
-                            3hで作れます　3step
+                        3hで作れます　3step
                 </AlertDescription>
             </Box>
             </Alert>

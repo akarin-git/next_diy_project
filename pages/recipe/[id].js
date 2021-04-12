@@ -50,7 +50,7 @@ export default function Recipe({staticPost,id}) {
             {/* レシピbox */}
             <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
                 {/* タイトル */}
-                <RcTitle/>
+                <RcTitle post={post}/>
                 {/* 画像 */}
                 <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615179182/sample.jpg'} width={640} height={400}/>
 
@@ -60,7 +60,6 @@ export default function Recipe({staticPost,id}) {
                 <RcTable post={post}/>
 
                 <Thx/>
-                
             </Container>
 
                 {/* ユーザー */}

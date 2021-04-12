@@ -8,9 +8,9 @@ import {
 export default function SubTitle() {
     return (
         <div>
-             <Stack direction="row" h="100px" p={5} >
+             <Stack direction="row" h="120" p={6} >
                 <Divider orientation="vertical" />
-                <Text>３ステップで簡単にシルクスクリーンのTshotsを作れます。３ステップで簡単にシルクスクリーンのTshotsを作れます</Text>
+                <Text fontSize={["xs","sm","md"]}>３ステップで簡単にシルクスクリーンのTshotsを作れます。３ステップで簡単にシルクスクリーンのTshotsを作れます</Text>
             </Stack>
         </div>
     )

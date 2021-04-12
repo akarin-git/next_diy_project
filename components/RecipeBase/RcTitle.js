@@ -11,7 +11,7 @@ import {
 
 
 
-export default function RcTitle() {
+export default function RcTitle({post}) {
     return (
         <>
            <Box>
@@ -20,13 +20,13 @@ export default function RcTitle() {
                    category
                 </Badge>
                 <motion.div variants={imageVariants}>
-                 <Text fontSize="4xl" >
+                 <Text fontSize="4xl" mx="3">
                     titleをここに
                  </Text>
                  </motion.div>
 
           {/* icon avater set */}
-          <AvatarBag/>
+          <AvatarBag post={post}/>
           {/* サブタイトル */}
            <SubTitle/>
            {/* ステップカード */}
