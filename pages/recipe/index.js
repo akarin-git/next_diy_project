@@ -6,6 +6,8 @@ import Card from '../../components/Card';
 import Layout from '../../components/Layout';
 import HeadLayout from '../../components/HeadLayout';
 import RcCard from '../../components/RcCard';
+import Bread from '../../components/Base/Bread';
+
 import { Grid } from "@chakra-ui/react";
 
 
@@ -35,21 +37,19 @@ export default function Recipe({recipePosts}) {
 
     return (
         <Layout>
-            <div className="head">
+            <Bread/>
+        <div className="head">
             <HeadLayout />
-            </div>
+        </div>
         <Grid 
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(3, 1fr)" }} 
-        gap={3}
-        w={{base:"100%",md:"100%",lg:"80%"}}
-        m="auto"
-        >
-        {filteredPosts &&
-        // filteredPosts.map((post) => <Card key={post.id} post={post}/>)}
-        filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
-            {/* <RcCard/>
-            <RcCard/>
-            <RcCard/> */}
+            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(3, 1fr)" }} 
+            gap={3}
+            w={{base:"100%",md:"100%",lg:"80%"}}
+            m="auto"
+            >
+                {filteredPosts &&
+                filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
+            {/* // filteredPosts.map((post) => <Card key={post.id} post={post}/>)} */}
          </Grid> 
         <style JSX>
                 {`

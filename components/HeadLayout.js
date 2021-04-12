@@ -1,16 +1,21 @@
-import { Container,Flex } from "@chakra-ui/react"
+import { Container,Flex,Box } from "@chakra-ui/react"
 
 
 export default function HeadLayout() {
 
     return (
         <>
-           <Container className="bgimage" w="100%" p="20px">
-               hihihi
+           <Container className="bgimage" w="100%" h="100%" >
+            <Flex alignItems="center" justifyContent="space-between" mx="auto">
+               <Box w="70%">
+               hi
+               </Box>
+               <Box w="30%" h="200px" bg="red">
+               hi
+               </Box>
+            </Flex>
             </Container> 
-           <Container className="bgimage" w="30%" p="20px">
-               hihihi
-            </Container> 
+           
             <style JSX>
                 {`
                 .bgimage{

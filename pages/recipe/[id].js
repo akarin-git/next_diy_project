@@ -4,7 +4,18 @@ import useSWR from 'swr';
 import { API_ENDPOINT } from '../../constants';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 import Layout from '../../components/Layout';
+import UserCard from '../../components/UserCard';
+import RecipeStep from '../../components/RecipeStep';
+import CBread from '../../components/Base/CBread';
+import RcTable from '../../components/RecipeBase/RcTable';
+import RcTitle from '../../components/RecipeBase/RcTitle';
+import Thx from '../../components/RecipeBase/Thx';
+
+import { motion } from 'framer-motion';
+import { Container } from "@chakra-ui/react";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -27,14 +38,35 @@ export default function Recipe({staticPost,id}) {
     if (router.isFallback || !post) {
     return <div>Loading...</div>;
   }
+  
     return (
         <Layout>
-            <p>{post.id}</p>
-            <p>{post.title}</p>
-            <p>{post.category}</p>
-            <Link href={`/category/${post.category}`}>
-            <span>hi</span>
+        <motion.div initial="exit" animate="enter" exit="exit">
+            {/* ブレッド */}
+            <CBread category={post.category}/>
+
+            {/* レシピbox */}
+            <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
+                {/* タイトル */}
+                <RcTitle/>
+                {/* 画像 */}
+                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615179182/sample.jpg'} width={640} height={400}/>
+
+                {/* レシピステップ */}
+                <RecipeStep/>
+                {/* 材料 */}
+                <RcTable post={post}/>
+
+                <Thx/>
+                
+            </Container>
+
+                {/* ユーザー */}
+                <UserCard/>
+            <Link href={`/category`}>
+            <span>back</span>
             </Link>
+       </motion.div>
         </Layout>
     );
 }
