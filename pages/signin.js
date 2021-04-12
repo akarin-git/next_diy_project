@@ -48,10 +48,10 @@ useEffect(() => {
             </Button>
         </Link>
         <Container w="full" align="center">
-            <Box mt={["10","6"]}>
+            <Box mt={["7","6"]}>
               <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
         <Link href={`/signup`}>
-            <Box mt="10">
+            <Box mt="4">
               <Text align="center" fontSize="xl">
                     Sign Up ?
               </Text>
