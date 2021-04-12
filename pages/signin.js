@@ -50,14 +50,16 @@ useEffect(() => {
         <Container w="full" align="center">
             <Box mt={["10","6"]}>
               <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
-              <Box mt="10">
-              <Text align="center">
-                    Sign In ?
-                </Text>
-              <Text align="center">
+        <Link href={`/signup`}>
+            <Box mt="10">
+              <Text align="center" fontSize="xl">
+                    Sign Up ?
+              </Text>
+              <Text align="center" fontSize="sm">
                     新規登録はこちら
-                </Text>
+              </Text>
             </Box>
+        </Link>
             </Box>
         <SigninForm
             onSubmit={signIn}

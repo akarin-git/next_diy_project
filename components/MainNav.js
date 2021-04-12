@@ -110,19 +110,19 @@ export default function MainNav() {
                 />
 
                 <Button w="full" variant="ghost">
-                  DIY Recipes
+                  <Link href="/recipe">DIY Recipes</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  Work Space
+                  <Link href="/space">Work Spaces</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  Blog
+                  <Link href="/blog">Blog</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  About 
+                 <Link href="/about">About</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  Sign in
+                  <Link href="/signin">Sign In</Link>
                 </Button>
               </VStack>
             </Box>

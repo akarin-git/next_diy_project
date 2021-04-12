@@ -30,22 +30,24 @@ const submit = async({name,email,password,role}) => {
                 </Link>
             </Button>
             <Container w="full" align="center">
-                <Box >
+            <Box>
                 <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615205052/undraw_Location_search_re_ttoj_t2ffi8.png'} width={570} height={340}/>
-                <Text align="center">
+            <Link href={`/signin`}>
+                <Box mb={["5","0"]}>
+                <Text align="center" fontSize="xl">
                     login ?
                 </Text>
-                <Text align="center">
+                <Text align="center" fontSize="sm">
                     ログインはこちらから
                 </Text>
                 </Box>
-                <Box>
+            </Link>
+            </Box>
                 <SignupForm
                     onSubmit={submit}
                     isSending={loading}
                 />
             {error && <p className="error">{error}</p>}
-                </Box>
             </Container>
         </>
     )
