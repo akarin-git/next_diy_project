@@ -46,7 +46,7 @@ export default function UserCard() {
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
-                    Design Tools
+                    My Plofile & Web page
                </chakra.h2>
 
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
@@ -61,7 +61,7 @@ export default function UserCard() {
                       fontSize="xl"
                       color={useColorModeValue("brand.500", "brand.300")}
                     >
-                      John Doe
+                      Akari Sugi
                     </Link>
                </Flex>
              </Box>

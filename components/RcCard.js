@@ -13,7 +13,7 @@ export default function RcCard({post}) {
         <div>
       <Flex
         bg="white"
-        p={[1,5,5,5]}
+        p={[1,3,4,4]}
         w="full"
         alignItems="center"
         justifyContent="center"
@@ -23,8 +23,8 @@ export default function RcCard({post}) {
         mx="auto"
         rounded="lg"
         shadow="xl"
-        bg="white"
-        w={[350,350,300]}
+        bg="#EEEEEE"
+        w={[330,330,290]}
         _hover={{ mt: 1 ,mb:-1}}
       >
         <Image

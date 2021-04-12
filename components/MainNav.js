@@ -32,25 +32,26 @@ export default function MainNav() {
             shadow="xs"
         >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          <Flex>
+        <Flex>
           <motion.div initial="exit" animate="enter" exit="exit">
           {/* framer animetion 右からふわっと */}
            <motion.div variants={rightVariants}>
-            <chakra.a
-              href="/"
-              title="Choc Home Page"
-              display="flex"
-              alignItems="center"
-            >
-            Choc
-              {/* <VisuallyHidden>Choc</VisuallyHidden> */}
-            </chakra.a>
-            {/* <chakra.h1 fontSize="2xl" fontWeight="bold">
-              Choc
-            </chakra.h1> */}
+              <chakra.a
+                href="/"
+                title="Choc Home Page"
+                display="flex"
+                alignItems="center"
+              >
+            {/* Fab Loop */}
+              <VisuallyHidden>Choc</VisuallyHidden>
+                <chakra.h1 fontSize="2xl" fontWeight="bold">
+                  Logo
+                </chakra.h1>
+              </chakra.a>
             </motion.div>
-       </motion.div>
+          </motion.div>
           </Flex>
+
           {/* PC */}
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -59,14 +60,21 @@ export default function MainNav() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">Pricing</Button>
-              <Button variant="ghost">Blog</Button>
-              <Button variant="ghost">Company</Button>
-              <Button variant="ghost">Sign in</Button>
+              <Button variant="ghost">
+              <Link href="/recipe">DIY Recipes</Link>
+              </Button>
+              <Button variant="ghost">
+              <Link href="/space">Work Spaces</Link>
+              </Button>
+              <Button variant="ghost">
+              <Link href="/blog">Blog</Link>
+              </Button>
+              <Button variant="ghost">
+              <Link href="/about">About</Link>
+              </Button>
             </HStack>
-            <Button colorScheme="brand" size="sm">
-              Get Started
+              <Button variant="ghost" size="sm" bg="yellow">
+              <Link href="/signin">Sign In</Link>
             </Button>
 
             {/* モバイル */}
@@ -102,16 +110,16 @@ export default function MainNav() {
                 />
 
                 <Button w="full" variant="ghost">
-                  Features
+                  DIY Recipes
                 </Button>
                 <Button w="full" variant="ghost">
-                  Pricing
+                  Work Space
                 </Button>
                 <Button w="full" variant="ghost">
                   Blog
                 </Button>
                 <Button w="full" variant="ghost">
-                  Company
+                  About 
                 </Button>
                 <Button w="full" variant="ghost">
                   Sign in

@@ -4,7 +4,7 @@ import useSWR from 'swr';
 import { useEffect } from 'react';
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
-
+import { Grid } from "@chakra-ui/react";
 
 // swr
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -25,8 +25,15 @@ export default function handmade({handmadePosts}) {
     );
     return (
         <Layout>
+            <Grid 
+            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(3, 1fr)" }} 
+            gap={3}
+            w={{base:"100%",md:"100%",lg:"95%",xl:"80%"}}
+            m="auto"
+            >
             {filteredPosts &&
             filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
+            </Grid>
         </Layout>
     )
 }

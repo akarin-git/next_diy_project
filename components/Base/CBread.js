@@ -16,7 +16,7 @@ export default function CBread({category}) {
             </BreadcrumbItem>
 
             <BreadcrumbItem>
-                    <BreadcrumbLink href="#">About</BreadcrumbLink>
+                    <BreadcrumbLink href="/recipe">Recipe</BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem isCurrentPage>
@@ -27,7 +27,6 @@ export default function CBread({category}) {
         {`
             .container{
                 width:100%;
-                // background:pink;
                 padding:20px;
                 padding-left:30px;
             }

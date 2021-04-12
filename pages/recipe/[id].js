@@ -15,7 +15,9 @@ import RcTitle from '../../components/RecipeBase/RcTitle';
 import Thx from '../../components/RecipeBase/Thx';
 
 import { motion } from 'framer-motion';
-import { Container } from "@chakra-ui/react";
+import { HiChevronLeft } from "react-icons/hi";
+import { Container,Button,Icon,Text } from "@chakra-ui/react";
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -63,9 +65,13 @@ export default function Recipe({staticPost,id}) {
 
                 {/* ユーザー */}
                 <UserCard/>
-            <Link href={`/category`}>
-            <span>back</span>
-            </Link>
+
+            <Button variant="ghost">
+                <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                <Link href={`/recipe`}>
+                <Text>back</Text>
+                </Link>
+            </Button>
        </motion.div>
         </Layout>
     );

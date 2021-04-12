@@ -1,6 +1,11 @@
 import SigninForm from '../components/SigninForm';
 import { useAppRouter,useAppAxiosExecute} from "../hooks";
 import { useEffect } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
+import { HiChevronLeft } from "react-icons/hi";
+import { Container,Button,Icon,Text,Box } from "@chakra-ui/react";
+
 
 
 export default function SignUp() {
@@ -36,11 +41,30 @@ useEffect(() => {
 
     return (
         <>
+         <Button variant="ghost">
+                <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                <Link href={`/`}>
+                <Text>back</Text>
+                </Link>
+            </Button>
+        <Container w="full" align="center">
+            <Box mt={["10","6"]}>
+              <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
+              <Box mt="10">
+              <Text align="center">
+                    Sign In ?
+                </Text>
+              <Text align="center">
+                    新規登録はこちら
+                </Text>
+            </Box>
+            </Box>
         <SigninForm
             onSubmit={signIn}
             isSending={signingIn}
         />
         {error && <p className="error">{error}</p>}
+        </Container>
         </>
     )
 }
