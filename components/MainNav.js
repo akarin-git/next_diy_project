@@ -60,22 +60,32 @@ export default function MainNav() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
+            <Link href="/recipe">
               <Button variant="ghost">
-              <Link href="/recipe">DIY Recipes</Link>
+              DIY Recipes
               </Button>
+            </Link>
+            <Link href="/space">
               <Button variant="ghost">
-              <Link href="/space">Work Spaces</Link>
+             Work Spaces
               </Button>
+            </Link>
+            <Link href="/blog">
               <Button variant="ghost">
-              <Link href="/blog">Blog</Link>
+              Blog
               </Button>
+            </Link>
+            <Link href="/about">
               <Button variant="ghost">
-              <Link href="/about">About</Link>
+              About
               </Button>
+            </Link>
             </HStack>
+            <Link href="/signin">
               <Button variant="ghost" size="sm" bg="yellow">
-              <Link href="/signin">Sign In</Link>
+              Sign In
             </Button>
+            </Link>
 
             {/* モバイル */}
             <Box display={{ base: "inline-flex", md: "none" }}>
@@ -108,22 +118,31 @@ export default function MainNav() {
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-
-                <Button w="full" variant="ghost">
-                  <Link href="/recipe">DIY Recipes</Link>
-                </Button>
-                <Button w="full" variant="ghost">
-                  <Link href="/space">Work Spaces</Link>
-                </Button>
-                <Button w="full" variant="ghost">
-                  <Link href="/blog">Blog</Link>
-                </Button>
-                <Button w="full" variant="ghost">
-                 <Link href="/about">About</Link>
-                </Button>
-                <Button w="full" variant="ghost">
-                  <Link href="/signin">Sign In</Link>
-                </Button>
+                <Link href="/recipe">
+                  <Button w="full" variant="ghost">
+                    DIY Recipes
+                  </Button>
+                </Link>
+                <Link href="/space">
+                  <Button w="full" variant="ghost">
+                    Work Spaces
+                  </Button>
+                </Link>
+                <Link href="/blog">
+                  <Button w="full" variant="ghost">
+                    Blog
+                  </Button>
+                </Link>
+                <Link href="/about">
+                  <Button w="full" variant="ghost">
+                    About
+                  </Button>
+                </Link>
+                <Link href="/signin">
+                  <Button w="full" variant="ghost">
+                    Sign In
+                  </Button>
+                </Link>
               </VStack>
             </Box>
           </HStack>
