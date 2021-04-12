@@ -85,7 +85,7 @@ export const useAppRouter = () => {
             needAuth:
             router.route !== "/" &&
             router.route !== "/signup" &&
-            router.route !== "/signin" 
+            router.route !== "/signin" &&
             router.route !== "/recipe" &&
             router.route !== "/recipe/[id]" &&
             router.route !== "/category/craft" &&
