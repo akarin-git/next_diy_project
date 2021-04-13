@@ -31,9 +31,9 @@ const submit = async({name,email,password,role}) => {
             </Link>
             <Container w="full" align="center">
             <Box>
-                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615205052/undraw_Location_search_re_ttoj_t2ffi8.png'} width={510} height={310}/>
+                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615205052/undraw_Location_search_re_ttoj_t2ffi8.png'} width={470} height={290}/>
             <Link href={`/signin`}>
-                <Box mb={["5","0"]}>
+                <Box mb={["1","0"]}>
                 <Text align="center" fontSize="xl">
                     login ?
                 </Text>

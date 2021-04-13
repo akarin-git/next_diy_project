@@ -36,7 +36,7 @@ export default function RcCard({post}) {
           alt="Article"
         />
 
-        <Box p={6}>
+        <Box p={4}>
           <Box>
             <chakra.span
               fontSize="xs"
@@ -62,8 +62,7 @@ export default function RcCard({post}) {
               color={useColorModeValue("gray.600", "gray.400")}
             >
             {/* {post} */}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
-              parturient et sem ipsum volutpat vel. Natoque sem et aliquam
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               
             </chakra.p>
           </Box>

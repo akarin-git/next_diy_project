@@ -7,27 +7,27 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 
-export default function UserCard({post}) {
+export default function UserTopCard() {
     return (
         <>
             <Flex
-             bg="gray.600"
-             p={50}
+             bg="gray.100"
+             p={5}
              w="full"
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/mypage/${post.user_id}`}>
+            <Link href={`/mypage`}>
              <Box
-               w="md"
+               w={["100%","100%","75%"]}
                mx="auto"
-               py={4}
-               px={8}
+               py={["0","4"]}
+               px={["0","8"]}
                bg={useColorModeValue("white", "gray.800")}
                shadow="lg"
                rounded="lg"
              >
-               <Flex justifyContent={{ base: "center", md: "end" }} mt={-16}>
+               <Flex justifyContent={["center", "end"]} mt={-16}>
                     <Image
                       w={20}
                       h={20}
@@ -49,13 +49,18 @@ export default function UserCard({post}) {
                >
                     My Plofile & Web page
                </chakra.h2>
-
+                <Box>
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
                     deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
                     commodi hic, suscipit in a veritatis pariatur minus consequuntur!
                </chakra.p>
-
+               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
+                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
+                    commodi hic, suscipit in a veritatis pariatur minus consequuntur!
+               </chakra.p>
+                </Box>
                <Flex justifyContent="end" mt={4}>
                     <Link
                       href="#"
@@ -67,7 +72,7 @@ export default function UserCard({post}) {
                </Flex>
              </Box>
              </Link>
-            </Flex> 
+            </Flex>  
         </>
     )
 }

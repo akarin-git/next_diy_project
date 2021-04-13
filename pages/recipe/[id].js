@@ -63,7 +63,7 @@ export default function Recipe({staticPost,id}) {
             </Container>
 
                 {/* ユーザー */}
-                <UserCard/>
+                <UserCard post={post}/>
 
             <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />

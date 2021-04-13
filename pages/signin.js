@@ -51,7 +51,7 @@ useEffect(() => {
             <Box mt={["7","6"]}>
               <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
         <Link href={`/signup`}>
-            <Box mt="4">
+            <Box mb={["1","0"]}>
               <Text align="center" fontSize="xl">
                     Sign Up ?
               </Text>
