@@ -8,7 +8,7 @@ Box
 
 
 
-export default function mypage({user_id}) {
+export default function mypage() {
 
     return (
         <div>
