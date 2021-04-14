@@ -1,3 +1,5 @@
+import TopMenuDown from "./Base/TopMenuDown"
+import MenuAccordion from "./Base/MenuAccordion"
 import Link from 'next/link'
 import {
   chakra,
@@ -60,14 +62,13 @@ export default function MainNav() {
               color="brand.500"
               display={{ base: "none", md: "inline-flex" }}
             >
-            <Link href="/recipe">
-              <Button variant="ghost">
-              DIY Recipes
-              </Button>
-            </Link>
+            
+            {/* Recipe Page pulldown */}
+            <TopMenuDown />
+
             <Link href="/space">
               <Button variant="ghost">
-             Work Spaces
+             Spaces
               </Button>
             </Link>
             <Link href="/blog">
@@ -118,11 +119,10 @@ export default function MainNav() {
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                 />
-                <Link href="/recipe">
-                  <Button w="full" variant="ghost">
-                    DIY Recipes
-                  </Button>
-                </Link>
+                 
+                {/* hamberger menu recipe accordion */}
+                  <MenuAccordion />
+                
                 <Link href="/space">
                   <Button w="full" variant="ghost">
                     Work Spaces

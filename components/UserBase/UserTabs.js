@@ -22,9 +22,12 @@ export default function UserTabs({user}) {
                             
                            </Grid>
                     </TabPanel>
-                    <TabPanel bg="pink">
-                            <p>two!</p>
-                            <Grid templateColumns="repeat(3, 1fr)" gap={3}>
+                    <TabPanel >
+                            <Grid 
+                            templateColumns={["repeat(2, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
+                            gap={3}
+                            w={"full"}
+                            >
                             {favorites.map((favoritePost) => <MypageCard key={favoritePost.id} favoritePost={favoritePost}/>)}
                             
                            </Grid>

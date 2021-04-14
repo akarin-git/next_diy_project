@@ -39,9 +39,9 @@ export default function Recipe({recipePosts}) {
             <HeadLayout />
         </div>
         <Grid 
-            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(3, 1fr)" }} 
-            gap={3}
-            w={{base:"100%",md:"100%",lg:"95%",xl:"80%"}}
+            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
+            gap={4}
+            w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
             m="auto"
             >
                 {filteredPosts &&

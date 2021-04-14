@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function UserCard({post}) {
+  // console.log(post[0].user_id);
     return (
         <>
             <Flex
@@ -17,7 +18,7 @@ export default function UserCard({post}) {
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/userpage`}>
+            <Link href={`/userpage/${post[0].user_id}`}>
              <Box
                w="md"
                mx="auto"
