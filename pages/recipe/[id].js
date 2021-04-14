@@ -35,7 +35,7 @@ import { Container,
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Recipe({staticPost,id}) {
-    console.log(staticPost);
+    // console.log(id);
     const router = useRouter();
     // swr
     const { data:post ,mutate } = useSWR(
@@ -45,7 +45,7 @@ export default function Recipe({staticPost,id}) {
             initialData:staticPost,
         }
     );
-    console.log(post[0]);
+    // console.log(post);
     useEffect(() => {
         mutate();
     },[]);
