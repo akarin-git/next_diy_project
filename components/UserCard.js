@@ -17,7 +17,7 @@ export default function UserCard({post}) {
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/mypage`}>
+            <Link href={`/userpage`}>
              <Box
                w="md"
                mx="auto"

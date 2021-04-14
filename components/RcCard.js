@@ -10,7 +10,8 @@ import Link from 'next/link';
 
 export default function RcCard({post}) {
     return (
-        <div>
+        <>
+    <Link href={`/recipe/${post.id}`}>
       <Flex
         bg="white"
         p={[1,3,4,4]}
@@ -18,7 +19,6 @@ export default function RcCard({post}) {
         alignItems="center"
         justifyContent="center"
         >
-    <Link href={`/recipe/${post.id}`}>
       <Box
         mx="auto"
         rounded="lg"
@@ -99,8 +99,8 @@ export default function RcCard({post}) {
           </Box>
         </Box>
       </Box>
-      </Link>
     </Flex>
-        </div>
+      </Link>
+        </>
     )
 }

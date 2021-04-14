@@ -15,7 +15,7 @@ export default function AvatarBag({post}) {
     // console.log(post[0]);
     return (
         <Box mb="2" w="100%" align="right">
-            <Link href={`/mypage`}>
+            <Link href={`/userpage`}>
             <Flex>
             <Spacer />
                 <Text fontSize="md" align="right" p="1" py="6" color="gray.500">

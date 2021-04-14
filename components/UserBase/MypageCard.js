@@ -1,10 +1,19 @@
-import { Flex, Box, chakra, Image, TabPanel,useColorModeValue } from "@chakra-ui/react";
+import { Flex,
+         Box, 
+         chakra,
+        TabPanel,
+        Image,
+        useColorModeValue
+} from "@chakra-ui/react";
+import Link from 'next/link';
 
 
 
-export default function MypageCard() {
+export default function MypageCard({favoritePost}) {
+  console.log(favoritePost.title);
     return (
-        <div>
+      <Link href={`/recipe/${favoritePost.id}`}>
+      <Box>
       <Box
         w={["80","60"]}
         mx="auto"
@@ -12,20 +21,21 @@ export default function MypageCard() {
         shadow="lg"
         rounded="lg"
       >
-        <Box px={4} py={2} >
+        <Box px={4} py={2} h="130">
           <chakra.h1
             color={useColorModeValue("gray.800", "white")}
             fontWeight="bold"
             fontSize="xl"
             textTransform="uppercase"
           >
-            title
+            {favoritePost.title}
           </chakra.h1>
           <chakra.p
             mt={1}
             fontSize="sm"
             color={useColorModeValue("gray.600", "gray.400")}
           >
+          {/* {favorite} */}
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </chakra.p>
         </Box>
@@ -36,11 +46,12 @@ export default function MypageCard() {
           fit="cover"
           roundedBottom="lg"
           mt={2}
-          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618278490/pzqsbztrzsg2owg8kkql.jpg"
+          src={favoritePost.image_path}
           alt=""
         />
       </Box>
-        </div>
+        </Box>
+      </Link>
     )
 }
 

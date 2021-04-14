@@ -7,7 +7,8 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 
-export default function UserTopCard() {
+export default function UserTopCard({user}) {
+  // console.log(user);
     return (
         <>
             <Flex
@@ -47,7 +48,7 @@ export default function UserTopCard() {
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
-                    My Plofile & Web page
+                   {user[0][0].name}
                </chakra.h2>
                 <Box>
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>

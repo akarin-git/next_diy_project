@@ -73,13 +73,13 @@ export default function Recipe({staticPost,id}) {
                 {/* レシピステップ */}
                 <RecipeStep/>
                 {/* 材料 */}
-                {/* <RcTable post={post}/> */}
+                <RcTable post={post}/>
 
                 <Thx/>
             </Container>
 
                 {/* ユーザー */}
-                {/* <UserCard post={post}/> */}
+                <UserCard post={post}/>
 
             <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
