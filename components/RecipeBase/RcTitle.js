@@ -12,16 +12,17 @@ import {
 
 
 export default function RcTitle({post}) {
+   // console.log(post.title);
     return (
         <>
            <Box>
                 {/* タイトル */}
                 <Badge variant="outline" m="2" colorScheme="purple">
-                   category
+                   {post[0].category}
                 </Badge>
                 <motion.div variants={imageVariants}>
                  <Text fontSize="4xl" mx="3">
-                    titleをここに
+                    {post[0].title}
                  </Text>
                  </motion.div>
 

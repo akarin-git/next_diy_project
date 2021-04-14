@@ -20,7 +20,7 @@ export default function RcTable({post}) {
         </Thead>
         <Tbody>
             <Tr>
-                  <Td>{post.title}</Td>
+                  <Td>{post[0].favorite.length}</Td>
                   <Td>millimetres (mm)</Td>
                   <Td isNumeric>25.4</Td>
             </Tr>

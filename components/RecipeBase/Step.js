@@ -6,7 +6,7 @@ import {
   AlertDescription
 } from "@chakra-ui/react";
 
-export default function Step() {
+export default function Step({post}) {
     return (
         <>
         <Alert status="success">

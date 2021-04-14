@@ -10,7 +10,8 @@ import Link from 'next/link';
 
 export default function RcCard({post}) {
     return (
-        <div>
+        <>
+    <Link href={`/recipe/${post.id}`}>
       <Flex
         bg="white"
         p={[1,3,4,4]}
@@ -18,7 +19,6 @@ export default function RcCard({post}) {
         alignItems="center"
         justifyContent="center"
         >
-    <Link href={`/recipe/${post.id}`}>
       <Box
         mx="auto"
         rounded="lg"
@@ -36,7 +36,7 @@ export default function RcCard({post}) {
           alt="Article"
         />
 
-        <Box p={6}>
+        <Box p={4}>
           <Box>
             <chakra.span
               fontSize="xs"
@@ -62,8 +62,7 @@ export default function RcCard({post}) {
               color={useColorModeValue("gray.600", "gray.400")}
             >
             {/* {post} */}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
-              parturient et sem ipsum volutpat vel. Natoque sem et aliquam
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               
             </chakra.p>
           </Box>
@@ -100,8 +99,8 @@ export default function RcCard({post}) {
           </Box>
         </Box>
       </Box>
-      </Link>
     </Flex>
-        </div>
+      </Link>
+        </>
     )
 }

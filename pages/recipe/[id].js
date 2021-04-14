@@ -13,16 +13,29 @@ import CBread from '../../components/Base/CBread';
 import RcTable from '../../components/RecipeBase/RcTable';
 import RcTitle from '../../components/RecipeBase/RcTitle';
 import Thx from '../../components/RecipeBase/Thx';
+import AvatarBag from "../../components/RecipeBase/Avatar";
+import SubTitle from "../../components/RecipeBase/SubTitle";
 
 import { motion } from 'framer-motion';
+import { imageVariants } from "../../components/Animetion/MotionBase"
 import { HiChevronLeft } from "react-icons/hi";
-import { Container,Button,Icon,Text } from "@chakra-ui/react";
+import { Container,
+        Button,
+        Icon,
+        Text,
+        Box,
+        Badge,
+        Breadcrumb,
+        BreadcrumbItem,
+        BreadcrumbLink,
+ } from "@chakra-ui/react";
+
 
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Recipe({staticPost,id}) {
-    // console.log(staticPost);
+    // console.log(id);
     const router = useRouter();
     // swr
     const { data:post ,mutate } = useSWR(
@@ -32,7 +45,7 @@ export default function Recipe({staticPost,id}) {
             initialData:staticPost,
         }
     );
-
+    // console.log(post);
     useEffect(() => {
         mutate();
     },[]);
@@ -42,15 +55,18 @@ export default function Recipe({staticPost,id}) {
   }
   
     return (
+        <>
         <Layout>
         <motion.div initial="exit" animate="enter" exit="exit">
             {/* ブレッド */}
-            <CBread category={post.category}/>
-
+            <CBread post={post}/>
+          
             {/* レシピbox */}
             <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
                 {/* タイトル */}
-                <RcTitle post={post}/>
+                <RcTitle  post={post}/>
+            
+         {/* {post[0].title} */}
                 {/* 画像 */}
                 <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615179182/sample.jpg'} width={640} height={400}/>
 
@@ -63,7 +79,7 @@ export default function Recipe({staticPost,id}) {
             </Container>
 
                 {/* ユーザー */}
-                <UserCard/>
+                <UserCard post={post}/>
 
             <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
@@ -73,6 +89,16 @@ export default function Recipe({staticPost,id}) {
             </Button>
        </motion.div>
         </Layout>
+         <style JSX>
+        {`
+            .container{
+                width:100%;
+                padding:20px;
+                padding-left:30px;
+            }
+        `}
+        </style>
+        </>
     );
 }
 
@@ -86,12 +112,13 @@ export async function getStaticPaths() {
 
 // ISR
 export async function getStaticProps({ params }){
+    // console.log(params.id);
     const {post:staticPost} = await getPostData(params.id);
-    console.log(staticPost.id);
+    // console.log(staticPost);
     return {
         props:{
-            id:staticPost.id,
-            staticPost,
+            id:staticPost[0].id,
+            staticPost:staticPost,
         },
         revalidate:3,
     };
