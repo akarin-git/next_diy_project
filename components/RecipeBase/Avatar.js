@@ -15,7 +15,7 @@ export default function AvatarBag({post}) {
     // console.log(post[0]);
     return (
         <Box mb="2" w="100%" align="right">
-            <Link href={`/userpage`}>
+            <Link href={`/userpage/${post[0].user_id}`}>
             <Flex>
             <Spacer />
                 <Text fontSize="md" align="right" p="1" py="6" color="gray.500">
@@ -38,11 +38,3 @@ export default function AvatarBag({post}) {
     )
 }
 
-// import React from 'react'
-
-// export const FavoBag() {
-//     return (
-//         <div>
-//         </div>
-//     )
-// }

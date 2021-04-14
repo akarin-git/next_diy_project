@@ -42,7 +42,7 @@ export default function userpage({staticUser,id}) {
             <Box py="7">
             </Box>
             <UserTopCard user={user}/> 
-            <Box w={["100%","100%","70%"]} m="auto" p="2">
+            <Box w={["100%","100%","80%"]} m="auto" p="2">
             <UserTabs user={user}/>
             </Box>
         </div>

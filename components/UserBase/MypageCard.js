@@ -10,7 +10,6 @@ import Link from 'next/link';
 
 
 export default function MypageCard({favoritePost}) {
-  console.log(favoritePost.title);
     return (
       <Link href={`/recipe/${favoritePost.id}`}>
       <Box>

@@ -20,17 +20,18 @@ export default function RcCard({post}) {
         justifyContent="center"
         >
       <Box
+        w={["80","60"]}
         mx="auto"
         rounded="lg"
         shadow="xl"
         bg="#EEEEEE"
-        w={[330,330,290]}
+        // w={[330,330,290]}
         _hover={{ mt: 1 ,mb:-1}}
       >
         <Image
           roundedTop="lg"
           w="full"
-          h={60}
+          h={40}
           fit="cover"
           src={post.image_path}
           alt="Article"
