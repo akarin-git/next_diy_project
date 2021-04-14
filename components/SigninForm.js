@@ -31,7 +31,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
                     type="email"
                     placeholder="E-mail"
                     value={email}
-                    onChange={(e) => setEmail(console.log(e.target.value))}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
              </FormControl>
              {/* <Input
