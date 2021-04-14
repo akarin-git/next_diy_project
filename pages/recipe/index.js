@@ -22,7 +22,7 @@ export default function Recipe({recipePosts}) {
     const { data:posts,mutate } = useSWR(apiUrl,fetcher,{
         initialData:recipePosts,
     });
-    console.log(recipePosts);
+    // console.log(recipePosts);
     const filteredPosts = posts?.sort(
         (a,b) => new Date(b.created_at) - new Date(a.created_at)
     );

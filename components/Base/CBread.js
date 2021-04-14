@@ -6,8 +6,10 @@ import {
 } from "@chakra-ui/react";
 import Link from 'next/link';
 
-export default function CBread({category}) {
+export default function CBread({post}) {
+  // console.log(post);
     return (
+      <>
         <div className="container">
         
           <Breadcrumb fontWeight="solid" fontSize="md" color="gray.500">
@@ -20,7 +22,7 @@ export default function CBread({category}) {
             </BreadcrumbItem>
 
             <BreadcrumbItem isCurrentPage>
-                    <Link href={`/category/${category}`}>{category}</Link>
+                    <Link href={`/category/${post[0].category}`}>{post[0].category}</Link>
             </BreadcrumbItem>
          </Breadcrumb>  
         <style JSX>
@@ -33,5 +35,6 @@ export default function CBread({category}) {
         `}
         </style>
         </div>
+        </>
     )
 }

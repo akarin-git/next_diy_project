@@ -13,10 +13,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
         e.preventDefault();
         // console.log(email,password);
         onSubmit({ email,password });
-       
     }
-
-
 
     return (
          <Container pb={["40","40","10"]} mt={["5","0"]}>
@@ -34,7 +31,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
                     type="email"
                     placeholder="E-mail"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setEmail(console.log(e.target.value))}
                 />
              </FormControl>
              {/* <Input
@@ -54,7 +51,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
              </FormControl>
              </Box>
             <Button className="mts" disabled={isSending}>
-            login
+                login
             </Button>
         </form>
         </Container>
@@ -62,3 +59,4 @@ const SigninForm = ({onSubmit,isSending}) =>  {
 }
 
 export default SigninForm;
+

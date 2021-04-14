@@ -47,6 +47,7 @@ useEffect(() => {
                 <Text>back</Text>
             </Button>
         </Link>
+        
         <Container w="full" align="center">
             <Box mt={["7","6"]}>
               <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>

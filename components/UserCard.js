@@ -17,7 +17,7 @@ export default function UserCard({post}) {
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/mypage/${post.user_id}`}>
+            <Link href={`/mypage`}>
              <Box
                w="md"
                mx="auto"
@@ -47,7 +47,7 @@ export default function UserCard({post}) {
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
-                    My Plofile & Web page
+                    My Plofile & Web page {post[0].id}
                </chakra.h2>
 
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
