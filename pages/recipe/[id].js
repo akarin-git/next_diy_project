@@ -35,6 +35,7 @@ import { Container,
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Recipe({staticPost,id}) {
+    console.log(staticPost);
     const router = useRouter();
     // swr
     const { data:post ,mutate } = useSWR(
@@ -44,7 +45,7 @@ export default function Recipe({staticPost,id}) {
             initialData:staticPost,
         }
     );
-
+    console.log(post[0]);
     useEffect(() => {
         mutate();
     },[]);
@@ -59,27 +60,26 @@ export default function Recipe({staticPost,id}) {
         <motion.div initial="exit" animate="enter" exit="exit">
             {/* ブレッド */}
             <CBread post={post}/>
-           
-
+          
             {/* レシピbox */}
             <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
                 {/* タイトル */}
                 <RcTitle  post={post}/>
             
-         
+         {/* {post[0].title} */}
                 {/* 画像 */}
                 <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615179182/sample.jpg'} width={640} height={400}/>
 
                 {/* レシピステップ */}
                 <RecipeStep/>
                 {/* 材料 */}
-                <RcTable post={post}/>
+                {/* <RcTable post={post}/> */}
 
                 <Thx/>
             </Container>
 
                 {/* ユーザー */}
-                <UserCard post={post}/>
+                {/* <UserCard post={post}/> */}
 
             <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
@@ -114,12 +114,12 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }){
     // console.log(params.id);
     const {post:staticPost} = await getPostData(params.id);
-    // console.log(staticPost[0].id);
+    // console.log(staticPost);
     return {
         props:{
             id:staticPost[0].id,
-            staticPost,
+            staticPost:staticPost,
         },
-        revalidate:1,
+        revalidate:3,
     };
 }
