@@ -4,12 +4,20 @@ import {
   Tr,Td,Th,
   Tbody,
   Tfoot,
-  Container
+  Container,
+  useColorModeValue
 } from "@chakra-ui/react";
+import Image from 'next/image';
+
 
 export default function RcTable({post}) {
     return (
         <>
+         <Image
+            width={100} 
+            height={100}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618460964/Desk_lamp_perspective_matte_1_m4qgv0.png'}
+        />
         <Table variant="unstyled" my={{base:"10",md:"30"}} bg="gray.100">
         <Thead >
             <Tr>

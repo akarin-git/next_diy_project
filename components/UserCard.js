@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function UserCard({post}) {
-  // console.log(post[0].user_id);
+  // console.log(post[0].user);
     return (
         <>
             <Flex
@@ -32,13 +32,14 @@ export default function UserCard({post}) {
                     <Image
                       w={20}
                       h={20}
+                      bg="white"
                       fit="cover"
                       rounded="full"
                       borderStyle="solid"
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
+                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_88/v1618453956/User_perspective_matte_gg7mnt.png"
                     />
                </Flex>
 
@@ -48,7 +49,7 @@ export default function UserCard({post}) {
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
-                    My Plofile & Web page {post[0].id}
+                    title
                </chakra.h2>
 
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
@@ -63,7 +64,7 @@ export default function UserCard({post}) {
                       fontSize="xl"
                       color={useColorModeValue("brand.500", "brand.300")}
                     >
-                      Akari Sugi
+                      {post[0].user.name}
                     </Link>
                </Flex>
              </Box>

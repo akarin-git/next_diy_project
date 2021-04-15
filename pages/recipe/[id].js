@@ -1,5 +1,7 @@
 import { getAllPostIds,getPostData } from '../../lib/posts';
 import { useRouter } from 'next/router';
+import { useAppAxiosExecute } from "../../hooks";
+
 import useSWR from 'swr';
 import { API_ENDPOINT } from '../../constants';
 import { useEffect } from 'react';
@@ -15,6 +17,7 @@ import RcTitle from '../../components/RecipeBase/RcTitle';
 import Thx from '../../components/RecipeBase/Thx';
 import AvatarBag from "../../components/RecipeBase/Avatar";
 import SubTitle from "../../components/RecipeBase/SubTitle";
+import IineBtn from "../../components/RecipeBase/IineBtn";
 
 import { motion } from 'framer-motion';
 import { imageVariants } from "../../components/Animetion/MotionBase"
@@ -37,6 +40,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Recipe({staticPost,id}) {
     // console.log(id);
     const router = useRouter();
+    const [{loading,error},iine] = useAppAxiosExecute({
+        method:"POST",
+        url:"/api/image/favorite",
+        errorMessage:"エラー",
+    })
     // swr
     const { data:post ,mutate } = useSWR(
         `${API_ENDPOINT}/api/image/show/${id}`,
@@ -45,15 +53,22 @@ export default function Recipe({staticPost,id}) {
             initialData:staticPost,
         }
     );
-    // console.log(post);
     useEffect(() => {
         mutate();
     },[]);
+
+    const handle = (id) => {
+    console.log(id);
+    iine({
+        post_id:id,
+    });
+  }
 
     if (router.isFallback || !post) {
     return <div>Loading...</div>;
   }
   
+    // console.log(post[0]);
     return (
         <>
         <Layout>
@@ -68,7 +83,11 @@ export default function Recipe({staticPost,id}) {
             
          {/* {post[0].title} */}
                 {/* 画像 */}
-                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615179182/sample.jpg'} width={640} height={400}/>
+                <Image 
+                src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618278490/pzqsbztrzsg2owg8kkql.jpg'} 
+                width={640} 
+                height={400}
+                />
 
                 {/* レシピステップ */}
                 <RecipeStep/>
@@ -76,7 +95,21 @@ export default function Recipe({staticPost,id}) {
                 <RcTable post={post}/>
 
                 <Thx/>
+
+                 <button onClick={handle.bind(this,post[0].id)}>
+                    いいね
+                </button>
+                
             </Container>
+
+            {/* ----------------------------------- */}
+            {/* 条件分岐 */}
+                {post[0].titlee ? (
+                    <p>A</p>
+                ) : (
+                    <p>なし</p>
+                )} 
+            {/* -------------------------------------- */}
 
                 {/* ユーザー */}
                 <UserCard post={post}/>
