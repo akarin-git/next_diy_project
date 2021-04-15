@@ -39,7 +39,7 @@ export default function TopMenuDown() {
                   <Image
                         boxSize="2rem"
                         borderRadius="full"
-                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615180177/Coffee_perspective_matte_s_fizjjb.png"
+                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618453937/Tools_perspective_matte_eikpyb.png"
                         alt="Fluffybuns the destroyer"
                         mr="12px"
                   />

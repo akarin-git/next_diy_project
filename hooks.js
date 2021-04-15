@@ -89,7 +89,8 @@ export const useAppRouter = () => {
             router.route !== "/recipe" &&
             router.route !== "/recipe/[id]" &&
             router.route !== "/category/craft" &&
-            router.route !== "/category/handmade" ,
+            router.route !== "/category/handmade" &&
+            router.route !== "/userpage/[id]" ,
         },
     ];
 };

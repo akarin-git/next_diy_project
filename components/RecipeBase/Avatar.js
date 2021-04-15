@@ -12,14 +12,14 @@ import {
 import { HiHeart } from "react-icons/hi";
 
 export default function AvatarBag({post}) {
-    // console.log(post[0]);
+    // console.log(post[0].user);
     return (
         <Box mb="2" w="100%" align="right">
             <Link href={`/userpage/${post[0].user_id}`}>
             <Flex>
             <Spacer />
                 <Text fontSize="md" align="right" p="1" py="6" color="gray.500">
-                   text {post[0].user_id}
+                   {post[0].user.name}
                 </Text>
             <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4"/>
             </Flex>

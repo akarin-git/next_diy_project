@@ -1,13 +1,14 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel,Box,Grid } from "@chakra-ui/react"
-import MypageCard from './MypageCard';
+import MypageFavCard from './MypageFavCard';
+import MypagePostCard from './MypagePostCard';
 
 
 export default function UserTabs({user}) {
-        // console.log(user[0][0]);
+        // console.log(user[0][0].post_image);
         // console.log(user[0][0].favorite);
-        const favorites = user[0][0].favorite;
-        // console.log(favorites.map((favorite) => favorite.id))
         // console.log(favorites.map((favorite) => favorite))
+        const favorites = user[0][0].favorite;
+        const myposts = user[0][0].post_image;
     return (
         <>
           <Tabs variant="soft-rounded" colorScheme="purple" align="left" w="full" py="10" >
@@ -17,18 +18,21 @@ export default function UserTabs({user}) {
             </TabList>
             <TabPanels my="10">
                     <TabPanel>
-                            <p>one!</p>
-                           <Grid templateColumns="repeat(3, 1fr)" gap={3}>
-                            
+                           <Grid 
+                            templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
+                            gap={3}
+                            w={"full"}
+                            >
+                            {myposts.map((myPost) => <MypagePostCard key={myPost.id} myPost={myPost}/>)}
                            </Grid>
                     </TabPanel>
                     <TabPanel >
                             <Grid 
-                            templateColumns={["repeat(2, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
+                            templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
                             gap={3}
                             w={"full"}
                             >
-                            {favorites.map((favoritePost) => <MypageCard key={favoritePost.id} favoritePost={favoritePost}/>)}
+                            {favorites.map((favoritePost) => <MypageFavCard key={favoritePost.id} favoritePost={favoritePost}/>)}
                             
                            </Grid>
                     </TabPanel>

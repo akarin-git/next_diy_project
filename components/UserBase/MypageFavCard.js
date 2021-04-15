@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 
 
-export default function MypageCard({favoritePost}) {
+export default function MypageFavCard({favoritePost}) {
     return (
       <Link href={`/recipe/${favoritePost.id}`}>
       <Box>
