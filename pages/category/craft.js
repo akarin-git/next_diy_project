@@ -29,11 +29,12 @@ export default function handmade({craftPosts}) {
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
             w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
+            h="auto"
             m="auto"
             >
             {filteredPosts &&
             filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
-            </Grid>
+        </Grid>
         </Layout>
     )
 }
