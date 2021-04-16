@@ -38,13 +38,14 @@ export default function userpage({staticUser,id}) {
 
     return (
         <div>
-            <MainNav/>
+            <Layout>
             <Box py="7">
             </Box>
             <UserTopCard user={user}/> 
             <Box w={["100%","100%","80%"]} m="auto" p="2">
             <UserTabs user={user}/>
             </Box>
+            </Layout>
         </div>
     )
 }

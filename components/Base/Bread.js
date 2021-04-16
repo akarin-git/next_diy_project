@@ -6,11 +6,12 @@ import {
 } from "@chakra-ui/react";
 import Link from 'next/link';
 
-export default function Bread() {
+export default function Bread({category}) {
+    console.log(category)
     return (
          <div className="container">
         
-          <Breadcrumb fontWeight="solid" fontSize="md" >
+          <Breadcrumb fontWeight="solid" fontSize="md" color="gray.500">
             <BreadcrumbItem>
                     <BreadcrumbLink href="/">Home</BreadcrumbLink>
             </BreadcrumbItem>
@@ -18,6 +19,15 @@ export default function Bread() {
             <BreadcrumbItem>
                     <Link href={`/recipe`}>Recipe</Link>
             </BreadcrumbItem>
+
+            {category ? (
+            <BreadcrumbItem>
+                    <Link href={`/category/${category}`}>{category}</Link>
+            </BreadcrumbItem>
+            ) : (
+                 <></>
+            )}
+          
          </Breadcrumb>  
         <style JSX>
         {`

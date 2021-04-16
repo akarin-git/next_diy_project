@@ -4,7 +4,8 @@ import {
   Box,
   Image,
   chakra,
-  useColorModeValue
+  useColorModeValue,
+  Text
 } from "@chakra-ui/react";
 
 export default function UserTopCard({user}) {
@@ -45,10 +46,10 @@ export default function UserTopCard({user}) {
                <chakra.h2
                     color={useColorModeValue("gray.800", "white")}
                     fontSize={{ base: "xl", md: "2xl" }}
-                    mt={{ base: 2, md: 0 }}
+                    mt={{ base: 2, md: 2 }}
                     fontWeight="bold"
                >
-                   {user[0][0].name}
+                   my plofile
                </chakra.h2>
                 <Box>
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
@@ -56,20 +57,15 @@ export default function UserTopCard({user}) {
                     deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
                     commodi hic, suscipit in a veritatis pariatur minus consequuntur!
                </chakra.p>
-               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
-                    commodi hic, suscipit in a veritatis pariatur minus consequuntur!
-               </chakra.p>
+               
                 </Box>
                <Flex justifyContent="end" mt={4}>
-                    <Link
-                      href="#"
-                      fontSize="xl"
-                      color={useColorModeValue("brand.500", "brand.300")}
+                    <Text
+                      m={3}
                     >
-                      Akari Sugi
-                    </Link>
+                    {/* 名前 */}
+                      {user[0][0].name}
+                    </Text>
                </Flex>
              </Box>
              </Link>

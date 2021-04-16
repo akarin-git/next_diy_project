@@ -71,17 +71,19 @@ export default function Recipe({staticPost,id}) {
     // console.log(post[0]);
     return (
         <>
+         {/* このようなdataの形　{post[0].title} */}
+
         <Layout>
-        <motion.div initial="exit" animate="enter" exit="exit">
+            <motion.div initial="exit" animate="enter" exit="exit">
             {/* ブレッド */}
             <CBread post={post}/>
           
-            {/* レシピbox */}
-            <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
+                {/* レシピbox */}
+                <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30" mb={20}>
+
                 {/* タイトル */}
                 <RcTitle  post={post}/>
             
-         {/* {post[0].title} */}
                 {/* 画像 */}
                 <Image 
                 src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618278490/pzqsbztrzsg2owg8kkql.jpg'} 
@@ -90,36 +92,34 @@ export default function Recipe({staticPost,id}) {
                 />
 
                 {/* レシピステップ */}
-                <RecipeStep/>
+                <RecipeStep post={post}/>
+
                 {/* 材料 */}
                 <RcTable post={post}/>
 
-                <Thx/>
-
-                 <button onClick={handle.bind(this,post[0].id)}>
-                    いいね
-                </button>
                 
             </Container>
 
-            {/* ----------------------------------- */}
-            {/* 条件分岐 */}
-                {post[0].titlee ? (
-                    <p>A</p>
-                ) : (
-                    <p>なし</p>
-                )} 
-            {/* -------------------------------------- */}
-
+           
                 {/* ユーザー */}
                 <UserCard post={post}/>
 
-            <Button variant="ghost">
-                <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
-                <Link href={`/recipe`}>
-                <Text>back</Text>
-                </Link>
-            </Button>
+                <Box>
+                <Thx/>
+                {/* お気に入りボタン */}
+                 <button onClick={handle.bind(this,post[0].id)}>
+                   ?
+                </button>
+                </Box>
+
+                {/* 戻るボタン */}
+                <Button variant="ghost">
+                    <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                    <Link href={`/recipe`}>
+                    <Text>back</Text>
+                    </Link>
+                </Button>
+                
        </motion.div>
         </Layout>
          <style JSX>
