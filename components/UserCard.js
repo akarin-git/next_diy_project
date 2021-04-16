@@ -49,13 +49,12 @@ export default function UserCard({post}) {
                     mt={{ base: 2, md: 0 }}
                     fontWeight="bold"
                >
-                    title
+                    mypage
                </chakra.h2>
 
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
-                    commodi hic, suscipit in a veritatis pariatur minus consequuntur!
+                    deserunt ea doloremque natus error, pariatur minus consequuntur!
                </chakra.p>
 
                <Flex justifyContent="end" mt={4}>

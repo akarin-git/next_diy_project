@@ -79,7 +79,7 @@ export default function Recipe({staticPost,id}) {
             <CBread post={post}/>
           
                 {/* レシピbox */}
-                <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30">
+                <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30" mb={20}>
 
                 {/* タイトル */}
                 <RcTitle  post={post}/>
@@ -97,18 +97,20 @@ export default function Recipe({staticPost,id}) {
                 {/* 材料 */}
                 <RcTable post={post}/>
 
-                <Thx/>
-
-                {/* お気に入りボタン */}
-                 <button onClick={handle.bind(this,post[0].id)}>
-                   お気に入り
-                </button>
                 
             </Container>
 
            
                 {/* ユーザー */}
                 <UserCard post={post}/>
+
+                <Box>
+                <Thx/>
+                {/* お気に入りボタン */}
+                 <button onClick={handle.bind(this,post[0].id)}>
+                   ?
+                </button>
+                </Box>
 
                 {/* 戻るボタン */}
                 <Button variant="ghost">

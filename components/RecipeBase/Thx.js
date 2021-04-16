@@ -12,26 +12,30 @@ import { Container,
 
 export default function Thx() {
     return (
-        <Container >
-            <Text fontSize="3xl" align="right" m="10">Thx 👋</Text>
-
-             <Box w="full" >
+        <Box w="full" pr={10} mt={10}>
             <Flex>
              <Spacer />
-             <Box w="50" align="center">
-                 <Icon as={HiHeart} w={8} h={8} color="red.500" />
+            <Text fontSize="3xl" align="right" mr={10}>Thx 👋</Text>
+            
+             <Box w="50" align="center" mr={3}>
+                 <Icon as={HiHeart} w={6} h={6} color="#dc143c" />
                  <Text fontSize="sm">
                  いいね
                  </Text>
              </Box>
-             <Box w="50">
-                 <Icon as={FaStar} w={8} h={8} color="red.500" />
+             <Box w="50" align="center" mr={3}>
+                 <Icon as={FaStar} w={6} h={6} color="#ffd700" />
+                  <Text fontSize="sm">
+                 favorite
+                 </Text>
              </Box>
-             <Box w="50">
-                 <Icon as={FaShareSquare} w={8} h={8} color="red.500" />
+             <Box w="50" align="center" >
+                 <Icon as={FaShareSquare} w={6} h={6} color="#4169e1" />
+                  <Text fontSize="sm">
+                 sher
+                 </Text>
              </Box>
-            </Flex>
-             </Box>
-        </Container>
+           </Flex>
+        </Box>
     )
 }

@@ -43,6 +43,7 @@ export default function Recipe({recipePosts}) {
             gap={4}
             w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
             m="auto"
+            mt={10}
             >
                 {filteredPosts &&
                 filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
