@@ -1,9 +1,12 @@
-import React from 'react'
+import { 
+        Container
+} from "@chakra-ui/react";
+import PostRecipeForm from '../components/PostRecipeForm'
 
 export default function PostForm() {
     return (
-        <div>
-            
-        </div>
+        <Container>
+            <PostRecipeForm/>
+        </Container>
     )
 }
