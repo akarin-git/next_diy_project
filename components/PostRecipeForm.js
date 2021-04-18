@@ -139,7 +139,6 @@ export default function PostRecipeForm({onSubmit}) {
              name="image_path"
              onChange={(e) => setImagePath(e.target.files[0])}
             />
-            <Step post={post}/>
           {/* <input
                 multiple
                 accept="image/*"
