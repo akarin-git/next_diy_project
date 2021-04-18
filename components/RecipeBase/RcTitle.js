@@ -12,7 +12,7 @@ import {
 
 
 export default function RcTitle({post}) {
-   // console.log(post.title);
+   // console.log(post[0].subtitle);
     return (
         <>
            <Box>
@@ -26,15 +26,14 @@ export default function RcTitle({post}) {
                  </Text>
                  </motion.div>
 
+           <SubTitle post={post}/>
           {/* icon avater set */}
           <AvatarBag post={post}/>
           {/* サブタイトル */}
-           <SubTitle/>
            {/* ステップカード */}
-           <Step/>
-
-            <Box m="10"/>
-          </Box>
+           {/* <Step post={post}/> */}
+         </Box>
+           
         </>
     )
 }
