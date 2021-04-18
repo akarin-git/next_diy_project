@@ -1,11 +1,14 @@
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 html,
-body {
+body,
+#root {
   background:#ffffe0;
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  
 }
+
 
 a {
   color: inherit;
@@ -27,3 +30,4 @@ a {
   color: #ff6a7c;
   margin-top: 1rem;
 }
+
