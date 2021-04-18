@@ -31,10 +31,11 @@ export default function Recipe({recipePosts}) {
         mutate();
     },[]);
 
+     const category = '';
 
     return (
         <Layout>
-            <Bread/>
+            <Bread />
         <div className="head">
             {/* <HeadLayout /> */}
         </div>

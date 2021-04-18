@@ -76,9 +76,9 @@ export default function MainNav() {
               Blog
               </Button>
             </Link>
-            <Link href="/about">
+            <Link href="/me">
               <Button variant="ghost">
-              About
+              MyPost
               </Button>
             </Link>
             </HStack>
@@ -133,9 +133,9 @@ export default function MainNav() {
                     Blog
                   </Button>
                 </Link>
-                <Link href="/about">
+                <Link href="/me">
                   <Button w="full" variant="ghost">
-                    About
+                    MyPost
                   </Button>
                 </Link>
                 <Link href="/signin">

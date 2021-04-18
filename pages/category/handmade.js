@@ -26,7 +26,7 @@ export default function handmade({handmadePosts}) {
         (a,b) => new Date(b.created_at) - new Date(a.created_at)
     );
 
-    const category = filteredPosts[0].category;
+     const category = 'handmade';
 
     return (
         <Layout>
