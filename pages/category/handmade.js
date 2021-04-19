@@ -4,8 +4,9 @@ import useSWR from 'swr';
 import { useEffect } from 'react';
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
-import { Grid } from "@chakra-ui/react";
+import { Grid,Box } from "@chakra-ui/react";
 import Bread from '../../components/Base/Bread';
+import FormInfoModal from '../../components/Base/FormInfoModal';
 
 
 // swr

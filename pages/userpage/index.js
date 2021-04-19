@@ -8,7 +8,7 @@ import useMe from "../../lib/users";
 export default function index() {
 //  const [router] = useAppRouter();
   const { me, refreshMe } = useMe();
-  console.log(me);
+//   console.log(me);
   
     return (
         <div>

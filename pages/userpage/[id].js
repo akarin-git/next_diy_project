@@ -27,7 +27,7 @@ export default function userpage({staticUser,id}) {
             initialData:staticUser,
         }
     );
-    console.log(user[0]);
+    // console.log(user);
     useEffect(() => {
         mutate();
     },[]);
