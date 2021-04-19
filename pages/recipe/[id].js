@@ -114,6 +114,8 @@ export default function Recipe({staticPost,id}) {
                  <button onClick={handle.bind(this,post[0].id)}>
                    ?
                 </button>
+                
+
                 </Box>
 
                 {/* 戻るボタン */}
@@ -123,6 +125,7 @@ export default function Recipe({staticPost,id}) {
                     <Text>back</Text>
                     </Link>
                 </Button>
+
                 
        </motion.div>
         </Layout>

@@ -34,16 +34,16 @@ export default function Home() {
         justifyContent="space-between"
       >
       <Box
-        w={["100%","100%","60%"]}
+        w={["100%","50%","40%"]}
         h="auto"
         pt={["5","10","20"]}
-        pl={["5","5","5","40"]}
+        pl={["5","5","5","10"]}
       >
        <FormInfoModal/>
       <Text fontSize="70" >
         search
       </Text>
-      <Box my="10">
+      <Box my="10" mx="20px">
        <InputGroup >
         <InputLeftElement
           pointerEvents="none"
@@ -72,7 +72,7 @@ export default function Home() {
        <Text w="70%" align="center">
        テキスト
        </Text>
-       <FormInfoModal/>
+      
 
       <Image
        src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,h_384/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png'}
@@ -92,7 +92,7 @@ export default function Home() {
         />
         <Input type="tel" placeholder="Recipe Serch" />
       </InputGroup>
-
+       <FormInfoModal/>
       </Box>
       </Box>
       </Box>

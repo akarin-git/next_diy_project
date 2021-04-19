@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import MainNav from "../components/MainNav";
+import MenuBtn from "../components/Base/MenuBtn";
 import { Box,Text } from "@chakra-ui/react"
 
 
@@ -15,7 +16,12 @@ export default function Layout({children,title = "fab loop"}) {
         <MainNav />
         </header>
         <main>
+        <Box position="relative">
         {children}
+        
+        <MenuBtn/>
+        </Box>
+ 
         </main>
         <footer>
             <Box align="center" pt={40}>
