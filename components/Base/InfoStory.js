@@ -162,7 +162,6 @@ function getPageContent(step) {
         ))}
       </Stepper>
 
-
       <div>
         {activeStep === steps.length ? (
           <div dir="rtl">
