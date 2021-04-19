@@ -4,8 +4,9 @@ import useSWR from 'swr';
 import { useEffect } from 'react';
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
-import { Grid } from "@chakra-ui/react";
+import { Grid,Box } from "@chakra-ui/react";
 import Bread from '../../components/Base/Bread';
+import FormInfoModal from '../../components/Base/FormInfoModal';
 
 
 // swr
@@ -34,6 +35,9 @@ export default function handmade({craftPosts}) {
     return (
         <Layout>
         <Bread category={category}/>
+        <Box align="right" mx="20">
+        <FormInfoModal/>
+        </Box>
          <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}

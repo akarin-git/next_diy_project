@@ -17,7 +17,7 @@ export default function FormInfoModal() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-    <Button onClick={onOpen}>Open Modal</Button>
+    <Button onClick={onOpen}>About MyPost FabLoop</Button>
       <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay/>
         <ModalContent >

@@ -9,6 +9,7 @@ import Layout from '../../components/Layout';
 import HeadLayout from '../../components/HeadLayout';
 import RcCard from '../../components/RcCard';
 import Bread from '../../components/Base/Bread';
+import FormInfoModal from '../../components/Base/FormInfoModal';
 
 import { Grid,Box,Flex,Text } from "@chakra-ui/react";
 
@@ -38,7 +39,9 @@ export default function Recipe({recipePosts}) {
     return (
         <Layout>
             <Bread />
-          
+           <Box align="right" mx="20">
+            <FormInfoModal/>
+            </Box>
         <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}

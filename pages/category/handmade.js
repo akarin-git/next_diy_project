@@ -31,6 +31,9 @@ export default function handmade({handmadePosts}) {
     return (
         <Layout>
         <Bread category={category}/>
+         <Box align="right" mx="20">
+        <FormInfoModal/>
+        </Box>
              <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
