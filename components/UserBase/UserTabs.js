@@ -7,8 +7,8 @@ export default function UserTabs({user}) {
         // console.log(user[0][0].post_image);
         // console.log(user[0][0]);
         // console.log(favorites.map((favorite) => favorite))
-        const favorites = user[0][0].favorite;
-        const myposts = user[0][0].post_image;
+        const favorites = user[0].favorite;
+        const myposts = user[0].post_image;
     return (
         <>
           <Tabs variant="soft-rounded" colorScheme="purple" align="left" w="full" py="10" >

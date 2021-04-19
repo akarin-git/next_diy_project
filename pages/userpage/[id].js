@@ -27,7 +27,7 @@ export default function userpage({staticUser,id}) {
             initialData:staticUser,
         }
     );
-    // console.log(user[0]);
+    console.log(user[0]);
     useEffect(() => {
         mutate();
     },[]);
@@ -66,7 +66,7 @@ export async function getStaticProps({ params }){
     // console.log(staticUser);
     return {
         props:{
-            id:staticUser[0][0].id,
+            id:staticUser[0].id,
             staticUser:staticUser,
         },
         revalidate:3,

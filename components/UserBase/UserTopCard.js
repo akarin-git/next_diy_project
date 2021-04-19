@@ -64,7 +64,7 @@ export default function UserTopCard({user}) {
                       m={3}
                     >
                     {/* 名前 */}
-                      {user[0][0].name}
+                      {user[0].name}
                     </Text>
                </Flex>
              </Box>
