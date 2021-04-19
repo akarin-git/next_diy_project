@@ -5,12 +5,13 @@ import {
 } from "@chakra-ui/react";
 
 
-export default function SubTitle() {
+export default function SubTitle({post}) {
+    // console.log(post[0])
     return (
         <div>
              <Stack direction="row" h="120" p={6} >
                 <Divider orientation="vertical" />
-                <Text fontSize={["xs","sm","md"]}>３ステップで簡単にシルクスクリーンのTshotsを作れます。３ステップで簡単にシルクスクリーンのTshotsを作れます</Text>
+                <Text p="5" fontSize={["xs","sm","md"]}>{post[0].subtitle}</Text>
             </Stack>
         </div>
     )

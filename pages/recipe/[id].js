@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 import Layout from '../../components/Layout';
 import UserCard from '../../components/UserCard';
-import RecipeStep from '../../components/RecipeStep';
+import RecipeStep from '../../components/RecipeBase/RecipeStep';
 import CBread from '../../components/Base/CBread';
 import RcTable from '../../components/RecipeBase/RcTable';
 import RcTitle from '../../components/RecipeBase/RcTitle';
@@ -18,6 +18,7 @@ import Thx from '../../components/RecipeBase/Thx';
 import AvatarBag from "../../components/RecipeBase/Avatar";
 import SubTitle from "../../components/RecipeBase/SubTitle";
 import IineBtn from "../../components/RecipeBase/IineBtn";
+import Step from "../../components/RecipeBase/Step";
 
 import { motion } from 'framer-motion';
 import { imageVariants } from "../../components/Animetion/MotionBase"
@@ -83,14 +84,17 @@ export default function Recipe({staticPost,id}) {
 
                 {/* タイトル */}
                 <RcTitle  post={post}/>
-            
+
+                {/* ステップカード */}
+                <Step post={post}/>
+
                 {/* 画像 */}
                 <Image 
-                src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618278490/pzqsbztrzsg2owg8kkql.jpg'} 
+                src={post[0].image_path} 
                 width={640} 
                 height={400}
                 />
-
+                
                 {/* レシピステップ */}
                 <RecipeStep post={post}/>
 

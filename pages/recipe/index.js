@@ -1,4 +1,6 @@
 import useSWR from 'swr';
+import Image from 'next/image';
+
 import { getAllPostsData } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import { useEffect } from 'react';
@@ -8,7 +10,7 @@ import HeadLayout from '../../components/HeadLayout';
 import RcCard from '../../components/RcCard';
 import Bread from '../../components/Base/Bread';
 
-import { Grid } from "@chakra-ui/react";
+import { Grid,Box,Flex,Text } from "@chakra-ui/react";
 
 
 // swr
@@ -31,20 +33,19 @@ export default function Recipe({recipePosts}) {
         mutate();
     },[]);
 
+     const category = '';
 
     return (
         <Layout>
-            <Bread/>
-        <div className="head">
-            {/* <HeadLayout /> */}
-        </div>
+            <Bread />
+          
         <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
             w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
             m="auto"
             mt={10}
-            >
+        >
                 {filteredPosts &&
                 filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
             {/* // filteredPosts.map((post) => <Card key={post.id} post={post}/>)} */}
