@@ -45,7 +45,6 @@ export default function TopFeature() {
 
   return (
     <Flex
-    //   bg="gray.600"
       bg="#b0c4de"
       p={["5","20"]}
       w="auto"

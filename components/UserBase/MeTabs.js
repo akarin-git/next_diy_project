@@ -2,19 +2,16 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel,Box,Grid } from "@chakra-ui/rea
 import MypageFavCard from './MypageFavCard';
 import MypagePostCard from './MypagePostCard';
 
-
-export default function UserTabs({user}) {
-        // console.log(user[0].post_image);
-        // console.log(user[0][0]);
-        // console.log(favorites.map((favorite) => favorite))
-        const favorites = user[0].favorite;
-        const myposts = user[0].post_image;
+export default function MeTabs({me}) {
+//      console.log(me[0]);
+     const favorites = me[0].favorite;
+     const myposts = me[0].post_image;
     return (
         <>
-          <Tabs variant="soft-rounded" colorScheme="purple" align="left" w="full" py="10" >
+           <Tabs variant="soft-rounded" colorScheme="pink" align="left" w="full" py="10" >
             <TabList >
                     <Tab>my post</Tab>
-                    <Tab>favorite</Tab>
+                    <Tab>my favorite</Tab>
             </TabList>
             <TabPanels my="10">
                     <TabPanel>
@@ -37,7 +34,7 @@ export default function UserTabs({user}) {
                            </Grid>
                     </TabPanel>
             </TabPanels>
-        </Tabs>
+        </Tabs>  
         </>
     )
 }

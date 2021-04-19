@@ -76,7 +76,7 @@ export default function MainNav() {
               Blog
               </Button>
             </Link>
-            <Link href="/me">
+            <Link href="/userpage">
               <Button variant="ghost">
               MyPost
               </Button>
