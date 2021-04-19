@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 import Layout from '../../components/Layout';
 import UserCard from '../../components/UserCard';
-import RecipeStep from '../../components/RecipeStep';
+import RecipeStep from '../../components/RecipeBase/RecipeStep';
 import CBread from '../../components/Base/CBread';
 import RcTable from '../../components/RecipeBase/RcTable';
 import RcTitle from '../../components/RecipeBase/RcTitle';
@@ -19,7 +19,6 @@ import AvatarBag from "../../components/RecipeBase/Avatar";
 import SubTitle from "../../components/RecipeBase/SubTitle";
 import IineBtn from "../../components/RecipeBase/IineBtn";
 import Step from "../../components/RecipeBase/Step";
-
 
 import { motion } from 'framer-motion';
 import { imageVariants } from "../../components/Animetion/MotionBase"

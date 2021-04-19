@@ -18,7 +18,7 @@ export const Spring = () => {
 
     return (
     <>
-    <Box align="center" w="40%" m="auto" mt="10" h="auto">
+    <Box align="center" w={["30%","30%","40%"]} m="auto" mt="10" h="auto">
     <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
       <animated.div className="card1" style={{ transform: props.xy.interpolate(trans1) }} />
       <animated.div className="card2" style={{ transform: props.xy.interpolate(trans2) }} />
