@@ -16,7 +16,7 @@ export default function Layout({children,title = "fab loop"}) {
         <MainNav />
         </header>
         <main>
-        <Box position="relative">
+        <Box position={["none","relative"]}>
         {children}
         
         <MenuBtn/>

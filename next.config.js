@@ -4,7 +4,7 @@ module.exports = {
     API_CLIENT_ID: 4,
     API_CLIENT_SECRET: "RHYdJhZ1JM6JWjeh3k7Ekgzqv1zzJfLB9Q1rtJG0",
     // API_CLIENT_ID: 1,
-    // API_CLIENT_SECRET: "Rn7H9fwF5g8IVZEHVIXL8wfWgUMn2lBiU6HBxUEv",
+    // API_CLIENT_SECRET: "WIZxGR16ynvUJjgkKVJkyb9VN5kkpydnznypSvTZ",
   },
   future: {
     webpack5: true,

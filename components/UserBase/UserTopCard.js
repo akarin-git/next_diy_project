@@ -39,26 +39,18 @@ export default function UserTopCard({user}) {
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
+                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_418/v1618539579/wed/User_perspective_matte_s_vbu7kn.png"
                     />
                </Flex>
 
                <chakra.h2
-                    color={useColorModeValue("gray.800", "white")}
+                    color={useColorModeValue("gray.600", "white")}
                     fontSize={{ base: "xl", md: "2xl" }}
                     mt={{ base: 2, md: 2 }}
                     fontWeight="bold"
                >
                    my plofile
                </chakra.h2>
-                <Box>
-               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
-                    commodi hic, suscipit in a veritatis pariatur minus consequuntur!
-               </chakra.p>
-               
-                </Box>
                <Flex justifyContent="end" mt={4}>
                     <Text
                       m={3}
@@ -67,6 +59,12 @@ export default function UserTopCard({user}) {
                       {user[0].name}
                     </Text>
                </Flex>
+                <Box>
+               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
+                    自分のページ
+               </chakra.p>
+               
+                </Box>
              </Box>
              </Link>
             </Flex>  

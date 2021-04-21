@@ -5,14 +5,21 @@ import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import SettingsIcon from '@material-ui/icons/Settings';
+import SearchIcon from '@material-ui/icons/Search';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import VideoLabelIcon from '@material-ui/icons/VideoLabel';
+import CreateIcon from '@material-ui/icons/Create';
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import {
+   Box,Flex,Text,
+} from "@chakra-ui/react";
+
 import Story1page from './Story1page'
+import Story2page from './Story2page'
+import Story3page from './Story3page'
+import FinishStory from './FinishStory'
 
 
 const ColorlibConnector = withStyles({
@@ -67,9 +74,9 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <SettingsIcon />,
+    1: <SearchIcon />,
     2: <GroupAddIcon />,
-    3: <VideoLabelIcon />,
+    3: <CreateIcon />,
   };
 
   return (
@@ -114,14 +121,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['DIY Recipeをみる', 'アカウントを登録する', 'Recipeを投稿'];
 }
 
 
 
 export default function InfoStory() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(1);
+  const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
 function getPageContent(step) {
@@ -129,11 +136,11 @@ function getPageContent(step) {
     case 0:
       return <Story1page/>;
     case 1:
-      return <Story1page/>;
+      return <Story2page/>;
     case 2:
-      return 'This is the bit I really care about!';
+      return <Story3page/>;
     default:
-      return 'Unknown step';
+      return 'LET FAB LOOP';
   }
 }
 
@@ -165,9 +172,7 @@ function getPageContent(step) {
       <div>
         {activeStep === steps.length ? (
           <div dir="rtl">
-            {/* <Typography className={classes.instructions}>
-              All steps completed - you&apos;re finished
-            </Typography> */}
+           <FinishStory/>
             <Button onClick={handleReset} className={classes.button}>
               Reset
             </Button>

@@ -15,11 +15,11 @@ export default function MeTopCard({me}) {
           <Flex
              bg="#d8bfd8"
              p={5}
+             mt={8}
              w="full"
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/mypage`}>
              <Box
                w={["100%","100%","75%"]}
                mx="auto"
@@ -33,42 +33,38 @@ export default function MeTopCard({me}) {
                     <Image
                       w={20}
                       h={20}
+                      bg="#fff"
                       fit="cover"
                       rounded="full"
                       borderStyle="solid"
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80"
+                      src="https://res.cloudinary.com/kiyopikko/image/upload/v1561617116/empty-user-image_o4ll8m.png"
                     />
                </Flex>
 
                <chakra.h2
-                    color={useColorModeValue("gray.800", "white")}
+                    color={useColorModeValue("gray.600", "white")}
                     fontSize={{ base: "xl", md: "2xl" }}
                     mt={{ base: 2, md: 2 }}
+                    ml="10"
                     fontWeight="bold"
                >
-                   my plofile
+                   {me[0].name}
                </chakra.h2>
+              
                 <Box>
-               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex
-                    commodi hic, suscipit in a veritatis pariatur minus consequuntur!
+               <chakra.p
+                mt={2}
+                color={useColorModeValue("gray.600", "gray.200")}
+                ml="10"
+               >
+                    自分のページ
                </chakra.p>
                
                 </Box>
-               <Flex justifyContent="end" mt={4}>
-                    <Text
-                      m={3}
-                    >
-                    {/* 名前 */}
-                      {me[0].name}
-                    </Text>
-               </Flex>
              </Box>
-             </Link>
             </Flex>     
         </>
     )

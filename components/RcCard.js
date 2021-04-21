@@ -4,17 +4,19 @@ import {
   Image,
   Flex,
   useColorModeValue,
-  Text
+  Text,
+  Badge
 } from "@chakra-ui/react";
 import Link from 'next/link';
 
+
 export default function RcCard({post}) {
+  console.log(post);
     return (
         <>
     <Link href={`/recipe/${post.id}`}>
       <Flex
-        bg="white"
-        p={[1,3,4,4]}
+        m={[1,3,4,4]}
         w="full"
         alignItems="center"
         justifyContent="center"
@@ -39,13 +41,12 @@ export default function RcCard({post}) {
 
         <Box p={2}>
           <Box>
-            <chakra.span
-              fontSize="xs"
-              textTransform="uppercase"
-              color={useColorModeValue("brand.600", "brand.400")}
-            >
-              Product
-            </chakra.span>
+            <Flex>
+            <Badge  m="2" colorScheme="green">
+                   {post.category}
+            </Badge>
+             <Badge variant="outline" colorScheme="purple" m="2">{post.difficult}</Badge>
+             </Flex>
             <Text
               display="block"
               color={useColorModeValue("gray.800", "white")}

@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
 import { Grid,Box } from "@chakra-ui/react";
 import Bread from '../../components/Base/Bread';
+import CallCard from '../../components/Base/CallCard';
 import FormInfoModal from '../../components/Base/FormInfoModal';
 
 
@@ -34,10 +35,13 @@ export default function handmade({craftPosts}) {
 
     return (
         <Layout>
-        <Bread category={category}/>
-        <Box align="right" mx="20">
-        <FormInfoModal/>
-        </Box>
+         <Box bg="#EED7E3" pb="10">
+            <Bread category={category}/>
+            <Box align="right" mx="20">
+                <FormInfoModal/>
+            </Box>
+         </Box>
+         <Box mb="40">
          <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
@@ -49,6 +53,8 @@ export default function handmade({craftPosts}) {
             {filteredPosts &&
             filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
         </Grid>
+        </Box>
+         <CallCard/>
         </Layout>
     )
 }

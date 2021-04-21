@@ -9,6 +9,7 @@ import Layout from '../../components/Layout';
 import HeadLayout from '../../components/HeadLayout';
 import RcCard from '../../components/RcCard';
 import Bread from '../../components/Base/Bread';
+import CallCard from '../../components/Base/CallCard';
 import FormInfoModal from '../../components/Base/FormInfoModal';
 
 import { Grid,Box,Flex,Text } from "@chakra-ui/react";
@@ -38,10 +39,13 @@ export default function Recipe({recipePosts}) {
 
     return (
         <Layout>
+        <Box bg="#E3DBEB" pb="10">
             <Bread />
            <Box align="right" mx="20">
             <FormInfoModal/>
             </Box>
+        </Box>
+        <Box mb="40">
         <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
@@ -53,6 +57,9 @@ export default function Recipe({recipePosts}) {
                 filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
             {/* // filteredPosts.map((post) => <Card key={post.id} post={post}/>)} */}
          </Grid> 
+         </Box>
+
+         <CallCard/>
         <style JSX>
                 {`
                 .head{

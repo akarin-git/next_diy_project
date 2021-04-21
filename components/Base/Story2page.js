@@ -1,17 +1,14 @@
 import {
-   Box,Flex,Text,Button,
+   Box,Flex,Text,
    Spacer,Avatar,Tag,TagLabel
 } from "@chakra-ui/react";
-
 import Image from 'next/image';
-import Link from 'next/link';
 
-
-export default function Story1page() {
+export default function Story2page() {
     return (
-        <>
+         <>
         {/* 親要素 */}
-        <Box w="85%" m="auto" mb="10" bg="#e6e6fa" p="10" borderRadius="20px">
+        <Box w="85%" m="auto" mb="10" bg="#fafad2" p="10" borderRadius="20px">
 
            {/* 子要素 */}
         
@@ -45,11 +42,9 @@ export default function Story1page() {
         {/* 子要素４　右寄せ */}
         <Flex >
         <Spacer/>
-        <Link href={`/recipe`}>
-         <Button onClick={close}>
+         <Box bg="gray" w="60%" align="center">
         Let't　watch
-        </Button>
-        </Link>
+        </Box>
         </Flex>
         </Box>
         </>

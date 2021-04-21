@@ -6,10 +6,10 @@ import Backdrop from '@material-ui/core/Backdrop';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
-import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
-import SaveIcon from '@material-ui/icons/Save';
-import PrintIcon from '@material-ui/icons/Print';
-import ShareIcon from '@material-ui/icons/Share';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
+import SearchIcon from '@material-ui/icons/Search';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import TagFacesIcon from '@material-ui/icons/TagFaces';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles((theme) => ({
@@ -33,11 +33,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const actions = [
-  { icon: <Link href="/"><FileCopyIcon /></Link>, name: 'Copy',href:'/recipe' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-  { icon: <Link href="me"><FavoriteIcon /></Link>, name: 'Like' },
+  { icon: <Link href="userpage"><TagFacesIcon /></Link>, name: 'マイページ' },
+  { icon: <Link href="/PostForm"><BorderColorIcon /></Link>, name: '投稿する' },
+  { icon: <Link href="/signin"><SupervisorAccountIcon /></Link>, name: 'ログイン' },
+  { icon: <Link href="/recipe"><SearchIcon /></Link>, name: 'レシピを探す' },
 ];
 
 export default function MenuBtn() {

@@ -31,13 +31,13 @@ export default function index() {
             <Box w={["100%","100%","80%"]} m="auto" p="2">
                 <MeTabs me={me}/>
             </Box>
+            <Box align="center">
+                <Button isTxt onClick={logout} w="auto">
+                ログアウト
+              </Button>
+            </Box>
             </Box>
           )}
-    <Box align="center">
-      <Button isTxt onClick={logout} w="auto">
-        ログアウト
-      </Button>
-      </Box>
       </Layout>
         </div>
     )

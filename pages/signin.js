@@ -23,7 +23,7 @@ const [
 useEffect(() => {
    if(data && process.browser){
        window.localStorage.setItem("Fab_loop_token",data.access_token);
-       router.push("/form")
+       router.push("/PostForm")
    }
 }, [data])
 
