@@ -2,13 +2,19 @@ import { getCategoryHandmade } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
+import Link from 'next/link'
+
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
-import { Grid,Box } from "@chakra-ui/react";
 import Bread from '../../components/Base/Bread';
 import CallCard from '../../components/Base/CallCard';
 
 import FormInfoModal from '../../components/Base/FormInfoModal';
+import CategoryBtn from '../../components/Base/CategoryBtn';
+import TopCatchBar from '../../components/Base/TopCatchBar';
+import { HiChevronLeft } from "react-icons/hi";
+
+import { Grid,Box,Flex,Image,Text,Icon,Button } from "@chakra-ui/react";
 
 
 // swr
@@ -35,12 +41,10 @@ export default function handmade({handmadePosts}) {
         <Layout>
         <Box bg="#EED7E3" pb="10">
             <Bread category={category}/>
-            <Box align="right" mx="20">
-                <FormInfoModal/>
-            </Box>
+            <TopCatchBar/>
         </Box>
         <Box mb="40">
-             <Grid 
+            <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
             w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
@@ -51,6 +55,14 @@ export default function handmade({handmadePosts}) {
             filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
             </Grid>
         </Box>
+
+            <Button variant="ghost">
+                    <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                    <Link href={`/recipe`}>
+                    <Text>back</Text>
+                    </Link>
+            </Button>
+
           <CallCard/>
         </Layout>
     )

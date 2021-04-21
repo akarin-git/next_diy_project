@@ -12,7 +12,8 @@ import {
    Box,Flex,Text,Heading,
    InputGroup,Button,
    InputLeftAddon,Image,
-   Input,InputLeftElement
+   Input,InputLeftElement,
+   Grid
 } from "@chakra-ui/react";
 import { FcSearch } from "react-icons/fc";
 
@@ -49,7 +50,7 @@ export default function Home() {
         </Text>
         
       </Flex>
-      <Box my="10" >
+      <Box mt="10" >
        <FormInfoModal/>
       </Box>
 
@@ -60,11 +61,11 @@ export default function Home() {
       {/* mobile用 */}
       <Box
        display={["block","block","none"]}
-       w={["100%","80%"]}
+       w={["100%","100%"]}
        m="auto"
+       bg="#f8f8ff"
       >
-       
-      <Box m="10">
+      <Box p="10">
         <Image
          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png"
          alt="Picture of the author"
@@ -73,15 +74,39 @@ export default function Home() {
         />
       </Box>
 
-      <Box align="right" m="10" >
+      <Box align="right" mt="10" >
        <Heading as="h2" size="2xl" mb="10">
        Fab Loop
       </Heading>
         <FormInfoModal/>
       </Box>
-
       </Box>
 
+    {/* 説明 */}
+      <Box bg="#f8f8ff" p="10">
+      {/* <Box w="80%" borderRadius="20" m="auto" bg="#BFE6CF" p="10">
+      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            <Box w="100%" h="10" bg="#fff" />
+            <Box w="100%" h="10" bg="#fff" />
+            <Box w="100%" h="10" bg="#fff" />
+            
+            </Grid>
+      </Box> */}
+      <Box w="90%" borderRadius="15" m="auto" p="10" bg="#CDE8D8">
+       <Flex>
+       <Box w="50%" m="auto" bg="#fff" borderRadius="20" p="10">
+       iji
+       </Box>
+       <Image
+         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png"
+         alt="Picture of the author"
+         width={250}
+         height={250}
+         m="auto"
+        />
+       </Flex>
+      </Box>
+      </Box>
       <Box bg="#f5f5f5" >
       <TopFeature/>
       </Box>

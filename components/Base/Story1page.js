@@ -15,7 +15,7 @@ export default function Story1page() {
 
            {/* 子要素 */}
         
-        <Box p={["0","5"]}>
+        <Box p={["0","0","5"]}>
         <Flex>
         <Box w="50%" display={["none","block"]}>
         <Image
@@ -43,14 +43,14 @@ export default function Story1page() {
        
 
         {/* 子要素４　右寄せ */}
-        <Flex >
+        {/* <Flex >
         <Spacer/>
         <Link href={`/recipe`}>
          <Button onClick={close}>
         Let't　watch
         </Button>
         </Link>
-        </Flex>
+        </Flex> */}
         </Box>
         </>
     )

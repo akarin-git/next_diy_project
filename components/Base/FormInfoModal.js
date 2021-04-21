@@ -8,6 +8,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   Button,Text,
+  chakra
 } from "@chakra-ui/react"
 import InfoStory from './InfoStory';
 import Link from 'next/link';
@@ -19,7 +20,22 @@ export default function FormInfoModal() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-    <Button onClick={onOpen} px="20" position={["none","relative"]}>About FabLoop</Button>
+    <Button
+     onClick={onOpen}
+     px="3"
+     py="2"
+     w="300px"
+     mb="10"
+     align="center"
+     position={["none","none","relative"]}
+     size="md" cursor="cursor"
+     _hover={{
+    background: "white",
+    color: "teal.500",
+    
+    }}>
+      About FabLoop
+    </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay/>
         <ModalContent >

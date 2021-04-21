@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 
 export default function RcCard({post}) {
-  console.log(post);
+  // console.log(post);
     return (
         <>
     <Link href={`/recipe/${post.id}`}>

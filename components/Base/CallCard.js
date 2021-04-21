@@ -15,7 +15,7 @@ export default function CallCard() {
         <>
                <Box 
                  bg="#ADC9D0"
-                 py="10"
+                 py="2"
                  opacity="90%"
                 >
                 <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px"> 

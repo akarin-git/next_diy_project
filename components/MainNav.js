@@ -89,8 +89,8 @@ export default function MainNav() {
             </Link>
 
 {/* absolute */}
-            {/* モバイル */}
-            <Box display={{ base: "inline-flex", md: "none" }} z-index="2">
+            {/* モバイルnline-flex */}
+            <Box display={["inline-flex","inline-flex","inline-flex","none"]}>
               <IconButton
                 display={{ base: "flex", md: "none" }}
                 aria-label="Open menu"
