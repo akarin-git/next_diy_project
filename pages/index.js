@@ -58,30 +58,29 @@ export default function Home() {
       </Box>
 
       {/* mobile用 */}
-      <Box mb="20">
-        {/* hi */}
-
-        <Box m="10">
+      <Box
+       display={["block","block","none"]}
+       w={["100%","80%"]}
+       m="auto"
+      >
+       
+      <Box m="10">
         <Image
          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png"
          alt="Picture of the author"
          width={200}
          height={200}
         />
-        </Box>
-        <Box align="right" mx="10">
+      </Box>
+
+      <Box align="right" m="10" >
        <Heading as="h2" size="2xl" mb="10">
        Fab Loop
       </Heading>
         <FormInfoModal/>
-
       </Box>
 
-
-        
-        
-        
-        </Box>
+      </Box>
 
       <Box bg="#f5f5f5" >
       <TopFeature/>
