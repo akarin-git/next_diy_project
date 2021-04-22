@@ -27,6 +27,8 @@ import { HiChevronLeft } from "react-icons/hi";
 import { HiHeart } from "react-icons/hi";
 import { FaShareSquare,FaStar } from "react-icons/fa";
 import { FcInternal } from "react-icons/fc";
+import { FiChevronsDown } from "react-icons/fi";
+
 
 import { Container,
         Button,
@@ -74,7 +76,7 @@ export default function Recipe({staticPost,id}) {
     return <div>Loading...</div>;
   }
   
-    // console.log(post[0]);
+    console.log(post[0]);
     return (
         <>
          {/* このようなdataの形　{post[0].title} */}
@@ -88,7 +90,9 @@ export default function Recipe({staticPost,id}) {
                 <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30" mb={20}>
 
                 {/* タイトル */}
-                <RcTitle  post={post}/>
+                <RcTitle
+                  post={post}
+                />
 
                 {/* ステップカード */}
                 <Step post={post}/>
@@ -120,8 +124,10 @@ export default function Recipe({staticPost,id}) {
              </Box>
                 <ShereBtn post={post}/>
             </Flex>
-                
 
+                <Box align="center">
+                    <Icon as={FiChevronsDown} w={10} h={10} color="#b0c4de" align="center"/>
+                </Box>
                  <UserCard post={post}/>
             </Box>
            
@@ -141,18 +147,15 @@ export default function Recipe({staticPost,id}) {
                 w="60%"
                 h="auto"
                 m="auto"
+                align="center"
                 >
                  <Heading as="h2" size="xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
-                <Flex mt="10">
-                <Text ml="6" color="#696969" mt="2" mr="5">
-                login はこちらから 
-                </Text>
-                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline">
+                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10">
                 login
                 </Button>
-                </Flex>
+                
                 
                 </Box>
                 </Flex>

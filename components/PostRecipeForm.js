@@ -9,10 +9,13 @@ import {
         RadioGroup,Button,
         Radio,Select,
         Textarea,Flex,
-        Container,Spacer
+        Container,Spacer,
+        Heading,Tag
 } from "@chakra-ui/react";
 import { BiListCheck } from "react-icons/bi";
 import { useState } from 'react';
+import Image from 'next/image';
+
 
 
 export default function PostRecipeForm({onSubmit}) {
@@ -23,7 +26,6 @@ export default function PostRecipeForm({onSubmit}) {
     const [image_path, setImagePath] = useState("");
     const [step, setStep] = useState("");
     const [hour, setHour] = useState("1");
-    const [comment, setComment] = useState("");
     const [difficult, setDifficult] = useState("1");
     const [descriptionA,setDescriptionA] = useState("");
     const [descriptionB,setDescriptionB] = useState("");
@@ -66,7 +68,7 @@ export default function PostRecipeForm({onSubmit}) {
         e.preventDefault();
         onSubmit({　
             category,title,subtitle,
-            web_page,image_path,step,hour,comment,difficult,
+            web_page,image_path,step,hour,difficult,
             descriptionA,descriptionB,
             descriptionC,descriptionD,descriptionE,
             materialA,materialB,materialC,materialD,materialE,
@@ -80,10 +82,13 @@ export default function PostRecipeForm({onSubmit}) {
     return (
         <Container py="40">
         <Box w="80%" align="center"　pt="100" m="auto">
-            {/* カテゴリーcheckbox */}
+           
         <form onSubmit={submit}>
+        <Heading as="h2" size="xl" align="left" ml="5" color="#708090">
+            Intro
+        </Heading>
+       
         <Box align="right" my="10">
-        <Text>カテゴリー</Text>
           <Select
             bg="#4682b4"
             borderColor="#4682b4"
@@ -102,17 +107,19 @@ export default function PostRecipeForm({onSubmit}) {
         <Box>
 
             {/* タイトル */}
+           
+            <Text align="left" mb="3" ml="2" color="#696969">Title <Tag color="red" bg="none">*</Tag></Text> 
             <Input
-              mt="5"
               variant="filled"
               placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-            />
+            /> 
+           
 
             {/* サブタイトル */}
+            <Text align="left" my="3" ml="2" color="#696969">SubTitle <Tag color="red" bg="none">*</Tag></Text> 
             <Input
-             mt="5"
              variant="filled" 
              placeholder="SubTitle" 
              value={subtitle}
@@ -120,8 +127,8 @@ export default function PostRecipeForm({onSubmit}) {
             />
           
             {/* website */}
+            <Text align="left" my="3" ml="2" color="#696969">WebSite</Text> 
             <Input
-             mt="5"
              variant="filled"
              placeholder="WebSite"
              value={web_page}
@@ -129,8 +136,8 @@ export default function PostRecipeForm({onSubmit}) {
             />
 
             {/* 写真 */}
+            <Text align="left" my="3" ml="2" color="#696969">写真 <Tag color="red" bg="none">*</Tag></Text> 
             <Input
-             mt="5"
             　multiple
             　accept="image/*"
              variant="filled"
@@ -149,12 +156,22 @@ export default function PostRecipeForm({onSubmit}) {
             /> */}
         </Box>
 
-             <Box m="20">
-            -------------------------------
+            {/* line */}
+             <Box my="20">
+                <Image
+                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
+                    width="600"
+                    height="30"
+                />
             </Box>
+
+             <Heading as="h2" size="xl" align="left" ml="5" color="#708090">
+                説明
+            </Heading>
 
              <Box align="right" my="10">
             {/* ステップ */}
+            <Tag color="red" bg="none">*</Tag>
             <Select
                 bg="#4682b4"
                 borderColor="#4682b4"
@@ -169,7 +186,8 @@ export default function PostRecipeForm({onSubmit}) {
                 <option value="3step">3step</option>
                 <option value="4step">4step</option>
             </Select>
-            {/* 一言 */}
+            {/* 難しさ */}
+            <Tag color="red" bg="none">*</Tag>
             <Select
                 bg="#4682b4"
                 borderColor="#4682b4"
@@ -203,20 +221,14 @@ export default function PostRecipeForm({onSubmit}) {
                 </NumberInputStepper>
             </NumberInput>
             
-            <Text mt="4">hコース</Text>
+            <Text mt="4">hコース<Tag color="red" bg="none">*</Tag></Text>
             </Flex>
 
-             <Input
-              mt="5"
-              variant="filled"
-              placeholder="一言コメント"
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-            />
             </Box> 
 
 
             {/* 説明 */}
+            <Text align="left" my="3" ml="2" color="#696969">説明１ <Tag color="red" bg="none">*</Tag></Text> 
             <Textarea
                 placeholder="説明1　(例) 木を20cm幅に切る"
                 size="sm"
@@ -225,6 +237,7 @@ export default function PostRecipeForm({onSubmit}) {
                 onChange={(e) => setDescriptionA(e.target.value)}
             />
             {/* 説明 */}
+            <Text align="left" my="3" ml="2" color="#696969">説明２</Text> 
             <Textarea
                 placeholder="説明2　(例) 木を20cm幅に切る"
                 size="sm"
@@ -233,6 +246,7 @@ export default function PostRecipeForm({onSubmit}) {
                 onChange={(e) => setDescriptionB(e.target.value)}
             />
             {/* 説明 */}
+            <Text align="left" my="3" ml="2" color="#696969">説明３</Text> 
             <Textarea
                 placeholder="説明3　(例) 木を20cm幅に切る"
                 size="sm"
@@ -241,6 +255,7 @@ export default function PostRecipeForm({onSubmit}) {
                 onChange={(e) => setDescriptionC(e.target.value)}
             />
             {/* 説明 */}
+            <Text align="left" my="3" ml="2" color="#696969">説明４</Text> 
             <Textarea
                 placeholder="説明4　(例) 木を20cm幅に切る"
                 size="sm"
@@ -249,6 +264,7 @@ export default function PostRecipeForm({onSubmit}) {
                 onChange={(e) => setDescriptionD(e.target.value)}
             />
             {/* 説明 */}
+            <Text align="left" my="3" ml="2" color="#696969">説明５</Text> 
             <Textarea
                 placeholder="説明5　(例) 木を20cm幅に切る"
                 size="sm"
@@ -259,14 +275,35 @@ export default function PostRecipeForm({onSubmit}) {
 
 
 
-            <Box m="20">
-            -------------------------------
+            {/* line */}
+             <Box my="20">
+                <Image
+                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
+                    width="600"
+                    height="30"
+                />
             </Box>
+
+             <Heading as="h2" size="xl" align="left" ml="5" color="#708090" mb="20">
+                材料
+            </Heading>
 
             <Box>
 
             {/* 材料1 */}
-            <Flex mt="5">
+           <Grid templateColumns="repeat(2, 1fr)" gap={8}>
+            <Text align="left" my="3" ml="2" color="#696969">
+                材料 
+            </Text> 
+             <Text align="left" my="3" color="#696969"　pr="14" align="right">
+                数量
+            </Text> 
+            </Grid>
+            
+            <Box align="left">
+            <Tag color="red" bg="none">*</Tag>
+            </Box>
+            <Flex >
             <Input
              variant="filled"
              placeholder="材料1"
@@ -292,7 +329,7 @@ export default function PostRecipeForm({onSubmit}) {
                 </NumberInputStepper>
             </NumberInput>
             </Flex>
-
+            
             {/* 材料2 */}
             <Flex mt="5">
             <Input
@@ -407,17 +444,28 @@ export default function PostRecipeForm({onSubmit}) {
             </Box>
            
 
-            <Box m="20">
-            -------------------------------
+             {/* line */}
+             <Box my="20">
+                <Image
+                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
+                    width="600"
+                    height="30"
+                />
             </Box>
 
+             <Heading as="h2" size="xl" align="left" ml="5" color="#708090"　mb="20">
+                道具
+            </Heading>
+
             {/* 道具1 */}
+            <Box align="left">
+            <Tag color="red" bg="none">*</Tag>
+            </Box>
             <Input
              variant="filled"
              placeholder="道具1"
              type="text"
              w="100%"
-             mt="5"
              value={goodsA}
              onChange={(e) => setGoodsA(e.target.value)}
             />

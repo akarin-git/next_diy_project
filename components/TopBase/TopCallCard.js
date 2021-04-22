@@ -58,6 +58,7 @@ export default function TopCallCard() {
                       colorScheme="teal"
                       variant="outline"
                       m={["auto",""]}
+                      width="150px"
                     >
                         login
                     </Button>

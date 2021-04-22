@@ -2,7 +2,7 @@ module.exports = {
   target: "serverless",
   env: {
     API_CLIENT_ID: 4,
-    API_CLIENT_SECRET: "RHYdJhZ1JM6JWjeh3k7Ekgzqv1zzJfLB9Q1rtJG0",
+    API_CLIENT_SECRET: "cQv9I9Aix4IMBDGIoJLtCk0N228JSgjiGmZgS8AE",
     // API_CLIENT_ID: 1,
     // API_CLIENT_SECRET: "WIZxGR16ynvUJjgkKVJkyb9VN5kkpydnznypSvTZ",
   },

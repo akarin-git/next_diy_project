@@ -1,9 +1,11 @@
-import { 
-        Container
-} from "@chakra-ui/react";
+import { Container,Button,Icon,Text } from "@chakra-ui/react";
 import PostRecipeForm from '../components/PostRecipeForm'
 import { useAppContext,useAppAxios,useAppAxiosExecute,useAppRouter } from "../hooks";
 import { upPost } from "../state/actions";
+import { HiChevronLeft } from "react-icons/hi";
+
+import Link from 'next/link';
+
 
 
 export default function PostForm() {
@@ -18,7 +20,7 @@ export default function PostForm() {
 
     const submit = ({
         category,title,subtitle,
-        web_page,image_path,step,hour,comment,difficult,
+        web_page,image_path,step,hour,difficult,
         descriptionA,descriptionB,
         descriptionC,descriptionD,descriptionE,
         materialA,materialB,materialC,materialD,materialE,
@@ -35,7 +37,6 @@ export default function PostForm() {
          submitData.append("image_path", image_path),
          submitData.append("step", step),
          submitData.append("hour", hour),
-         submitData.append("comment", comment),
          submitData.append("difficult", difficult),
          submitData.append("descriptionA", descriptionA),
          submitData.append("descriptionB", descriptionB),
@@ -64,8 +65,17 @@ export default function PostForm() {
 };
     
     return (
-        <Container>
+        <>
+        {/* 戻る */}
+        <Link href={`/recipe`}>
+            <Button variant="ghost">
+                <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                <Text>back</Text>
+            </Button>
+        </Link>
 
+        <Container>
+            {/* Form */}
             <PostRecipeForm
              onSubmit={submit}
              isSending={loading}
@@ -73,6 +83,14 @@ export default function PostForm() {
         {error && <p className="error">{error}</p>}
 
         </Container>
+
+         <Link href={`/recipe`}>
+            <Button variant="ghost">
+                <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                <Text>back</Text>
+            </Button>
+        </Link>
+        </>
     )
 }
 
