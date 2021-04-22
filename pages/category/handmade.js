@@ -39,7 +39,7 @@ export default function handmade({handmadePosts}) {
 
     return (
         <Layout>
-        <Box bg="#EED7E3" pb="10">
+        <Box bg="#DBCCDA" >
             <Bread category={category}/>
             <TopCatchBar/>
         </Box>

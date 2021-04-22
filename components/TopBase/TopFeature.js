@@ -61,7 +61,7 @@ export default function TopFeature() {
         shadow="xl"
       >
         <Feature
-          title="Unify your payments stack"
+          title="DIYのレシピを確認"
           icon={
             <path
               strokeLinecap="round"
@@ -71,13 +71,14 @@ export default function TopFeature() {
             />
           }
         >
-          Manage all your online and offline sales in one place with a single
-          integration, simplifying reporting and reconciliation. Terminal works
-          seamlessly with Payments, Connect, and Billing.
+        <p>カテゴリから簡単検索!!!</p>
+        <p>どのくらいの工程かとレシピがすぐにわかる。</p>
+         <p>材料、どのくらいの工程が必要なのかがすぐにわかる。</p>
+         
         </Feature>
 
         <Feature
-          title="Own your in-store experience"
+          title="マイページの作成"
           icon={
             <path
               fillRule="evenodd"
@@ -86,13 +87,13 @@ export default function TopFeature() {
             />
           }
         >
-          Provide a seamless customer experience across channels, like reserving
-          online and picking up in store. Our SDKs make it easy to integrate
-          into your own mobile and web applications to accept in-store payments.
+         
+         <p>ユーザー登録していたら、気に入った投稿をお気に入り登録できるため、後から見直せる。</p>
+         <p>自分のDIYを投稿し、見返すのも簡単。</p>
         </Feature>
 
         <Feature
-          title="Grow your platform’s revenue"
+          title="レシピの投稿"
           icon={
             <path
               strokeLinecap="round"
@@ -102,9 +103,9 @@ export default function TopFeature() {
             />
           }
         >
-          Add in-person payments to your platform or marketplace. Using Terminal
-          with Connect, you can onboard users for online and in-person payments,
-          and unify their payouts across channels.
+          自分が作ったレシピをシェアできる。
+          ものづくりの楽しさをみんなに伝えよう。
+          ENJOY　DIY　！！
         </Feature>
       </SimpleGrid>
     </Flex>

@@ -44,7 +44,7 @@ export default function Recipe({recipePosts}) {
 
     return (
         <Layout>
-        <Box bg="#E3DBEB" pb="10">
+        <Box bg="#E3DBEB">
             <Bread />
           <TopCatchBar/>
         </Box>
