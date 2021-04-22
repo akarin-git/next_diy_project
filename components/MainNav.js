@@ -76,7 +76,7 @@ export default function MainNav() {
               Blog
               </Button>
             </Link>
-            <Link href="/me">
+            <Link href="/userpage">
               <Button variant="ghost">
               MyPost
               </Button>
@@ -88,8 +88,9 @@ export default function MainNav() {
             </Button>
             </Link>
 
-            {/* モバイル */}
-            <Box display={{ base: "inline-flex", md: "none" }}>
+{/* absolute */}
+            {/* モバイルnline-flex */}
+            <Box display={["inline-flex","inline-flex","inline-flex","none"]}>
               <IconButton
                 display={{ base: "flex", md: "none" }}
                 aria-label="Open menu"
@@ -121,7 +122,7 @@ export default function MainNav() {
                 />
                  
                 {/* hamberger menu recipe accordion */}
-                  <MenuAccordion />
+                <MenuAccordion />
                 
                 <Link href="/space">
                   <Button w="full" variant="ghost">

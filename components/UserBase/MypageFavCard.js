@@ -10,8 +10,9 @@ import Link from 'next/link';
 
 
 export default function MypageFavCard({favoritePost}) {
+  console.log(favoritePost);
     return (
-      <Link href={`/recipe/${favoritePost.id}`}>
+      <Link href={`/recipe/${favoritePost.post_id}`}>
       <Box>
       <Box
         w={["80","60"]}
@@ -21,21 +22,14 @@ export default function MypageFavCard({favoritePost}) {
         rounded="lg"
       >
         <Box px={4} py={2} h="130">
-          <chakra.h1
-            color={useColorModeValue("gray.800", "white")}
-            fontWeight="bold"
-            fontSize="xl"
-            textTransform="uppercase"
-          >
-            {favoritePost.title}
-          </chakra.h1>
+         
           <chakra.p
             mt={1}
             fontSize="sm"
             color={useColorModeValue("gray.600", "gray.400")}
           >
           {/* {favorite} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           テストタイトル
           </chakra.p>
         </Box>
 
@@ -45,7 +39,7 @@ export default function MypageFavCard({favoritePost}) {
           fit="cover"
           roundedBottom="lg"
           mt={2}
-          src={favoritePost.image_path}
+          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_431/v1618906427/xypeb1mlblwzud2em4bj.jpg"
           alt=""
         />
       </Box>

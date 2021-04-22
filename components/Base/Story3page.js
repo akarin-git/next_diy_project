@@ -1,23 +1,20 @@
 import {
-   Box,Flex,Text,Button,
+   Box,Flex,Text,
    Spacer,Avatar,Tag,TagLabel
 } from "@chakra-ui/react";
-
 import Image from 'next/image';
-import Link from 'next/link';
 
-
-export default function Story1page() {
+export default function Story3page() {
     return (
-        <>
+          <>
         {/* 親要素 */}
-        <Box w="85%" m="auto" mb="10" bg="#e6e6fa" p="10" borderRadius="20px">
+        <Box w="85%" m="auto" mb="10" bg="#fafad2" p="10" borderRadius="20px">
 
            {/* 子要素 */}
-        
-        <Box p={["0","0","5"]}>
+       
+        <Box p={["0","5"]} display={["none","block"]}>
         <Flex>
-        <Box w="50%" display={["none","block"]}>
+        <Box w="50%">
         <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,h_384/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png'}
             width={150}
@@ -43,14 +40,12 @@ export default function Story1page() {
        
 
         {/* 子要素４　右寄せ */}
-        {/* <Flex >
+        <Flex >
         <Spacer/>
-        <Link href={`/recipe`}>
-         <Button onClick={close}>
+         <Box bg="gray" w="60%" align="center">
         Let't　watch
-        </Button>
-        </Link>
-        </Flex> */}
+        </Box>
+        </Flex>
         </Box>
         </>
     )

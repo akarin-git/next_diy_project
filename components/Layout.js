@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import MainNav from "../components/MainNav";
-import { Box,Text } from "@chakra-ui/react"
+import MenuBtn from "../components/Base/MenuBtn";
+import { Box,Text,Grid } from "@chakra-ui/react"
 
 
 
@@ -15,10 +16,24 @@ export default function Layout({children,title = "fab loop"}) {
         <MainNav />
         </header>
         <main>
+        <Box position={["none","none","relative"]}>
         {children}
+        
+        <MenuBtn/>
+        </Box>
+ 
         </main>
         <footer>
-            <Box align="center" pt={40}>
+            <Box w="80%" m="auto" pt="20">
+            <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+            <Box w="100%" h="10" bg="blue.500" />
+            <Box w="100%" h="10" bg="blue.500" />
+            <Box w="100%" h="10" bg="blue.500" />
+            <Box w="100%" h="10" bg="blue.500" />
+            <Box w="100%" h="10" bg="blue.500" />
+            </Grid>
+            </Box>
+            <Box align="center" mt="10">
             <Text mb={-20} color="#708090">
             (c) Fab Loop 2021
             </Text>

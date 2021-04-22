@@ -8,18 +8,18 @@ import {
   Text
 } from "@chakra-ui/react";
 
-export default function UserTopCard({user}) {
-  // console.log(user);
+export default function MeTopCard({me}) {
+    // console.log(me);
     return (
         <>
-            <Flex
-             bg="gray.100"
+          <Flex
+             bg="#d8bfd8"
              p={5}
+             mt={8}
              w="full"
              alignItems="center"
              justifyContent="center"
             >
-            <Link href={`/mypage`}>
              <Box
                w={["100%","100%","75%"]}
                mx="auto"
@@ -33,13 +33,14 @@ export default function UserTopCard({user}) {
                     <Image
                       w={20}
                       h={20}
+                      bg="#fff"
                       fit="cover"
                       rounded="full"
                       borderStyle="solid"
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_418/v1618539579/wed/User_perspective_matte_s_vbu7kn.png"
+                      src="https://res.cloudinary.com/kiyopikko/image/upload/v1561617116/empty-user-image_o4ll8m.png"
                     />
                </Flex>
 
@@ -47,27 +48,24 @@ export default function UserTopCard({user}) {
                     color={useColorModeValue("gray.600", "white")}
                     fontSize={{ base: "xl", md: "2xl" }}
                     mt={{ base: 2, md: 2 }}
+                    ml="10"
                     fontWeight="bold"
                >
-                   my plofile
+                   {me[0].name}
                </chakra.h2>
-               <Flex justifyContent="end" mt={4}>
-                    <Text
-                      m={3}
-                    >
-                    {/* 名前 */}
-                      {user[0].name}
-                    </Text>
-               </Flex>
+              
                 <Box>
-               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
+               <chakra.p
+                mt={2}
+                color={useColorModeValue("gray.600", "gray.200")}
+                ml="10"
+               >
                     自分のページ
                </chakra.p>
                
                 </Box>
              </Box>
-             </Link>
-            </Flex>  
+            </Flex>     
         </>
     )
 }

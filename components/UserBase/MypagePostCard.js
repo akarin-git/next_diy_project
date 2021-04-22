@@ -8,6 +8,7 @@ import { Flex,
 import Link from 'next/link';
 
 export default function MypagePostCard({myPost}) {
+  // console.log(myPost);
     return (
         <>
     <Link href={`/recipe/${myPost.id}`}>

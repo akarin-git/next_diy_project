@@ -1,16 +1,23 @@
 import useSWR from 'swr';
-import Image from 'next/image';
 
 import { getAllPostsData } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import { useEffect } from 'react';
+import Link from 'next/link'
+
+
 import Card from '../../components/Card';
 import Layout from '../../components/Layout';
 import HeadLayout from '../../components/HeadLayout';
 import RcCard from '../../components/RcCard';
 import Bread from '../../components/Base/Bread';
+import CallCard from '../../components/Base/CallCard';
+import FormInfoModal from '../../components/Base/FormInfoModal';
+import CategoryBtn from '../../components/Base/CategoryBtn';
+import TopCatchBar from '../../components/Base/TopCatchBar';
+import { HiChevronLeft } from "react-icons/hi";
 
-import { Grid,Box,Flex,Text } from "@chakra-ui/react";
+import { Grid,Box,Flex,Text,Image,Button,Icon } from "@chakra-ui/react";
 
 
 // swr
@@ -37,8 +44,11 @@ export default function Recipe({recipePosts}) {
 
     return (
         <Layout>
+        <Box bg="#E3DBEB">
             <Bread />
-          
+          <TopCatchBar/>
+        </Box>
+        <Box mb="40">
         <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
@@ -50,6 +60,16 @@ export default function Recipe({recipePosts}) {
                 filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
             {/* // filteredPosts.map((post) => <Card key={post.id} post={post}/>)} */}
          </Grid> 
+         </Box>
+
+                <Button variant="ghost">
+                    <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
+                    <Link href={`/`}>
+                    <Text>back</Text>
+                    </Link>
+                </Button>
+
+         <CallCard/>
         <style JSX>
                 {`
                 .head{

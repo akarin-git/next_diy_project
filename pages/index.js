@@ -1,22 +1,29 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from "react";
+import { useAppRouter,useAppAxiosExecute } from "../hooks";
+
 import styles from '../styles/Home.module.scss';
 import Layout from '../components/Layout';
 import Spring from '../components/Spring';
 import FormInfoModal from '../components/Base/FormInfoModal';
-import TopFeature from '../components/Base/TopFeature';
-import {
-   Box,Flex,Text,
-   InputGroup,
-   InputLeftAddon,
-   Input,InputLeftElement
-} from "@chakra-ui/react";
-import { AiOutlineSearch } from "react-icons/ai";
+import CardFirst from '../components/TopBase/CardFirst';
+import CardSecond from '../components/TopBase/CardSecond';
+import TopCallCard from '../components/TopBase/TopCallCard';
+import { FcSearch } from "react-icons/fc";
 
+import {
+   Box,Flex,Text,Heading,
+   InputGroup,Button,
+   InputLeftAddon,Image,
+   Input,InputLeftElement,
+   Grid,chakura
+} from "@chakra-ui/react";
 
 
 
 export default function Home() {
+ 
 
   return (
     <>
@@ -25,83 +32,75 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-
+      <Box bg="#f8f8ff">
       <Box
-        bg="#f8f8ff"
+        // bg="#f8f8ff"
         pt="20"
         display={["none","none","flex"]}
         alignItems="center"
         justifyContent="space-between"
+        w="90%"
       >
       <Box
-        w={["100%","100%","60%"]}
+        w={["","50%","50%"]}
         h="auto"
         pt={["5","10","20"]}
-        pl={["5","5","5","40"]}
+        pl={["5","10","40","40"]}
       >
-       <FormInfoModal/>
-      <Text fontSize="70" >
-        search
-      </Text>
-      <Box my="10">
-       <InputGroup >
-        <InputLeftElement
-          pointerEvents="none"
-          children={<AiOutlineSearch color="gray.300" />}
-        />
-        <Input type="tel" placeholder="Recipe Serch" />
-      </InputGroup>
+       <Box m="auto" w="80%">
+        <Heading as="h1" size={["xl","2xl","3xl"]} color="#3A5478" fontSize="80px" align="left">
+          Try it.
+        </Heading>
+        <Heading as="h1" size={["xl","2xl","3xl"]} color="#3A5478" fontSize="80px" align="left">
+         Let's DIY !
+        </Heading>
+        <Box mt="10" align="left">
+          <FormInfoModal/>
+        </Box>
       </Box>
-   
+
       </Box>
       <Spring />
       </Box>
+      
 
       {/* mobile用 */}
-      <Box 
-        display={["inline","inline","none"]}
-      >
-     
       <Box
-      py="100"
-       bgImage="url('https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618740072/wed/blob_1_kq9pr5.svg')"
-       bgRepeat="no-repeat"
-       bgPosition="right"
-       >
-      <Flex>
-       <Text w="70%" align="center">
-       テキスト
-       </Text>
-       <FormInfoModal/>
-
-      <Image
-       src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,h_384/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png'}
-      width={100}
-       height={100}
-      />
-      </Flex>
-
-       <Text fontSize="30" ml="30">
-        search
-      </Text>
-      <Box my="2">
-       <InputGroup bg="white">
-        <InputLeftElement
-          pointerEvents="none"
-          children={<AiOutlineSearch color="gray.300" />}
+       display={["block","block","none"]}
+       w={["100%","100%"]}
+       m="auto"
+       bg="#f8f8ff"
+      >
+      <Box p="10">
+        <Image
+         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619059713/wed/mobiletop_drzjau.png"
+         alt="Picture of the author"
+         width={["360","400"]}
+         height={["280","350"]}
+         mt="10"
+         m="auto"
         />
-        <Input type="tel" placeholder="Recipe Serch" />
-      </InputGroup>
-
-      </Box>
-      </Box>
       </Box>
 
-
-      <Box bg="#f5f5f5" >
-      <TopFeature/>
+      <Box align="center" mt="10" >
+       <Heading as="h2" size="2xl" mb="10" color="#3A5478" fontSize="60px">
+       Fab Loop
+      </Heading>
+        <FormInfoModal/>
       </Box>
+      </Box>
+{/* -------------------------------------------------------- */}
+    {/* 説明 */}
+      <CardFirst />
 
+      <CardSecond/>
+
+    {/* 矢印 */}
+      
+
+       <TopCallCard/>
+
+      </Box>
 
       </Layout>
 
