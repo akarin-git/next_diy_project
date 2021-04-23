@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useAppRouter,useAppAxiosExecute } from "../hooks";
+import { motion } from 'framer-motion';
+import { imageVariants } from "../components/Animetion/MotionBase"
 
 import styles from '../styles/Home.module.scss';
 import Layout from '../components/Layout';
@@ -23,7 +25,6 @@ import {
 
 
 export default function Home() {
- 
 
   return (
     <>
@@ -32,7 +33,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-      <Box bg="#f8f8ff">
+      <motion.div initial="exit" animate="enter" exit="exit">
+
+      <Box bg="#f8f8ff" >
       <Box
         // bg="#f8f8ff"
         pt="20"
@@ -48,12 +51,14 @@ export default function Home() {
         pl={["5","10","40","40"]}
       >
        <Box m="auto" w="80%">
-        <Heading as="h1" size={["xl","2xl","3xl"]} color="#3A5478" fontSize="80px" align="left">
+      <motion.div variants={imageVariants}>
+        <Heading as="h1" size={["xl","xl","3xl"]} color="#3A5478" fontSize="80px" align="left" >
           Try it.
         </Heading>
-        <Heading as="h1" size={["xl","2xl","3xl"]} color="#3A5478" fontSize="80px" align="left">
+        <Heading as="h1" size={["xl","xl","3xl"]} color="#3A5478" fontSize="80px" align="left">
          Let's DIY !
         </Heading>
+      </motion.div>
         <Box mt="10" align="left">
           <FormInfoModal/>
         </Box>
@@ -63,7 +68,6 @@ export default function Home() {
       <Spring />
       </Box>
       
-
       {/* mobile用 */}
       <Box
        display={["block","block","none"]}
@@ -89,19 +93,17 @@ export default function Home() {
         <FormInfoModal/>
       </Box>
       </Box>
-{/* -------------------------------------------------------- */}
-    {/* 説明 */}
-      <CardFirst />
 
-      <CardSecond/>
+        {/* 説明 */}
+        <CardFirst />
 
-    {/* 矢印 */}
-      
+        <CardSecond/>
 
-       <TopCallCard/>
+        <TopCallCard/>
 
-      </Box>
-
+        </Box>
+       
+      </motion.div>
       </Layout>
 
      

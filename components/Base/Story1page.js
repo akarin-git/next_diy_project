@@ -11,30 +11,33 @@ export default function Story1page() {
     return (
         <>
         {/* 親要素 */}
-        <Box w="85%" m="auto" mb="10" bg="#e6e6fa" p="10" borderRadius="20px">
-
-           {/* 子要素 */}
+        <Box w="90%" m="auto" mb="10" bg="#fffacd" p="3" borderRadius="20px">
         
         <Box p={["0","0","5"]}>
-        <Flex>
-        <Box w="50%" display={["none","block"]}>
+
+        {/* mobile */}
+        <Box w="90%" display={["block","none"]} m="auto" my="10">
         <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,h_384/v1618539570/wed/Tools_perspective_matte_s_lqe2ko.png'}
-            width={150}
-            height={150}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619089460/wed/category_tvh5ye.png'}
+            width={450}
+            height={230}
         />
         </Box>
-        <Box mb="5">
-        <Text mb="3">
-        <p>カテゴリから簡単に</p>
-        <p>DIY Recipeにアクセス。</p>
-        </Text>
 
-        <Text>
-        <p>カテゴリから簡単に</p>
-        <p>DIY Recipeにアクセス。</p>
-        </Text>
-
+        {/* PC */}
+        <Flex>
+        <Box w="70%" display={["none","block"]} ml="5" py="10">
+          <Image
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619089460/wed/category_tvh5ye.png'}
+            width={450}
+            height={230}
+          />
+        </Box>
+        <Box mb="5" m="auto">
+          <Text mb="3" fontWeight="bold">
+           <p>カテゴリから簡単に</p>
+           <p>DIY Recipeにアクセス。</p>
+          </Text>
         </Box>
 
         </Flex>

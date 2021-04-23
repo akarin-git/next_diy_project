@@ -3,23 +3,31 @@ import Link from 'next/link'
 import MainNav from "../components/MainNav";
 import MenuBtn from "../components/Base/MenuBtn";
 import { Box,Text,Grid } from "@chakra-ui/react"
-
+import { useState,useEffect } from "react";
 
 
 export default function Layout({children,title = "fab loop"}) {
+　const [offsetY,setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll",handleScroll);
+  },[]);
     return (
     <>
         <Head>
-                <title>{title}</title>
+            <title>{title}</title>
         </Head>
         <header>
         <MainNav />
         </header>
         <main>
         <Box position={["none","none","relative"]}>
+        <Box>
         {children}
         
         <MenuBtn/>
+        </Box>
         </Box>
  
         </main>

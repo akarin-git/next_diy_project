@@ -26,7 +26,7 @@ export default function TopCatchBar() {
             </Flex>
 
             {/* mobile design */}
-            <Box display={["block","block","none"]} w="100%" align="center">
+            <Box display={["block","block","none"]} w="100%" align="center" pb="10">
             <Image
                 src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_431/v1618994555/wed/Saly-12_fnlnk1.png"
                 alt="Picture of the author"

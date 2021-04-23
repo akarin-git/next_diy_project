@@ -8,6 +8,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { FcInternal } from "react-icons/fc";
+import { FcGallery } from "react-icons/fc";
 
 export default function TopCallCard() {
     return (
@@ -25,7 +26,7 @@ export default function TopCallCard() {
                py="2"
                opacity="90%"
              >
-                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px"> 
+                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px={["0","20","20","60"]}　borderRadius="20px"> 
                 <Flex>
                 <Box display={["none","none","block"]}>
                     <Image 
@@ -35,23 +36,15 @@ export default function TopCallCard() {
                     />
                 </Box>
                 <Box 
-                  w={["100%","60%","60%"]}
+                  w={["100%","50%","50%"]}
                   h="auto"
                   m="auto"
+                  align="center"
                 >
                  <Heading as="h2" size="xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
-                <Flex mt="10">
-                   <Text
-                    ml="6"
-                    color="#696969"
-                    mt="2"
-                    mr="5"
-                    display={["none","none","flex"]}
-                    >
-                        login はこちらから 
-                    </Text>
+                
                 <Link href="/signin">
                     <Button
                       rightIcon={<FcInternal />}
@@ -59,12 +52,23 @@ export default function TopCallCard() {
                       variant="outline"
                       m={["auto",""]}
                       width="150px"
+                      mt="12"
                     >
                         login
                     </Button>
                 </Link>
-                </Flex>
-                
+                 <Link href="/signin">
+                    <Button
+                      rightIcon={<FcGallery />}
+                      colorScheme="teal"
+                      variant="outline"
+                      m={["auto",""]}
+                      mt="5"
+                    >
+                        レシピをみる
+                    </Button>
+                </Link>
+
                 </Box>
                 </Flex>
             </Box>  

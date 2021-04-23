@@ -28,11 +28,9 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            1 step
            </Text>
-            <Box padding="5" bg="gray.100" maxW="3xl">
 
-                 {/* 説明１ */}
-                There are many benefits to a joint design and development system. Not only
-                does it bring benefits to the design team.
+            {/* 説明１ */}
+            <Box padding="5" bg="gray.100" maxW="3xl">
                 {post[0].descriptionA}
             </Box>
             </Box>
@@ -42,11 +40,9 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            2 step
            </Text>
-            <Box padding="5" bg="gray.100" maxW="3xl">
 
-                 {/* 説明２ */}
-                There are many benefits to a joint design and development system. Not only
-                does it bring benefits to the design team.
+            {/* 説明２ */}
+            <Box padding="5" bg="gray.100" maxW="3xl">
                 {post[0].descriptionB}
             </Box>
             </Box>
@@ -59,9 +55,9 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            3 step
            </Text>
-            <Box padding="5" bg="gray.100" maxW="3xl">
 
-                {/* 説明３ */}
+            {/* 説明３ */}
+            <Box padding="5" bg="gray.100" maxW="3xl">
                 {post[0].descriptionC}
             </Box>
             </Box>
@@ -74,9 +70,8 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            4 step
            </Text>
+            {/* 説明４ */}
             <Box padding="5" bg="gray.100" maxW="3xl">
-
-                 {/* 説明４ */}
                 {post[0].descriptionD}
             </Box>
             </Box>
@@ -89,9 +84,8 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            5 step
            </Text>
+            {/* 説明５ */}
             <Box padding="5" bg="gray.100" maxW="3xl">
-                
-                {/* 説明５ */}
                 {post[0].descriptionE}
             </Box>
             </Box>
@@ -104,11 +98,9 @@ export default function RecipeStep({post}) {
            <Text fontWeight="bold" mb="1">
            6 step
            </Text>
+           
+            {/* 説明６ */}
             <Box padding="5" bg="gray.100" maxW="3xl">
-
-                 {/* 説明６ */}
-                There are many benefits to a joint design and development system. Not only
-                does it bring benefits to the design team.
                 {post[0].descriptionF}
             </Box>
             </Box>

@@ -16,7 +16,7 @@ import { dayjs } from "../../plugins";
 
 export default function AvatarBag({post}) {
     const day = dayjs(post.created_at).format("YYYY/MM/DD HH:mm");
-    console.log(day);
+    // console.log(day);
     return (
         <Box mb="3" w="100%" align="right">
             <Link href={`/userpage/${post[0].user_id}`}>
@@ -25,7 +25,7 @@ export default function AvatarBag({post}) {
                 <Text fontSize="sm" align="right" p="1" pt="6" m="auto" color="gray.500">
                    {post[0].user.name}
                 </Text>
-            <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4" mb="2"/>
+            {/* <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4" mb="2"/> */}
             </Flex>
             </Link>
               <Flex mr="2">
