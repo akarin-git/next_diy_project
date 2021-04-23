@@ -66,19 +66,19 @@ export default function MainNav() {
             {/* Recipe Page pulldown */}
             <TopMenuDown />
 
-            <Link href="/space">
+            <Link href="/userpage">
               <Button variant="ghost">
-             Spaces
+              MyPost
+              </Button>
+            </Link>
+            <Link href="/PostForm">
+              <Button variant="ghost">
+             Post Form
               </Button>
             </Link>
             <Link href="/blog">
               <Button variant="ghost">
               Blog
-              </Button>
-            </Link>
-            <Link href="/userpage">
-              <Button variant="ghost">
-              MyPost
               </Button>
             </Link>
             </HStack>
@@ -124,19 +124,19 @@ export default function MainNav() {
                 {/* hamberger menu recipe accordion */}
                 <MenuAccordion />
                 
-                <Link href="/space">
+                <Link href="/userpage">
                   <Button w="full" variant="ghost">
-                    Work Spaces
+                    MyPost
+                  </Button>
+                </Link>
+                <Link href="/PostForm">
+                  <Button w="full" variant="ghost">
+                    Post Form 
                   </Button>
                 </Link>
                 <Link href="/blog">
                   <Button w="full" variant="ghost">
                     Blog
-                  </Button>
-                </Link>
-                <Link href="/me">
-                  <Button w="full" variant="ghost">
-                    MyPost
                   </Button>
                 </Link>
                 <Link href="/signin">

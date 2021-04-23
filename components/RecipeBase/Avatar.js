@@ -10,29 +10,33 @@ import {
     Icon
 } from "@chakra-ui/react";
 import { HiHeart } from "react-icons/hi";
+import { dayjs } from "../../plugins";
+
+
 
 export default function AvatarBag({post}) {
-    // console.log(post[0].user);
+    const day = dayjs(post.created_at).format("YYYY/MM/DD HH:mm");
+    // console.log(day);
     return (
-        <Box mb="2" w="100%" align="right">
+        <Box mb="3" w="100%" align="right">
             <Link href={`/userpage/${post[0].user_id}`}>
             <Flex>
             <Spacer />
-                <Text fontSize="md" align="right" p="1" py="6" color="gray.500">
+                <Text fontSize="sm" align="right" p="1" pt="6" m="auto" color="gray.500">
                    {post[0].user.name}
                 </Text>
-            <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4"/>
+            {/* <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4" mb="2"/> */}
             </Flex>
             </Link>
-              <Flex>
+              <Flex mr="2">
                  <Spacer />
                  <Icon as={HiHeart} w={4} h={4} color="red.500" />
                  <Text fontSize="sm" align="right" my="2">
-                  {post[0].favorite.length}　favorite
+                  {post[0].favorite.length}　
                  </Text>
-            <Text p="2"　fontSize="sm">
-            / {post[0].created_at}
-           </Text>
+                    <Text p="2" mr="2"　fontSize="sm" color="#808080">
+                        {day}
+                    </Text>
              </Flex>
         </Box>
     )

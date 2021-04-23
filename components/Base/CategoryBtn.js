@@ -51,9 +51,14 @@ export default function CategoryBtn() {
                         Craft
                     </Button>
                 </Link>
-                <Link href="/category/craft">
+                <Link href="/category/living">
                     <Button colorScheme="blue">
-                        Craft
+                        Living
+                    </Button>
+                </Link>
+                <Link href="/category/outside">
+                    <Button colorScheme="blue">
+                        Outside
                     </Button>
                 </Link>
                 </Grid>

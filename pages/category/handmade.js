@@ -47,7 +47,7 @@ export default function handmade({handmadePosts}) {
             <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
-            w={{base:"100%",md:"80%",lg:"70%",xl:"80%"}}
+            w={{base:"100%",md:"80%",lg:"80%",xl:"80%"}}
             m="auto"
             mt={10}
             >

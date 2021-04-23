@@ -6,6 +6,8 @@ import {
    Grid,chakura
 } from "@chakra-ui/react";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { imageVariants } from "../../components/Animetion/MotionBase";
 
 
 export default function CardFirst() {
@@ -35,12 +37,14 @@ export default function CardFirst() {
          <Text fontSize="2xl" color="#3A5478">(2xl) In love with React & Next</Text>
        </Box>
        <Box m="auto" mt="8" align="center">
+       <motion.div variants={imageVariants}>
        <Image
          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618739907/wed/bg-1_bmbchr.png"
          alt="Picture of the author"
          width={350}
          height={230}
         />
+        </motion.div>
         </Box>
          <Box display={["block","block","none"]} w={["90%","90%","50%"]} m="auto" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["5","10","0"]}>
          <Text fontSize="2xl" color="#3A5478">(2xl) In love with React & Next</Text>

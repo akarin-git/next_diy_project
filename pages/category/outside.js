@@ -1,28 +1,30 @@
-import { getCategoryCraft } from '../../lib/posts';
+import { getCategoryOutside } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
 
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
 import Bread from '../../components/Base/Bread';
 import CallCard from '../../components/Base/CallCard';
+
 import FormInfoModal from '../../components/Base/FormInfoModal';
 import CategoryBtn from '../../components/Base/CategoryBtn';
 import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
 
-import { Grid,Box,Flex,Image,Button,Icon,Text } from "@chakra-ui/react";
+import { Grid,Box,Flex,Image,Text,Icon,Button } from "@chakra-ui/react";
+
 
 // swr
 const fetcher = (url) => fetch(url).then((res) => res.json());
-const apiUrl = `${API_ENDPOINT}/api/image/craft`;
+const apiUrl = `${API_ENDPOINT}/api/image/outside`;
 
 
-export default function handmade({craftPosts}) {
+export default function outside({outsidePosts}) {
     const {data:posts,mutate} = useSWR(apiUrl,fetcher,{
-        initialData:craftPosts,
+        initialData:outsidePosts,
     });
 
     useEffect(() => {
@@ -32,27 +34,26 @@ export default function handmade({craftPosts}) {
     const filteredPosts = posts?.sort(
         (a,b) => new Date(b.created_at) - new Date(a.created_at)
     );
-    
-        const category = 'craft';
-        
+
+     const category = 'outside';
+
     return (
         <Layout>
-         <Box bg="#DBCCDA">
+        <Box bg="#DBCCDA" >
             <Bread category={category}/>
-           <TopCatchBar/>
-         </Box>
-         <Box mb="40">
-         <Grid 
+            <TopCatchBar/>
+        </Box>
+        <Box mb="40">
+            <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
             gap={4}
             w={{base:"100%",md:"80%",lg:"80%",xl:"80%"}}
-            h="auto"
             m="auto"
             mt={10}
             >
             {filteredPosts &&
             filteredPosts.map((post) => <RcCard key={post.id} post={post}/>)}
-        </Grid>
+            </Grid>
         </Box>
 
             <Button variant="ghost">
@@ -62,7 +63,7 @@ export default function handmade({craftPosts}) {
                     </Link>
             </Button>
 
-         <CallCard/>
+          <CallCard/>
         </Layout>
     )
 }
@@ -70,10 +71,10 @@ export default function handmade({craftPosts}) {
 export async function getStaticProps(){
     // console.log(params);
 
-    const craftPosts = await getCategoryCraft();
+    const outsidePosts = await getCategoryOutside();
     return {
         props:{
-            craftPosts,
+            outsidePosts,
         },
         revalidate:3,
     };

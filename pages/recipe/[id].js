@@ -22,11 +22,15 @@ import IineBtn from "../../components/RecipeBase/IineBtn";
 import Step from "../../components/RecipeBase/Step";
 
 import { motion } from 'framer-motion';
-import { imageVariants } from "../../components/Animetion/MotionBase"
+import { imageVariants } from "../../components/Animetion/MotionBase";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiHeart } from "react-icons/hi";
 import { FaShareSquare,FaStar } from "react-icons/fa";
 import { FcInternal } from "react-icons/fc";
+import { FiChevronsDown } from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
+
+
 
 import { Container,
         Button,
@@ -38,18 +42,22 @@ import { Container,
         BreadcrumbItem,
         BreadcrumbLink,
         Heading,
+
+        Modal,ModalOverlay,ModalContent,
+        ModalHeader,ModalCloseButton,
+        ModalBody,ModalFooter,useDisclosure
  } from "@chakra-ui/react";
 
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Recipe({staticPost,id}) {
-    // console.log(id);
+    
     const router = useRouter();
     const [{loading,error},iine] = useAppAxiosExecute({
         method:"POST",
         url:"/api/image/favorite",
-        errorMessage:"エラー",
+        errorMessage:"loginしてください",
     })
     // swr
     const { data:post ,mutate } = useSWR(
@@ -64,7 +72,7 @@ export default function Recipe({staticPost,id}) {
     },[]);
 
     const handle = (id) => {
-    console.log(id);
+    // console.log(id);
     iine({
         post_id:id,
     });
@@ -74,7 +82,7 @@ export default function Recipe({staticPost,id}) {
     return <div>Loading...</div>;
   }
   
-    // console.log(post[0]);
+    console.log(post[0]);
     return (
         <>
          {/* このようなdataの形　{post[0].title} */}
@@ -88,7 +96,9 @@ export default function Recipe({staticPost,id}) {
                 <Container w={{base:"100%",md:"100%",lg:"80%"}} p="0" my="30" mb={20}>
 
                 {/* タイトル */}
-                <RcTitle  post={post}/>
+                <RcTitle
+                  post={post}
+                />
 
                 {/* ステップカード */}
                 <Step post={post}/>
@@ -109,28 +119,37 @@ export default function Recipe({staticPost,id}) {
                 
             </Container>
 
-            <Box w="full" pr={10} mt={10}>
-            <Flex>
+            <Box w="full" pr="10" mt="10" mb="10" w="80%"　w="auto">
+            {/* ユーザー */}
+                <Box align="center">
+                    <Icon as={FiChevronsDown} w={10} h={10} color="#b0c4de" align="center"/>
+                </Box>
+                 <UserCard post={post}/>
+            {/* シェアボタン */}
+            <Flex w={["90%","90%","80%"]}>
             <Spacer />
-            <Text fontSize="3xl" align="right" mr={14} pb="3">Thx 👋</Text>
              <Box w="50" align="center" mr={3}>
                  <button onClick={handle.bind(this,post[0].id)}>
-                    <Icon as={HiHeart} w={8} h={8} color="#dc143c" />
+                    <Icon
+                     as={FiHeart}
+                     w={8}
+                     h={8}
+                     border="none"
+                     color="#a9a9a9"
+                     _hover={{ color: 'red' }}
+                     />
                  </button>
+                   {error && <p className="error">{error}</p>}
              </Box>
                 <ShereBtn post={post}/>
             </Flex>
-                
-
-                 <UserCard post={post}/>
             </Box>
            
                 <Box 
                  bg="#d8bfd8"
                  py="10"
                 >
-               
-            <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px">
+                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px">
                 <Flex>
                  <Image 
                 src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618748941/wed/iamge_phone_lkoofn.png"
@@ -141,23 +160,18 @@ export default function Recipe({staticPost,id}) {
                 w="60%"
                 h="auto"
                 m="auto"
+                align="center"
                 >
                  <Heading as="h2" size="xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
-                <Flex mt="10">
-                <Text ml="6" color="#696969" mt="2" mr="5">
-                login はこちらから 
-                </Text>
-                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline">
-                login
+                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10">
+                    login
                 </Button>
-                </Flex>
                 
                 </Box>
                 </Flex>
             </Box>
-
 
                 {/* 戻るボタン */}
                 <Button variant="ghost">

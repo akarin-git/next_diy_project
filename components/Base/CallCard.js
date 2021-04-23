@@ -6,6 +6,7 @@ import {
         Heading,
  } from "@chakra-ui/react";
  import { FcInternal } from "react-icons/fc";
+ import { FcGallery } from "react-icons/fc";
  import Image from 'next/image';
  import Link from 'next/link';
 
@@ -31,32 +32,25 @@ export default function CallCard() {
                 w={["100%","60%","60%"]}
                 h="auto"
                 m="auto"
+                align="center"
                 >
                  <Heading as="h2" size="xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
-                <Flex mt="10">
-                <Text
-                 ml="6"
-                 color="#696969"
-                 mt="2"
-                 mr="5"
-                 display={["none","none","flex"]}
-                >
-                login はこちらから 
-                </Text>
+                
+              
                 <Link href="/signin">
                  <Button
                  rightIcon={<FcInternal />}
                  colorScheme="teal"
                  variant="outline"
                  m={["auto",""]}
+                 mt="5"
                 >
                 login
                 </Button>
                 </Link>
-                </Flex>
-                
+
                 </Box>
                 </Flex>
             </Box>  

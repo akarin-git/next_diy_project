@@ -24,7 +24,7 @@ export default function UserCard({post}) {
                mx="auto"
                py={4}
                px={8}
-               bg={useColorModeValue("white", "gray.800")}
+               bg={useColorModeValue("#f8f8ff", "gray.800")}
                shadow="lg"
                rounded="lg"
                 _hover={{ mt:1,pb:3 }}
