@@ -71,7 +71,7 @@ export default function living({livingPosts}) {
 export async function getStaticProps(){
     // console.log(params);
 
-    const livingPosts = await getCategoryliving();
+    const livingPosts = await getCategoryLiving();
     return {
         props:{
             livingPosts,
