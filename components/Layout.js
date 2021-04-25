@@ -42,7 +42,7 @@ export default function Layout({children,title = "fab loop"}) {
             ABOUT
             </Button>
             </Link>
-            <Link href={`/recipi`}>
+            <Link href={`/recipe`}>
             <Button w="100%" h="10">
             RECIPE
             </Button>
@@ -52,9 +52,9 @@ export default function Layout({children,title = "fab loop"}) {
             BLOG
             </Button>
             </Link>
-            <Link href={`/contact`}>
+            <Link href={`/signin`}>
             <Button w="100%" h="10">
-            CONTACT
+            Login
             </Button>
             </Link>
             

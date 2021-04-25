@@ -9,7 +9,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Layout from '../../components/Layout';
-import UserCard from '../../components/RecipeBase/UserCard';
 import RecipeStep from '../../components/RecipeBase/RecipeStep';
 import CBread from '../../components/Base/CBread';
 import ShereBtn from '../../components/RecipeBase/ShereBtn';

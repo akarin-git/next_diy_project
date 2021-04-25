@@ -53,6 +53,13 @@ export default function MeTopCard({me}) {
                >
                    {me[0].name}
                </chakra.h2>
+                <Box>
+                      <Image
+                          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
+                          width="600"
+                          height="30"
+                      />
+                  </Box>
               
                 <Box>
                <chakra.p
@@ -60,7 +67,7 @@ export default function MeTopCard({me}) {
                 color={useColorModeValue("gray.600", "gray.200")}
                 ml="10"
                >
-                    自分のページ
+                     Post Recipe & Favorite Recipe
                </chakra.p>
                
                 </Box>
