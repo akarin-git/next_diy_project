@@ -1,6 +1,8 @@
 import { Grid,Box,Flex,Image } from "@chakra-ui/react";
 import FormInfoModal from './FormInfoModal';
 import CategoryBtn from './CategoryBtn';
+import { motion } from 'framer-motion';
+import { imageVariants,smallreverseVariants } from "../Animetion/MotionBase"
 
 
 export default function TopCatchBar() {
@@ -9,6 +11,7 @@ export default function TopCatchBar() {
             <Flex  w={["100%","100%","80%"]} m="auto">
             <Flex align="center" w="100%" m="auto">
             <Box display={["none","none","block"]} m="auto" w="50%">
+            <motion.div variants={smallreverseVariants}>
              <Image
                 src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619015205/wed/Frame_1391_nopppy.png"
                 alt="Picture of the author"
@@ -16,6 +19,7 @@ export default function TopCatchBar() {
                 height={["200","300"]}
                 m="auto"
             />
+            </motion.div>
             </Box>
             <Box display={["none","none","block"]} w="50%" ml="20">
                  <FormInfoModal/>

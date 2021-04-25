@@ -16,6 +16,7 @@ import FormInfoModal from '../../components/Base/FormInfoModal';
 import CategoryBtn from '../../components/Base/CategoryBtn';
 import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
 import { Grid,Box,Flex,Text,Image,Button,Icon } from "@chakra-ui/react";
 
@@ -44,6 +45,7 @@ export default function Recipe({recipePosts}) {
 
     return (
         <Layout>
+        <motion.div initial="exit" animate="enter" exit="exit">
         <Box bg="#E3DBEB">
             <Bread />
           <TopCatchBar/>
@@ -70,6 +72,7 @@ export default function Recipe({recipePosts}) {
                 </Button>
 
          <CallCard/>
+         </motion.div>
         <style JSX>
                 {`
                 .head{

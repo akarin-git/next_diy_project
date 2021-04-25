@@ -25,7 +25,6 @@ export default function FormInfoModal() {
      px="3"
      py="2"
      w="300px"
-     mb="10"
      align="center"
      position={["none","none","relative"]}
      size="md" cursor="cursor"
@@ -34,7 +33,7 @@ export default function FormInfoModal() {
     color: "teal.500",
     
     }}>
-      About FabLoop
+      FabLoopでなにができるの？
     </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay/>

@@ -7,22 +7,26 @@ import {
 } from "@chakra-ui/react";
 import Image from 'next/image';
 import TopFeature from './TopFeature';
+import { motion } from 'framer-motion';
+import { smreverseVariants } from "../Animetion/MotionBase"
+
 
 export default function CardSecond() {
     return (
         <div>
             <Box bg="#f8f8ff" py="20" m="auto">
       <Box w="80%" m="auto" align="center" my="20">
+      <motion.div variants={smreverseVariants}>
       <Heading size="lg" fontSize={["30","30","40"]} color="#696969" mb="2">
         FabLoop のサービス
       </Heading>
+      </motion.div>
       <Image
         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619023988/wed/Ellipse_2_yjlhbr.png"
         alt="Picture of the author"
         width={400}
         height={15}
-      />
-
+        /> 
       </Box>
       {/* PC */}
      <Flex>
