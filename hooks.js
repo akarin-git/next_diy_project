@@ -90,6 +90,8 @@ export const useAppRouter = () => {
             router.route !== "/recipe/[id]" &&
             router.route !== "/category/craft" &&
             router.route !== "/category/handmade" &&
+            router.route !== "/category/living" &&
+            router.route !== "/category/outside" &&
             router.route !== "/userpage/[id]" ,
         },
     ];

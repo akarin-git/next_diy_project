@@ -14,6 +14,9 @@ import CategoryBtn from '../../components/Base/CategoryBtn';
 import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
 
+import { motion } from 'framer-motion';
+import { imageVariants,reverseVariants } from "../../components/Animetion/MotionBase";
+
 import { Grid,Box,Flex,Image,Text,Icon,Button } from "@chakra-ui/react";
 
 
@@ -39,7 +42,9 @@ export default function handmade({handmadePosts}) {
 
     return (
         <Layout>
-        <Box bg="#DBCCDA" >
+       <motion.div initial="exit" animate="enter" exit="exit">
+
+        <Box bg="#E3DBEB" >
             <Bread category={category}/>
             <TopCatchBar/>
         </Box>
@@ -64,6 +69,7 @@ export default function handmade({handmadePosts}) {
             </Button>
 
           <CallCard/>
+          </motion.div>
         </Layout>
     )
 }

@@ -16,6 +16,51 @@ import { motion } from 'framer-motion';
       }
     };
 
+// 上下リピート大
+       export const reverseVariants = {
+      exit: { y: 0, opacity: 1, 
+              transition: { duration: 0.5, ease: easing } },
+      enter: {
+            y:30,
+            opacity:1,
+            transition: {
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 2
+            }
+      }
+      
+    };
+// 上下斜めリピート中
+       export const smreverseVariants = {
+      exit: { y: 0, opacity: 1, 
+              transition: { duration: 0.5, ease: easing } },
+      enter: {
+            y:20,
+            opacity:1,
+            transition: {
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 2
+            }
+      } 
+    };
+// 上下斜めリピート小
+       export const smallreverseVariants = {
+      exit: { y: 0, opacity: 1, 
+              transition: { duration: 0.5, ease: easing } },
+      enter: {
+            y:10,
+            x:5,
+            opacity:1,
+            transition: {
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 2
+            }
+      } 
+    };
+
     // 右から左にふわっと
     export const rightVariants = {
       exit: {

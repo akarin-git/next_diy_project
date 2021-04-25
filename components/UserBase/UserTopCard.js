@@ -46,22 +46,21 @@ export default function UserTopCard({user}) {
                <chakra.h2
                     color={useColorModeValue("gray.600", "white")}
                     fontSize={{ base: "xl", md: "2xl" }}
-                    mt={{ base: 2, md: 2 }}
+                    mt={{ base: 4, md: 4 }}
                     fontWeight="bold"
                >
-                   my plofile
+                   {user[0].name} Fab page
                </chakra.h2>
-               <Flex justifyContent="end" mt={4}>
-                    <Text
-                      m={3}
-                    >
-                    {/* 名前 */}
-                      {user[0].name}
-                    </Text>
-               </Flex>
+                  <Box>
+                      <Image
+                          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
+                          width="600"
+                          height="30"
+                      />
+                  </Box>
                 <Box>
                <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
-                    自分のページ
+                    user Post Recipe & Favorite Recipe
                </chakra.p>
                
                 </Box>

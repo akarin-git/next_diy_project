@@ -46,7 +46,7 @@ export default function TopMenuDown() {
                   <span>All Recipe</span>
             </MenuItem>
             </Link>
-            <Link href="/category/craft">
+            <Link href="/category/handmade">
             <MenuItem minH="40px">
                   <Image
                         boxSize="2rem"
@@ -55,19 +55,46 @@ export default function TopMenuDown() {
                         alt="Simon the pensive"
                         mr="12px"
                   />
-                  <span>Craft</span>
+                  <span>Handmade</span>
             </MenuItem>
             </Link>
-            <Link href="/category/handmade">
+            <Link href="/category/craft">
             <MenuItem minH="40px">
                   <Image
                         boxSize="2rem"
                         borderRadius="full"
-                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615205762/Tulip_q8vmj9.png"
+                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618539590/wed/Tulip_sa7woh.png"
                         alt="Simon the pensive"
                         mr="12px"
                   />
-                  <span>Handmade</span>
+                  <span>Craft</span>
+            </MenuItem>
+            </Link>
+            <Link href="/category/living">
+            <MenuItem minH="40px">
+                  <Image
+                        boxSize="2rem"
+                        borderRadius="full"
+                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_161/v1618539547/wed/Desk_lamp_perspective_matte_s_q0nvze.png"
+                        alt="Simon the pensive"
+                        mr="12px"
+                  />
+                  <span>Living</span>
+            </MenuItem>
+            </Link>
+            <Link href="/category/outside">
+            <MenuItem minH="40px">
+                  <Image
+                        boxSize="2rem"
+                        // borderRadius="full"
+                        pl="2"
+                        pr="1"
+                        src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,h_64,w_29/v1619190969/wed/lamp_object_a5tcpg.png"
+                        // src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618539590/wed/Tulip_sa7woh.png"
+                        alt="Simon the pensive"
+                        mr="12px"
+                  />
+                  <span>Outside</span>
             </MenuItem>
             </Link>
         </MenuList>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState,useEffect } from "react";
 import { useAppRouter,useAppAxiosExecute } from "../hooks";
 import { motion } from 'framer-motion';
-import { imageVariants } from "../components/Animetion/MotionBase"
+import { imageVariants,reverseVariants } from "../components/Animetion/MotionBase"
 
 import styles from '../styles/Home.module.scss';
 import Layout from '../components/Layout';
@@ -19,7 +19,7 @@ import {
    InputGroup,Button,
    InputLeftAddon,Image,
    Input,InputLeftElement,
-   Grid,chakura
+   Grid,chakura,Spacer
 } from "@chakra-ui/react";
 
 
@@ -38,7 +38,7 @@ export default function Home() {
       <Box bg="#f8f8ff" >
       <Box
         // bg="#f8f8ff"
-        pt="20"
+        pt="10"
         display={["none","none","flex"]}
         alignItems="center"
         justifyContent="space-between"
@@ -47,7 +47,6 @@ export default function Home() {
       <Box
         w={["","50%","50%"]}
         h="auto"
-        pt={["5","10","20"]}
         pl={["5","10","40","40"]}
       >
        <Box m="auto" w="80%">
@@ -61,12 +60,31 @@ export default function Home() {
       </motion.div>
         <Box mt="10" align="left">
           <FormInfoModal/>
+
+      <Box mt="20" mr="40">
+      <motion.div 
+                animate={{ y:15 }}
+                transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2
+            }}>
+                 <Image
+                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619245132/wed/akari_scroll_mgoout.svg"
+                    alt="Picture of the author"
+                    width={60}
+                    height={20}
+                />
+        </motion.div>
+        </Box>
+
         </Box>
       </Box>
-
       </Box>
       <Spring />
       </Box>
+
+     
       
       {/* mobile用 */}
       <Box
@@ -75,14 +93,14 @@ export default function Home() {
        m="auto"
        bg="#f8f8ff"
       >
-      <Box p="10">
+      <Box pt="10">
         <Image
-         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619059713/wed/mobiletop_drzjau.png"
-         alt="Picture of the author"
-         width={["360","400"]}
-         height={["280","350"]}
-         mt="10"
-         m="auto"
+          src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619059713/wed/mobiletop_drzjau.png"
+          alt="Picture of the author"
+          width={["360","400"]}
+          height={["280","350"]}
+          mt="10"
+          m="auto"
         />
       </Box>
 
@@ -93,12 +111,13 @@ export default function Home() {
         <FormInfoModal/>
       </Box>
       </Box>
+      
 
         {/* 説明 */}
         <CardFirst />
 
         <CardSecond/>
-
+      
         <TopCallCard/>
 
         </Box>

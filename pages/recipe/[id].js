@@ -9,7 +9,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Layout from '../../components/Layout';
-import UserCard from '../../components/RecipeBase/UserCard';
 import RecipeStep from '../../components/RecipeBase/RecipeStep';
 import CBread from '../../components/Base/CBread';
 import ShereBtn from '../../components/RecipeBase/ShereBtn';
@@ -22,15 +21,14 @@ import IineBtn from "../../components/RecipeBase/IineBtn";
 import Step from "../../components/RecipeBase/Step";
 
 import { motion } from 'framer-motion';
-import { imageVariants } from "../../components/Animetion/MotionBase";
+import { imageVariants,reverseVariants } from "../../components/Animetion/MotionBase";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiHeart } from "react-icons/hi";
 import { FaShareSquare,FaStar } from "react-icons/fa";
 import { FcInternal } from "react-icons/fc";
 import { FiChevronsDown } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
-
-
+import { AiOutlineLaptop,AiOutlineAudit  } from "react-icons/ai"
 
 import { Container,
         Button,
@@ -41,8 +39,7 @@ import { Container,
         Breadcrumb,
         BreadcrumbItem,
         BreadcrumbLink,
-        Heading,
-
+        Heading,useColorModeValue,
         Modal,ModalOverlay,ModalContent,
         ModalHeader,ModalCloseButton,
         ModalBody,ModalFooter,useDisclosure
@@ -119,12 +116,25 @@ export default function Recipe({staticPost,id}) {
                 
             </Container>
 
-            <Box w="full" pr="10" mt="10" mb="10" w="80%"　w="auto">
+            <Box w="full" pr="10" mt="10" mb="10" w="80%"　m="auto" align="right">
             {/* ユーザー */}
-                <Box align="center">
-                    <Icon as={FiChevronsDown} w={10} h={10} color="#b0c4de" align="center"/>
-                </Box>
-                 <UserCard post={post}/>
+            <Box mb="10">
+              <Link href={`/userpage/${post[0].user_id}`}>
+               <Button mt={2} ml="10" color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineAudit />}>
+                     {post[0].user.name}'s DIY recipes page
+               </Button>
+               </Link>
+
+               {post[0].web_page ? (
+              <Link href={`${post[0].web_page}`}>
+               <Button mt={2} ml="10" color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineLaptop />} >
+                    DIY web site
+               </Button>
+               </Link>):(
+                   <>
+                   </>
+               )}
+            </Box>
             {/* シェアボタン */}
             <Flex w={["90%","90%","80%"]}>
             <Spacer />
@@ -162,9 +172,11 @@ export default function Recipe({staticPost,id}) {
                 m="auto"
                 align="center"
                 >
+                <motion.div variants={reverseVariants}>
                  <Heading as="h2" size="xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
+                </motion.div>
                  <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10">
                     login
                 </Button>

@@ -22,13 +22,15 @@ export default function CategoryBtn() {
                   role="button"
                   aria-label="Some box"
                   p={5}
+                  mt="5"
                   w="300px"
-                  bg="gray.300"
                   children="Category検索"
                   align="center"
                   position="none"
-                 
-                />
+                  _hover={{
+                  background: "white",
+                  color: "teal.500",
+                  }}/>
         </PopoverTrigger>
         <PopoverContent bg="tomato" color="white">
         <PopoverHeader fontWeight="semibold" align="center">DIY category</PopoverHeader>

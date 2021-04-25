@@ -3,6 +3,8 @@ import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
@@ -12,6 +14,7 @@ import FormInfoModal from '../../components/Base/FormInfoModal';
 import CategoryBtn from '../../components/Base/CategoryBtn';
 import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
+
 
 import { Grid,Box,Flex,Image,Button,Icon,Text } from "@chakra-ui/react";
 
@@ -37,7 +40,8 @@ export default function handmade({craftPosts}) {
         
     return (
         <Layout>
-         <Box bg="#DBCCDA">
+        <motion.div initial="exit" animate="enter" exit="exit">
+         <Box bg="#E3DBEB">
             <Bread category={category}/>
            <TopCatchBar/>
          </Box>
@@ -63,6 +67,7 @@ export default function handmade({craftPosts}) {
             </Button>
 
          <CallCard/>
+        </motion.div>
         </Layout>
     )
 }

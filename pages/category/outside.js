@@ -2,7 +2,8 @@ import { getCategoryOutside } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
@@ -39,7 +40,8 @@ export default function outside({outsidePosts}) {
 
     return (
         <Layout>
-        <Box bg="#DBCCDA" >
+        <motion.div initial="exit" animate="enter" exit="exit">
+        <Box bg="#E3DBEB" >
             <Bread category={category}/>
             <TopCatchBar/>
         </Box>
@@ -64,6 +66,7 @@ export default function outside({outsidePosts}) {
             </Button>
 
           <CallCard/>
+          </motion.div>
         </Layout>
     )
 }

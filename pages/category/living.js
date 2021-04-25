@@ -2,7 +2,9 @@ import { getCategoryLiving } from '../../lib/posts';
 import { API_ENDPOINT } from "../../constants";
 import useSWR from 'swr';
 import { useEffect } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 
 import Layout from '../../components/Layout';
 import RcCard from '../../components/RcCard';
@@ -39,7 +41,8 @@ export default function living({livingPosts}) {
 
     return (
         <Layout>
-        <Box bg="#DBCCDA" >
+        <motion.div initial="exit" animate="enter" exit="exit">
+        <Box bg="#E3DBEB" >
             <Bread category={category}/>
             <TopCatchBar/>
         </Box>
@@ -64,6 +67,7 @@ export default function living({livingPosts}) {
             </Button>
 
           <CallCard/>
+        </motion.div>
         </Layout>
     )
 }
@@ -71,7 +75,7 @@ export default function living({livingPosts}) {
 export async function getStaticProps(){
     // console.log(params);
 
-    const livingPosts = await getCategoryliving();
+    const livingPosts = await getCategoryLiving();
     return {
         props:{
             livingPosts,
