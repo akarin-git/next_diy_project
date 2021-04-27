@@ -18,7 +18,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
     return (
         <Container pb={["20","10"]} mt={["5","0"]}>
         <form onSubmit={submit}>
-            <Box mt={["5","7"]} mb="10">
+            <Box mt={["5","7"]} mb="2" bg="#fff" p="2">
             <FormControl id="name" isRequired>
                 <FormLabel>Name</FormLabel>
                 <Input 

@@ -15,7 +15,7 @@ export default function Story3page() {
         {/* mobile */}
         <Box w="90%" display={["block","none"]} ml="3" align="center" ml="10">
         <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619091736/wed/Formimage_eojcla.png'}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619508233/wed/story2_deyga4.png'}
             width={200}
             height={200}
         />
@@ -23,11 +23,11 @@ export default function Story3page() {
 
         {/* PC */}
         <Flex>
-        <Box w="50%" display={["none","block"]} ml="10" align="center">
+        <Box w="50%" display={["none","block"]} ml="10" py="5" align="center">
           <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619091736/wed/Formimage_eojcla.png'}
-            width={320}
-            height={310}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619508233/wed/story2_deyga4.png'}
+            width={290}
+            height={230}
           />
         </Box>
         <Box mb="5" m="auto">

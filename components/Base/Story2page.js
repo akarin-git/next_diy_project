@@ -23,11 +23,11 @@ export default function Story2page() {
 
         {/* PC */}
         <Flex>
-        <Box w="60%" display={["none","block"]} align="center" pb="10">
+        <Box w="60%" display={["none","block"]} align="center" py="5" ml="3">
           <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619507223/wed/story3_ftqyjm.png'}
             width={410}
-            height={220}
+            height={230}
           />
         </Box>
         <Box mb="5" m="auto">
