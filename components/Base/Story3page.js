@@ -13,11 +13,11 @@ export default function Story3page() {
         <Box p={["0","0","5"]}>
 
         {/* mobile */}
-        <Box w="90%" display={["block","none"]} my="2" align="center" ml="10">
+        <Box w="90%" display={["block","none"]} ml="3" align="center" ml="10">
         <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619091736/wed/Formimage_eojcla.png'}
-            width={230}
-            height={230}
+            width={200}
+            height={200}
         />
         </Box>
 

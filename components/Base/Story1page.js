@@ -16,10 +16,10 @@ export default function Story1page() {
         <Box p={["0","0","5"]}>
 
         {/* mobile */}
-        <Box w="90%" display={["block","none"]} m="auto" my="10">
+        <Box w="90%" display={["block","none"]} m="auto" ml="7" my="5">
         <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619089460/wed/category_tvh5ye.png'}
-            width={450}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619506860/wed/story1_zjc2ed.png'}
+            width={420}
             height={230}
         />
         </Box>
@@ -28,8 +28,8 @@ export default function Story1page() {
         <Flex>
         <Box w="70%" display={["none","block"]} ml="5" py="10">
           <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619089460/wed/category_tvh5ye.png'}
-            width={450}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619506860/wed/story1_zjc2ed.png'}
+            width={410}
             height={230}
           />
         </Box>
