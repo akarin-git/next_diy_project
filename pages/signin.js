@@ -38,7 +38,7 @@ useEffect(() => {
     }
 
     return (
-        <>
+        <Box bg="#f0f8ff">
         <Link href={`/`}>
             <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
@@ -47,26 +47,28 @@ useEffect(() => {
         </Link>
         
         <Container w="full" align="center">
-            <Box mt={["7","6"]}>
-              <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615206113/example-25_toyoqb.svg'} width={560} height={320}/>
+            <Box>
+              <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619509461/wed/signup_sw2dpp.png'} width={240} height={250}/>
         <Link href={`/signup`}>
-            <Box mb={["1","0"]}>
-              <Text align="center" fontSize="xl">
+            <Box mb={["1","0"]} pr="10" _hover={{ color: 'pink' }}>
+              <Text align="right" fontSize="md" fontWeight="bold">
                     Sign Up ?
               </Text>
-              <Text align="center" fontSize="sm">
+              <Text align="right" fontSize="sm">
                     新規登録はこちら
               </Text>
             </Box>
         </Link>
             </Box>
+        
         <SigninForm
             onSubmit={signIn}
             isSending={signingIn}
             error={error}
         />
         {error && <p className="error">{error}</p>}
+        
         </Container>
-        </>
+        </Box>
     )
 }

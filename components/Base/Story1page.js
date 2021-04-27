@@ -26,7 +26,7 @@ export default function Story1page() {
 
         {/* PC */}
         <Flex>
-        <Box w="70%" display={["none","block"]} ml="5" py="10">
+        <Box w="70%" display={["none","block"]} ml="5" py="5">
           <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619506860/wed/story1_zjc2ed.png'}
             width={410}

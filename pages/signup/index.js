@@ -22,7 +22,7 @@ const submit = async({name,email,password,role}) => {
 };
 
     return (
-        <>
+        <Box bg="#f0f8ff">
             <Link href={`/`}>
              <Button variant="ghost">
                 <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
@@ -31,13 +31,13 @@ const submit = async({name,email,password,role}) => {
             </Link>
             <Container w="full" align="center">
             <Box>
-                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1615205052/undraw_Location_search_re_ttoj_t2ffi8.png'} width={470} height={290}/>
+                <Image src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619509425/wed/login_pykoqk.png'} width={240} height={250}/>
             <Link href={`/signin`}>
-                <Box mb={["1","0"]}>
-                <Text align="center" fontSize="xl">
+                <Box mb={["1","0"]} pr="10" _hover={{ color: 'pink' }}>
+                <Text align="right" fontSize="md" fontWeight="bold">
                     login ?
                 </Text>
-                <Text align="center" fontSize="sm">
+                <Text align="right" fontSize="sm">
                     ログインはこちらから
                 </Text>
                 </Box>
@@ -49,6 +49,6 @@ const submit = async({name,email,password,role}) => {
                 />
             {error && <p className="error">{error}</p>}
             </Container>
-        </>
+        </Box>
     )
 }

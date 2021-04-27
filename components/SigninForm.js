@@ -18,7 +18,7 @@ const SigninForm = ({onSubmit,isSending,error}) =>  {
     return (
          <Container pb={["40","40","20"]} mt={["5","0"]}>
             <form onSubmit={submit}>
-             <Box mt={["20","7"]} mb="10">
+             <Box mt={["20","7"]} mb="2" bg="#fff" p="5">
             {/* <Input
                 value={email}
                 placeholder="メールアドレス"
