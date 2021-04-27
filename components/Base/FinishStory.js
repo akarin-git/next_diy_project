@@ -13,11 +13,11 @@ export default function FinishStory() {
         <Box p={["0","0","5"]}>
 
         {/* mobile */}
-        <Box w="90%" display={["block","none"]} m="auto" my="2">
+        <Box w="90%" display={["block","none"]} m="auto" align="center">
         <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618994555/wed/Saly-12_fnlnk1.png'}
-            width={300}
-            height={270}
+            width={200}
+            height={200}
         />
         </Box>
 

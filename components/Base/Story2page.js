@@ -13,11 +13,11 @@ export default function Story2page() {
         <Box p={["0","0","5"]}>
 
         {/* mobile */}
-        <Box w="90%" display={["block","none"]} m="auto" my="2" align="center">
+        <Box w="90%" display={["block","none"]} m="auto" my="3" ml="10" align="center">
         <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619091330/wed/Group_7_nezvln.png'}
-            width={190}
-            height={190}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619507223/wed/story3_ftqyjm.png'}
+            width={420}
+            height={230}
         />
         </Box>
 
@@ -25,9 +25,9 @@ export default function Story2page() {
         <Flex>
         <Box w="60%" display={["none","block"]} align="center" pb="10">
           <Image
-            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619091330/wed/Group_7_nezvln.png'}
-            width={290}
-            height={270}
+            src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619507223/wed/story3_ftqyjm.png'}
+            width={410}
+            height={220}
           />
         </Box>
         <Box mb="5" m="auto">
