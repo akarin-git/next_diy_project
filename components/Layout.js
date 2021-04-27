@@ -20,7 +20,7 @@ export default function Layout({children,title = "Fab Loop",description="DIY レ
       <meta property="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${process.env.SITE_URL}/https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619447318/wed/logo_f2hpvg.png`} />
+      <meta property="og:image" content={`https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619447318/wed/logo_f2hpvg.png`} />
       <meta name="twitter:card" content="summary_large_image"/>
     </Head>
         <header>
