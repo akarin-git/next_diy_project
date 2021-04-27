@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FormLabel,Input,FormControl,Box,Container } from "@chakra-ui/react";
 
 
-const SigninForm = ({onSubmit,isSending}) =>  {
+const SigninForm = ({onSubmit,isSending,error}) =>  {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
@@ -53,6 +53,7 @@ const SigninForm = ({onSubmit,isSending}) =>  {
             <Button className="mts" disabled={isSending}>
                 login
             </Button>
+             {error && <p className="error">{error}</p>}
         </form>
         </Container>
     )

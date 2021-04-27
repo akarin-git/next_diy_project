@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 
 
-export default function PostRecipeForm({onSubmit}) {
+export default function PostRecipeForm({onSubmit,error}) {
     const [category, setCategory] = useState("");
     const [title, setTitle] = useState("");
     const [subtitle, setSubTitle] = useState("");
@@ -543,6 +543,7 @@ export default function PostRecipeForm({onSubmit}) {
               >
                 書き込む
             </Button>
+            {error && <p className="error">{error}</p>}
             </Box>
             </form>
         </Box>

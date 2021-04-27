@@ -22,10 +22,10 @@ export default function AvatarBag({post}) {
             <Link href={`/userpage/${post[0].user_id}`}>
             <Flex>
             <Spacer />
-                <Text fontSize="sm" align="right" p="1" pt="6" m="auto" color="gray.500">
+                <Text fontSize="sm" fontWeight="bold" align="right" p="1" pt="6" m="auto" color="gray.500" _hover={{ color: 'pink' }}>
                    {post[0].user.name}
                 </Text>
-            {/* <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" mx="4" mb="2"/> */}
+            <Avatar src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619488685/wed/ava7_mlvsmn.png" mx="2" mb="2"/>
             </Flex>
             </Link>
               <Flex mr="2">
