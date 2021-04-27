@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   Button,Text,
-  chakra
+  chakra,Box
 } from "@chakra-ui/react"
 import InfoStory from './InfoStory';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ export default function FormInfoModal() {
       <Modal isOpen={isOpen} onClose={onClose} size="4xl">
         <ModalOverlay/>
         <ModalContent >
-          <ModalHeader　align="center" mt="4" color="#696969">このサイトの使い方</ModalHeader>
+          {/* <ModalHeader　align="center" mt="4" color="#696969">このサイトの使い方</ModalHeader> */}
           <ModalCloseButton />
           <ModalBody>
             <InfoStory />
@@ -48,14 +48,24 @@ export default function FormInfoModal() {
             {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button> */}
-            <Link href={`/PostForm`}>
+            <Box w="200px" >
+            <Link href={`/recipe`}>
             <Button
-            colorScheme="purple" onClose={onClose}
+            mb="5" w="200px" colorScheme="purple" onClose={onClose} 
             //  variant="ghost"
             >
-            DIY Recipe を投稿する
+            レシピ を探す
             </Button>
             </Link>
+            <Link href={`/PostForm`}>
+            <Button
+            w="200px"　colorScheme="purple" onClose={onClose}
+            //  variant="ghost"
+            >
+            レシピ を投稿する
+            </Button>
+            </Link>
+            </Box>
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -15,7 +15,7 @@ import CategoryBtn from '../../components/Base/CategoryBtn';
 import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
 
-import { Grid,Box,Flex,Image,Text,Icon,Button } from "@chakra-ui/react";
+import { Grid,Box,Flex,Image,Text,Icon,Button,Heading } from "@chakra-ui/react";
 
 
 // swr
@@ -43,6 +43,9 @@ export default function outside({outsidePosts}) {
         <motion.div initial="exit" animate="enter" exit="exit">
         <Box bg="#E3DBEB" >
             <Bread category={category}/>
+            <Heading as="h3" size="xl" align="center" color="#4682b4"> 
+                Outside
+            </Heading>
             <TopCatchBar/>
         </Box>
         <Box mb="40">

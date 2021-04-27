@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { imageVariants,smallreverseVariants } from "../Animetion/MotionBase"
 
 
-export default function TopCatchBar() {
+export default function MainCatchBar() {
     return (
         <div>
             <Flex  w={["100%","100%","80%"]} m="auto">
@@ -13,7 +13,7 @@ export default function TopCatchBar() {
             <Box display={["none","none","block"]} m="auto" w="50%" mb="10">
             <motion.div variants={smallreverseVariants}>
              <Image
-                src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619496244/wed/topcatch_lc191t.png"
+                src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619497671/wed/topcatch2_oxo094.png"
                 alt="Picture of the author"
                 width={["200","300"]}
                 height={["200","300"]}
@@ -32,7 +32,7 @@ export default function TopCatchBar() {
             {/* mobile design */}
             <Box display={["block","block","none"]} w="100%" align="center" pb="10">
             <Image
-                src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619496244/wed/topcatch_lc191t.png"
+                src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619497671/wed/topcatch2_oxo094.png"
                 alt="Picture of the author"
                 width={["200","300"]}
                 height={["200","300"]}

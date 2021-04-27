@@ -21,26 +21,26 @@ export default function CardFirst() {
        <Box m="auto" mt="-20" align="center">
        <motion.div variants={smreverseVariants}>
        <Image
-         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618739844/wed/bg-19_gruwqw.png"
+         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619490990/wed/topcard2_rlansu.png"
          alt="Picture of the author"
-         width={250}
+         width={300}
          height={250}
          m="auto"
          mt="-20"
         />
         </motion.div>
         </Box>
-       <Box w={["90%","90%","50%"]} m="auto" align="center" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["5","10","0"]}>
-         <Text fontSize="xl" color="#3A5478">
+       <Box w={["100%","90%","50%"]} m="auto" align="center" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["10","10","10"]}>
+         <Text fontSize={["md","xl"]} color="#3A5478" fontWeight="bold">
          <p>DIYしてみたいけど難しそう...</p>
          <p>どうやって作るんだろう？が知れる。</p>
          </Text>
         
        </Box>
        </Flex>
-       <Flex display={["","","flex"]}>
-       <Box display={["none","none","block"]} w={["90%","90%","50%"]} h="200" m="auto" align="center" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["5","10","10"]}>
-          <Text fontSize="xl" color="#3A5478">
+       <Flex display={["","","flex"]} mt="5" align="center">
+       <Box display={["none","none","block"]} w={["90%","90%","50%"]} h="100" align="center" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["10","10","10"]} >
+          <Text fontSize="xl" color="#3A5478" fontWeight="bold">
          <p>カテゴリーから自分が探していた</p>
          <p>DIYのレシピをさっと検索</p>
          </Text>
@@ -48,15 +48,18 @@ export default function CardFirst() {
        <Box m="auto" mt="8" align="center">
        <motion.div variants={imageVariants}>
        <Image
-         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618739907/wed/bg-1_bmbchr.png"
+         src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619490714/wed/card1image_yol4vw.png"
          alt="Picture of the author"
-         width={350}
-         height={230}
+         width={400}
+         height={270}
         />
         </motion.div>
         </Box>
-         <Box display={["block","block","none"]} w={["90%","90%","50%"]} m="auto" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["5","10","0"]}>
-         <Text fontSize="2xl" color="#3A5478">(2xl) In love with React & Next</Text>
+         <Box display={["block","block","none"]} w={["90%","90%","50%"]} m="auto" align="center" bg="#EBFBF1" borderRadius="20" p={["3","3"]} my={["10","10","0"]}>
+         <Text fontSize="md" color="#3A5478" fontWeight="bold">
+         <p>カテゴリーから自分が探していた</p>
+         <p>DIYのレシピをさっと検索</p>
+         </Text>
        </Box>
        </Flex>
        

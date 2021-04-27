@@ -38,6 +38,16 @@ export default function MenuAccordion() {
                     Handmade
                   </Button>
             </Link> 
+            <Link href="/category/outside">
+                  <Button w="full" variant="ghost">
+                    Outside
+                  </Button>
+            </Link> 
+            <Link href="/category/living">
+                  <Button w="full" variant="ghost">
+                    Living
+                  </Button>
+            </Link> 
             </AccordionPanel>
         </AccordionItem>
         </Accordion> 

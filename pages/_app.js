@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
   const [{ data: user }, fetchUser] = useAppAxiosExecute({
     url: "/api/me",
   });
-  console.log(user);
+  // console.log(user);
 
   useEffect(() => {
     if (process.browser && needAuth) {

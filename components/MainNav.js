@@ -72,14 +72,14 @@ export default function MainNav() {
             {/* Recipe Page pulldown */}
             <TopMenuDown />
 
-            <Link href="/userpage">
-              <Button variant="ghost">
-              MyPost
-              </Button>
-            </Link>
             <Link href="/PostForm">
               <Button variant="ghost">
              Post Form
+              </Button>
+            </Link>
+            <Link href="/userpage">
+              <Button variant="ghost">
+              My Page
               </Button>
             </Link>
             {/* <Link href="/blog">
@@ -94,8 +94,9 @@ export default function MainNav() {
             </Button>
             </Link>
 
+
             {/* absolute */}
-            {/* モバイルnline-flex */}
+            {/* モバイルsize */}
             <Box display={["inline-flex","inline-flex","inline-flex","none"]}>
               <IconButton
                 display={{ base: "flex", md: "none" }}

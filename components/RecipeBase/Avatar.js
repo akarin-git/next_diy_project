@@ -25,7 +25,7 @@ export default function AvatarBag({post}) {
                 <Text fontSize="sm" fontWeight="bold" align="right" p="1" pt="6" m="auto" color="gray.500" _hover={{ color: 'pink' }}>
                    {post[0].user.name}
                 </Text>
-            <Avatar src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619488685/wed/ava7_mlvsmn.png" mx="2" mb="2"/>
+            <Avatar src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619488311/wed/ava4_xhuicr.png" mx="2" mb="2"/>
             </Flex>
             </Link>
               <Flex mr="2">

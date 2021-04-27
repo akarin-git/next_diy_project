@@ -16,7 +16,7 @@ import TopCatchBar from '../../components/Base/TopCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
 
 
-import { Grid,Box,Flex,Image,Button,Icon,Text } from "@chakra-ui/react";
+import { Grid,Box,Flex,Image,Button,Icon,Text,Heading } from "@chakra-ui/react";
 
 // swr
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -43,6 +43,9 @@ export default function handmade({craftPosts}) {
         <motion.div initial="exit" animate="enter" exit="exit">
          <Box bg="#E3DBEB">
             <Bread category={category}/>
+            <Heading as="h3" size="xl" align="center" color="#ff7f50"> 
+                Craft
+            </Heading>
            <TopCatchBar/>
          </Box>
          <Box mb="40">

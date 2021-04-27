@@ -23,13 +23,13 @@ export default function MeTopCard({me}) {
              <Box
                w={["100%","100%","75%"]}
                mx="auto"
-               py={["0","4"]}
+               py={["4","4"]}
                px={["0","8"]}
                bg={useColorModeValue("white", "gray.800")}
                shadow="lg"
                rounded="lg"
              >
-               <Flex justifyContent={["center", "end"]} mt={-16}>
+               <Flex justifyContent={["center", "end"]} mt={-16} >
                     <Image
                       w={20}
                       h={20}
@@ -46,14 +46,14 @@ export default function MeTopCard({me}) {
 
                <chakra.h2
                     color={useColorModeValue("gray.600", "white")}
-                    fontSize={{ base: "xl", md: "2xl" }}
+                    fontSize={{ base: "xl", md: "xl" }}
                     mt={{ base: 2, md: 2 }}
                     ml="10"
                     fontWeight="bold"
                >
                    {me[0].name}
                </chakra.h2>
-                <Box>
+                <Box ml="5">
                       <Image
                           src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
                           width="600"

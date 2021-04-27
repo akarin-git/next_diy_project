@@ -7,7 +7,7 @@ import {
 import Link from 'next/link';
 
 export default function Bread({category}) {
-    console.log(category)
+    // console.log(category)
     return (
          <div className="container">
         
