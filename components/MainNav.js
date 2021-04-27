@@ -12,7 +12,7 @@ import {
   useDisclosure,
   VStack,
   IconButton,
-  CloseButton,
+  CloseButton,Image
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { rightVariants } from "./Animetion/MotionBase"
@@ -43,12 +43,18 @@ export default function MainNav() {
                 title="Choc Home Page"
                 display="flex"
                 alignItems="center"
+                fontWeight="bold"
               >
             {/* Fab Loop */}
               <VisuallyHidden>Choc</VisuallyHidden>
-                <chakra.h1 fontSize="2xl" fontWeight="bold">
-                  Logo
+                <chakra.h1 fontSize="2xl" fontWeight="bold" mr="2" ml="5">
+                  <Image
+                   src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619447318/wed/logo_f2hpvg.png"
+                        width={10} 
+                        height={10}
+                  />
                 </chakra.h1>
+                 FabLoop
               </chakra.a>
             </motion.div>
           </motion.div>
@@ -76,11 +82,11 @@ export default function MainNav() {
              Post Form
               </Button>
             </Link>
-            <Link href="/blog">
+            {/* <Link href="/blog">
               <Button variant="ghost">
               Blog
               </Button>
-            </Link>
+            </Link> */}
             </HStack>
             <Link href="/signin">
               <Button variant="ghost" size="sm" bg="yellow">
@@ -88,7 +94,7 @@ export default function MainNav() {
             </Button>
             </Link>
 
-{/* absolute */}
+            {/* absolute */}
             {/* モバイルnline-flex */}
             <Box display={["inline-flex","inline-flex","inline-flex","none"]}>
               <IconButton
@@ -134,11 +140,11 @@ export default function MainNav() {
                     Post Form 
                   </Button>
                 </Link>
-                <Link href="/blog">
+                {/* <Link href="/blog">
                   <Button w="full" variant="ghost">
                     Blog
                   </Button>
-                </Link>
+                </Link> */}
                 <Link href="/signin">
                   <Button w="full" variant="ghost">
                     Sign In

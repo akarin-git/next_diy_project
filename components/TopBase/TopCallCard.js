@@ -63,7 +63,7 @@ export default function TopCallCard() {
                         login
                     </Button>
                 </Link>
-                 <Link href="/signin">
+                 <Link href="/resipe">
                     <Button
                       rightIcon={<FcGallery />}
                       colorScheme="teal"

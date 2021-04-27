@@ -63,6 +63,7 @@ useEffect(() => {
         <SigninForm
             onSubmit={signIn}
             isSending={signingIn}
+            error={error}
         />
         {error && <p className="error">{error}</p>}
         </Container>

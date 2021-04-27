@@ -19,7 +19,7 @@ export default function CallCard() {
                  py="2"
                  opacity="90%"
                 >
-                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px"> 
+                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w={["90%","70%"]} m="auto" my="20" py="10" px={["5","20"]}　borderRadius="20px"> 
                 <Flex>
                 <Box display={["none","none","block"]}>
                  <Image 
@@ -34,7 +34,7 @@ export default function CallCard() {
                 m="auto"
                 align="center"
                 >
-                 <Heading as="h2" size="xl" color="#4682b4">
+                 <Heading as="h2" size="2xl" color="#4682b4">
                     Let's Try it!
                 </Heading>
                 
@@ -46,6 +46,7 @@ export default function CallCard() {
                  variant="outline"
                  m={["auto",""]}
                  mt="5"
+                 w="250px"
                 >
                 login
                 </Button>

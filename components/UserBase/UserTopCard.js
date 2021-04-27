@@ -28,6 +28,7 @@ export default function UserTopCard({user}) {
                bg={useColorModeValue("white", "gray.800")}
                shadow="lg"
                rounded="lg"
+              align={{base:"center",md:"left"}}
              >
                <Flex justifyContent={["center", "end"]} mt={-16}>
                     <Image
@@ -39,27 +40,29 @@ export default function UserTopCard({user}) {
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_418/v1618539579/wed/User_perspective_matte_s_vbu7kn.png"
+                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619488317/wed/ava3_bzqxf6.png"
                     />
                </Flex>
-
+              
                <chakra.h2
                     color={useColorModeValue("gray.600", "white")}
-                    fontSize={{ base: "xl", md: "2xl" }}
-                    mt={{ base: 4, md: 4 }}
+                    fontSize={{ base: "xl", md: "xl" }}
+                    mt={{ base: 5, md: 6 }}
+                    ml={{ base: 4, md: 4 }}
                     fontWeight="bold"
                >
                    {user[0].name} Fab page
                </chakra.h2>
-                  <Box>
+              
+                  <Box mt="2">
                       <Image
                           src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619066114/wed/lineyellow_a3awdz.png"
-                          width="600"
-                          height="30"
+                          width="300"
+                          height="10"
                       />
                   </Box>
                 <Box>
-               <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.200")}>
+               <chakra.p mt={2} mb={["10","5"]} color={useColorModeValue("gray.600", "gray.200")}>
                     user Post Recipe & Favorite Recipe
                </chakra.p>
                

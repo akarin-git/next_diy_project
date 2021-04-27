@@ -15,7 +15,7 @@ export default function PostForm() {
         method:"POST",
         url:"/api/image",
         contentType: "multipart/form-data",
-        errorMessage:"エラー",
+        errorMessage:"未入力エラーです",
     });
 
     const submit = ({
@@ -60,8 +60,9 @@ export default function PostForm() {
          submitData.append("goodsE", goodsE),
         //  submitData.append("goods", goAnum),
          upload(submitData);
-        
+        if(!error){
         router.push("/recipe");
+        }
 };
     
     return (
@@ -79,6 +80,7 @@ export default function PostForm() {
             <PostRecipeForm
              onSubmit={submit}
              isSending={loading}
+             error={error}
              />
         {error && <p className="error">{error}</p>}
 

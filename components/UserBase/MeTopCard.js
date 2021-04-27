@@ -40,7 +40,7 @@ export default function MeTopCard({me}) {
                       borderWidth={2}
                       borderColor={useColorModeValue("brand.500", "brand.400")}
                       alt="Testimonial avatar"
-                      src="https://res.cloudinary.com/kiyopikko/image/upload/v1561617116/empty-user-image_o4ll8m.png"
+                      src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619488503/wed/ava6_inqa4f.png"
                     />
                </Flex>
 
