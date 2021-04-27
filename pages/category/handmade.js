@@ -17,7 +17,7 @@ import { HiChevronLeft } from "react-icons/hi";
 import { motion } from 'framer-motion';
 import { imageVariants,reverseVariants } from "../../components/Animetion/MotionBase";
 
-import { Grid,Box,Flex,Image,Text,Icon,Button } from "@chakra-ui/react";
+import { Grid,Box,Flex,Image,Text,Icon,Button,Badge,Heading } from "@chakra-ui/react";
 
 
 // swr
@@ -46,8 +46,13 @@ export default function handmade({handmadePosts}) {
 
         <Box bg="#E3DBEB" >
             <Bread category={category}/>
+             <Heading as="h3" size="xl" align="center" color="#db7093"> 
+                Handmade
+            </Heading>
             <TopCatchBar/>
         </Box>
+        
+       
         <Box mb="40">
             <Grid 
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 

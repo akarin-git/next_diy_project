@@ -62,7 +62,7 @@ export default function UserTopCard({user}) {
                       />
                   </Box>
                 <Box>
-               <chakra.p mt={2} mb={["10","5"]} color={useColorModeValue("gray.600", "gray.200")}>
+               <chakra.p mt={2} mb={["10","5"]} ml="3" color={useColorModeValue("gray.600", "gray.200")}>
                     user Post Recipe & Favorite Recipe
                </chakra.p>
                

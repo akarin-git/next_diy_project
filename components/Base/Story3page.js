@@ -32,8 +32,8 @@ export default function Story3page() {
         </Box>
         <Box mb="5" m="auto">
           <Text mb="3" fontWeight="bold">
-           <p>カテゴリから簡単に</p>
-           <p>DIY Recipeにアクセス。</p>
+           <p>自分のDIYのレシピを</p>
+           <p>投稿してシェアしよう！</p>
           </Text>
         </Box>
 

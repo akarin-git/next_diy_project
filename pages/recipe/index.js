@@ -14,11 +14,11 @@ import Bread from '../../components/Base/Bread';
 import CallCard from '../../components/Base/CallCard';
 import FormInfoModal from '../../components/Base/FormInfoModal';
 import CategoryBtn from '../../components/Base/CategoryBtn';
-import TopCatchBar from '../../components/Base/TopCatchBar';
+import MainCatchBar from '../../components/Base/MainCatchBar';
 import { HiChevronLeft } from "react-icons/hi";
 import { motion } from 'framer-motion';
 
-import { Grid,Box,Flex,Text,Image,Button,Icon } from "@chakra-ui/react";
+import { Grid,Box,Flex,Text,Image,Button,Icon,Heading } from "@chakra-ui/react";
 
 
 // swr
@@ -48,7 +48,10 @@ export default function Recipe({recipePosts}) {
         <motion.div initial="exit" animate="enter" exit="exit">
         <Box bg="#E3DBEB">
             <Bread />
-          <TopCatchBar/>
+            <Heading as="h3" size="xl" align="center" color="#bc8f8f"> 
+                All Recipe
+            </Heading>
+          <MainCatchBar/>
         </Box>
         <Box mb="40">
         <Grid 

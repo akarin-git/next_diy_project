@@ -21,7 +21,7 @@ export default function CallCard() {
                 >
                 <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w={["90%","70%"]} m="auto" my="20" py="10" px={["5","20"]}　borderRadius="20px"> 
                 <Flex>
-                <Box display={["none","none","block"]}>
+                <Box display={["none","none","block"]} w="50%">
                  <Image 
                 src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618748941/wed/iamge_phone_lkoofn.png"
                 width={350} 
@@ -29,7 +29,7 @@ export default function CallCard() {
                 />
                 </Box>
                 <Box 
-                w={["100%","60%","60%"]}
+                w={["100%","50%","50%"]}
                 h="auto"
                 m="auto"
                 align="center"

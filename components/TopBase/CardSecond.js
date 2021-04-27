@@ -14,7 +14,7 @@ import { smreverseVariants } from "../Animetion/MotionBase"
 export default function CardSecond() {
     return (
         <div>
-            <Box bg="#f8f8ff" py="20" m="auto">
+      <Box bg="#f8f8ff" py={["10","20"]} m="auto">
       <Box w="80%" m="auto" align="center" my="20">
       <motion.div variants={smreverseVariants}>
       <Heading size="lg" fontSize={["30","30","40"]} color="#696969" mb="2">
@@ -38,7 +38,7 @@ export default function CardSecond() {
         />
       </Box>
       <Box w="60%" m="auto" display={["none","none","block"]}>
-      <Text>
+      <Text fontWeight="bold" fontSize="xl">
       <p>見つけにくいものづくりの情報が</p>
       <p>すぐに見つけられる。</p>
       </Text>
@@ -56,7 +56,7 @@ export default function CardSecond() {
         />
       </Box>
        <Box w="90%" mt="10" mx="auto" align="center" display={["block","block","none"]}>
-        <Text>
+        <Text fontWeight="bold" fontSize="xl" color="#696969">
           <p>見つけにくいものづくりの情報が</p>
           <p>すぐに見つけられる。</p>
         </Text>

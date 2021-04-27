@@ -34,7 +34,7 @@ import { Container,
         Button,
         Icon,Flex,
         Text,Spacer,
-        Box,
+        Box,IconButton,
         Badge,
         Breadcrumb,
         BreadcrumbItem,
@@ -79,7 +79,7 @@ export default function Recipe({staticPost,id}) {
     return <div>Loading...</div>;
   }
   
-    console.log(post[0]);
+    // console.log(post[0]);
     return (
         <>
          {/* このようなdataの形　{post[0].title} */}
@@ -116,19 +116,19 @@ export default function Recipe({staticPost,id}) {
                 
             </Container>
 
-            <Box w="full" pr="10" mt="10" mb="10" w="80%"　m="auto" align="right">
+            <Box w="60%" pr="10" mt="10" mb="10" m="auto" align="right">
             {/* ユーザー */}
-            <Box mb="10">
+            <Box mb="10" w="50%">
               <Link href={`/userpage/${post[0].user_id}`}>
-               <Button mt={2} ml="10" color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineAudit />}>
+               <Button mt={2} ml="10" w="290px" _hover={{ color: '#ff69b4' }} color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineAudit />}>
                      {post[0].user.name}'s DIY recipes page
                </Button>
                </Link>
 
                {post[0].web_page ? (
               <Link href={`${post[0].web_page}`}>
-               <Button mt={2} ml="10" color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineLaptop />} >
-                    DIY web site
+               <Button mt={2} ml="10" w="290px" _hover={{ color: '#ff69b4' }} color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineLaptop />} >
+                   etc. DIY web site link
                </Button>
                </Link>):(
                    <>
@@ -159,15 +159,17 @@ export default function Recipe({staticPost,id}) {
                  bg="#d8bfd8"
                  py="10"
                 >
-                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px="20"　borderRadius="20px">
+                <Box bgGradient="linear(to-r, #e6e6fa, #ffc0cb)" w="70%" m="auto" my="20" py="10" px={["0","10","20"]}　borderRadius="20px">
                 <Flex>
+                <Box display={["none","block"]}>
                  <Image 
                 src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618748941/wed/iamge_phone_lkoofn.png"
                 width={350} 
                 height={300}
                 />
+                </Box>
                 <Box 
-                w="60%"
+                w={["100%","50%"]}
                 h="auto"
                 m="auto"
                 align="center"
@@ -177,7 +179,7 @@ export default function Recipe({staticPost,id}) {
                     Let's Try it!
                 </Heading>
                 </motion.div>
-                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10">
+                 <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10" w="150px">
                     login
                 </Button>
                 

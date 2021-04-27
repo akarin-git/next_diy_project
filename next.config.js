@@ -5,6 +5,7 @@ module.exports = {
     API_CLIENT_SECRET: "cQv9I9Aix4IMBDGIoJLtCk0N228JSgjiGmZgS8AE",
     // API_CLIENT_ID: 1,
     // API_CLIENT_SECRET: "WIZxGR16ynvUJjgkKVJkyb9VN5kkpydnznypSvTZ",
+    SITE_URL:"fabloop.vercel.app",
   },
   future: {
     webpack5: true,

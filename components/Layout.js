@@ -6,7 +6,7 @@ import { Box,Text,Grid,Button,Image } from "@chakra-ui/react"
 import { useState,useEffect } from "react";
 
 
-export default function Layout({children,title = "fab loop"}) {
+export default function Layout({children,title = "fab loop",description="hi"}) {
 　const [offsetY,setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -15,9 +15,14 @@ export default function Layout({children,title = "fab loop"}) {
   },[]);
     return (
     <>
-        <Head>
-            <title>{title}</title>
-        </Head>
+      <Head>
+      <title>{title}</title>
+      <meta property="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={`${process.env.SITE_URL}/bg_nab1.png`} />
+      <meta name="twitter:card" content="summary_large_image"/>
+    </Head>
         <header>
         <MainNav />
         </header>
@@ -36,8 +41,8 @@ export default function Layout({children,title = "fab loop"}) {
             <Grid templateColumns="repeat(5, 1fr)" gap={6} color="#808080" display={["none","flex"]} align="center">
             <Image
                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619447318/wed/logo_f2hpvg.png"
-                        width={10} 
-                        height={10}
+                        width={20} 
+                        height={20}
                         
                   />
             <Link href={`/`}>
