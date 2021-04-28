@@ -24,6 +24,7 @@ export default function CategoryBtn() {
                   p={5}
                   mt="5"
                   w="300px"
+                  color="#535354"
                   children="Category検索"
                   align="center"
                   position="none"

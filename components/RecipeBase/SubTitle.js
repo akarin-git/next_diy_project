@@ -11,7 +11,7 @@ export default function SubTitle({post}) {
         <div>
              <Stack direction="row" h="120" p={6} >
                 <Divider orientation="vertical" />
-                <Text p="5" fontSize={["xs","sm","md"]}>{post[0].subtitle}</Text>
+                <Text p="5" fontSize={["xs","md","md"]} fontWeight="bold" color="#535354">{post[0].subtitle}</Text>
             </Stack>
         </div>
     )

@@ -25,13 +25,13 @@ export default function FormInfoModal() {
      px="3"
      py="2"
      w="300px"
+     color="#535354"
      align="center"
      position={["none","none","relative"]}
      size="md" cursor="cursor"
      _hover={{
     background: "white",
     color: "teal.500",
-    
     }}>
       FabLoopでなにができるの？
     </Button>

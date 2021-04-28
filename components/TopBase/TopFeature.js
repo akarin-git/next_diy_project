@@ -50,6 +50,7 @@ export default function TopFeature() {
       w="auto"
       justifyContent="center"
       alignItems="center"
+      
     >
       <SimpleGrid
         columns={{ base: 1, md: 2, lg: 3 }}

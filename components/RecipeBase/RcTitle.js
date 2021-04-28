@@ -15,7 +15,7 @@ export default function RcTitle({post}) {
    // console.log(post[0].subtitle);
     return (
         <>
-           <Box>
+           <Box color="#535354">
                 {/* タイトル */}
                 <Badge variant="outline" m="2" colorScheme="purple">
                    {post[0].category}

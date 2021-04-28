@@ -38,7 +38,7 @@ export default function CardSecond() {
         />
       </Box>
       <Box w="60%" m="auto" display={["none","none","block"]}>
-      <Text fontWeight="bold" fontSize="xl">
+      <Text fontWeight="bold" fontSize="xl" color="#696969">
       <p>見つけにくいものづくりの情報が</p>
       <p>すぐに見つけられる。</p>
       </Text>
