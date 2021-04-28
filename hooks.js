@@ -14,7 +14,7 @@ export const useAppAxios = ({ url, method = "GET" }) => {
         method,
         url: API_ENDPOINT + url,
     });
-    console.log(data);
+    // console.log(data);
     return [{ data, loading }, refetch];
   };
 
@@ -46,7 +46,7 @@ export const useAppAxiosExecute = ({
                         headers,
                     });
                 } else {
-                    console.log(payload);
+                    // console.log(payload);
                     result = await axios({
                         method,
                         url,
