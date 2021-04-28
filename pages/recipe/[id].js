@@ -35,7 +35,7 @@ import { Container,
         Icon,Flex,
         Text,Spacer,
         Box,IconButton,
-        Badge,
+        Badge,Alert,AlertIcon,
         Breadcrumb,
         BreadcrumbItem,
         BreadcrumbLink,
@@ -54,7 +54,7 @@ export default function Recipe({staticPost,id}) {
     const [{loading,error},iine] = useAppAxiosExecute({
         method:"POST",
         url:"/api/image/favorite",
-        errorMessage:"loginしてください",
+        errorMessage:"未login",
     })
     // swr
     const { data:post ,mutate } = useSWR(
@@ -149,6 +149,7 @@ export default function Recipe({staticPost,id}) {
                      />
                  </button>
                    {error && <p className="error">{error}</p>}
+                  
              </Box>
                 <ShereBtn post={post}/>
             </Flex>

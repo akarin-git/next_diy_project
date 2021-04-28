@@ -16,8 +16,8 @@ export default function MeTabs({me}) {
             <TabPanels my="10">
                     <TabPanel>
                            <Grid 
-                            templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
-                            gap={3}
+                            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
+            gap={4}
                             w={"full"}
                             >
                             {myposts.map((myPost) => <MypagePostCard key={myPost.id} myPost={myPost}/>)}
@@ -25,8 +25,8 @@ export default function MeTabs({me}) {
                     </TabPanel>
                     <TabPanel >
                             <Grid 
-                            templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(4, 1fr)"]} 
-                            gap={3}
+                            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
+            gap={4}
                             w={"full"}
                             >
                             {favorites.map((favoritePost) => <MypageFavCard key={favoritePost.id} favoritePost={favoritePost}/>)}

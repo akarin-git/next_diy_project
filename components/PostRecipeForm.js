@@ -81,7 +81,7 @@ export default function PostRecipeForm({onSubmit,error}) {
 
     return (
         <Container py="40">
-        <Box w="80%" align="center"　pt="100" m="auto">
+        <Box w="80%" align="center" pt="100" m="auto">
            
         <form onSubmit={submit}>
         <Heading as="h2" size="xl" align="left" ml="5" color="#708090">
@@ -100,8 +100,8 @@ export default function PostRecipeForm({onSubmit,error}) {
           >
           <option value="craft">craft</option>
           <option value="handmade">handmade</option>
-          <option value="家具">家具</option>
-          <option value="option2">outdoor</option>
+          <option value="living">living</option>
+          <option value="outside">outside</option>
           </Select>
         </Box>
         <Box>
@@ -139,7 +139,7 @@ export default function PostRecipeForm({onSubmit,error}) {
             <Text align="left" my="3" ml="2" color="#696969">写真 <Tag color="red" bg="none">*</Tag></Text> 
             <Input
             　multiple
-            　accept="image/*"
+            accept="image/*"
              variant="filled"
              placeholder="画像"
              type="file"
@@ -185,6 +185,7 @@ export default function PostRecipeForm({onSubmit,error}) {
                 <option value="2step">2step</option>
                 <option value="3step">3step</option>
                 <option value="4step">4step</option>
+                <option value="5step">5step</option>
             </Select>
             {/* 難しさ */}
             <Tag color="red" bg="none">*</Tag>

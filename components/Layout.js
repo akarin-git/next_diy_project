@@ -17,7 +17,7 @@ export default function Layout({children,title = "Fab Loop",description="DIY レ
     <>
       <Head>
       <title>{title}</title>
-      <link rel="icon" href="/fav.png" />
+      <link rel="icon" href="/favicon.ico" />
       <meta property="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
