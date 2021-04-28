@@ -35,7 +35,7 @@ import { Container,
         Icon,Flex,
         Text,Spacer,
         Box,IconButton,
-        Badge,
+        Badge,Alert,AlertIcon,
         Breadcrumb,
         BreadcrumbItem,
         BreadcrumbLink,
@@ -54,7 +54,7 @@ export default function Recipe({staticPost,id}) {
     const [{loading,error},iine] = useAppAxiosExecute({
         method:"POST",
         url:"/api/image/favorite",
-        errorMessage:"loginしてください",
+        errorMessage:"未login",
     })
     // swr
     const { data:post ,mutate } = useSWR(
@@ -116,9 +116,8 @@ export default function Recipe({staticPost,id}) {
                 
             </Container>
 
-            <Box w="60%" pr="10" mt="10" mb="10" m="auto" align="right">
-            {/* ユーザー */}
-            <Box mb="10" w="50%">
+            <Box w={["100%","60%"]} pr="10" mr="10" mt="10" mb="10" m="auto" align="right">
+            <Box mb="10" w={["100%","50%"]} >
               <Link href={`/userpage/${post[0].user_id}`}>
                <Button mt={2} ml="10" w="290px" _hover={{ color: '#ff69b4' }} color={useColorModeValue("gray.600", "gray.200")} rightIcon={<AiOutlineAudit />}>
                      {post[0].user.name}'s DIY recipes page
@@ -136,7 +135,7 @@ export default function Recipe({staticPost,id}) {
                )}
             </Box>
             {/* シェアボタン */}
-            <Flex w={["90%","90%","80%"]}>
+            <Flex w={["90%","90%","80%"]} mb="8">
             <Spacer />
              <Box w="50" align="center" mr={3}>
                  <button onClick={handle.bind(this,post[0].id)}>
@@ -150,6 +149,7 @@ export default function Recipe({staticPost,id}) {
                      />
                  </button>
                    {error && <p className="error">{error}</p>}
+                  
              </Box>
                 <ShereBtn post={post}/>
             </Flex>

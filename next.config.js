@@ -2,7 +2,7 @@ module.exports = {
   target: "serverless",
   env: {
     API_CLIENT_ID: 4,
-    API_CLIENT_SECRET: "cQv9I9Aix4IMBDGIoJLtCk0N228JSgjiGmZgS8AE",
+    API_CLIENT_SECRET: "GdNk0d4REbdpEb5kOW20RLpcq4K0r74M0fMTdXHR",
     // API_CLIENT_ID: 1,
     // API_CLIENT_SECRET: "WIZxGR16ynvUJjgkKVJkyb9VN5kkpydnznypSvTZ",
     SITE_URL:"https://fabloop-git-main-akarin-git.vercel.app/",

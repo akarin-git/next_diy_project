@@ -3,6 +3,7 @@ import { Flex,
          chakra,
         TabPanel,
         Image,
+        Badge,
         useColorModeValue
 } from "@chakra-ui/react";
 import Link from 'next/link';
@@ -19,23 +20,24 @@ export default function MypagePostCard({myPost}) {
         bg={useColorModeValue("white", "gray.800")}
         shadow="lg"
         rounded="lg"
+        _hover={{ mt: 1 ,mb:-1}}
       >
-        <Box px={4} py={2} h="130">
-          <chakra.h1
-            color={useColorModeValue("gray.800", "white")}
+        <Box px={4} py={4} h="130" >
+          <Flex>
+            <Badge  m="2" colorScheme="green">
+                   {myPost.category}
+            </Badge>
+             <Badge variant="outline" colorScheme="purple" m="2">{myPost.difficult}</Badge>
+             </Flex>
+          <chakra.p
+            mt={4}
+            fontSize="sm"
             fontWeight="bold"
-            fontSize="xl"
-            textTransform="uppercase"
+            color={useColorModeValue("gray.600", "gray.400")}
+            _hover={{ color: "gray.600", textDecor: "underline" }}
           >
             {myPost.title}
-          </chakra.h1>
-          <chakra.p
-            mt={1}
-            fontSize="sm"
-            color={useColorModeValue("gray.600", "gray.400")}
-          >
           {/* {favorite} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </chakra.p>
         </Box>
 
