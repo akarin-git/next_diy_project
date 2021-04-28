@@ -179,9 +179,11 @@ export default function Recipe({staticPost,id}) {
                     Let's Try it!
                 </Heading>
                 </motion.div>
+                <Link href="/signin">
                  <Button rightIcon={<FcInternal />} colorScheme="teal" variant="outline" size="lg" mt="10" w="150px">
                     login
                 </Button>
+                </Link>
                 
                 </Box>
                 </Flex>
