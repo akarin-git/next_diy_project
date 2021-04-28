@@ -66,7 +66,6 @@ export default function Recipe({recipePosts}) {
             {/* // filteredPosts.map((post) => <Card key={post.id} post={post}/>)} */}
          </Grid> 
          </Box>
-
                 <Button variant="ghost">
                     <Icon as={HiChevronLeft} w={8} h={8} color="glay.500" />
                     <Link href={`/`}>
