@@ -96,14 +96,15 @@ export default function RcTable({post}) {
 
         {/* ------------------------------------------------------------- */}
 
-        <Flex px="3">
+        <Flex px="3" mt="20">
          <Image
-            width={70} 
-            height={70}
+            width={80} 
+            height={80}
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618453937/Tools_perspective_matte_eikpyb.png'}
         />
 
-      <Text pt={10} px={6}>道具</Text>
+        <Heading size="md" pt={10} ml="6" fontWeight="bold" color="#708090">道具</Heading>
+
       </Flex>
 
         <Table variant="unstyled" my={{base:"10",md:"30"}} bg="gray.100">

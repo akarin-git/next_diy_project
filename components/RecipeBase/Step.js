@@ -14,8 +14,8 @@ export default function Step({post}) {
         <Box ml="10">
             <AlertIcon />
         </Box>
-                <Text mr="5" fontWeight="bold">{post[0].difficult}</Text>
-                    <Text fontWeight="bold">
+                <Text mr="5" fontWeight="bold" color="#535354">{post[0].difficult}</Text>
+                    <Text fontWeight="bold" color="#535354">
                        {post[0].step}
                     </Text>
             {/* <AlertIcon />

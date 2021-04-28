@@ -32,6 +32,7 @@ export default function MainNav() {
             px={{ base: 4, sm: 6}}
             py={4}
             shadow="xs"
+            color="#393A60"
         >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
         <Flex>
@@ -40,13 +41,13 @@ export default function MainNav() {
            <motion.div variants={rightVariants}>
               <chakra.a
                 href="/"
-                title="Choc Home Page"
+                title="Fabloop Home Page"
                 display="flex"
                 alignItems="center"
                 fontWeight="bold"
               >
             {/* Fab Loop */}
-              <VisuallyHidden>Choc</VisuallyHidden>
+              <VisuallyHidden>Fab Loop</VisuallyHidden>
                 <chakra.h1 fontSize="2xl" fontWeight="bold" mr="2" ml="5">
                   <Image
                    src="https://res.cloudinary.com/dk2uwbtnl/image/upload/v1619447318/wed/logo_f2hpvg.png"
@@ -133,7 +134,7 @@ export default function MainNav() {
                 
                 <Link href="/userpage">
                   <Button w="full" variant="ghost">
-                    MyPost
+                    MyPage
                   </Button>
                 </Link>
                 <Link href="/PostForm">

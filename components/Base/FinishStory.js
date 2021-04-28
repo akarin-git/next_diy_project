@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function FinishStory() {
     return (
         <div>
-            <Box w="90%" m="auto" mb="10" bg="#fffacd" p="3" borderRadius="20px">
+        <Box w="90%" m="auto" mb="10" bg="#fffacd" color="#535354" p="3" borderRadius="20px">
         
         <Box p={["0","0","5"]}>
 
@@ -30,7 +30,7 @@ export default function FinishStory() {
           </Text>
         </Box>
 
-        <Box w="50%" display={["none","block"]} align="center" pb="10">
+        <Box w="50%" display={["none","block"]} align="center" pb="10" ml="20">
           <Image
             src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/v1618994555/wed/Saly-12_fnlnk1.png'}
             width={300}

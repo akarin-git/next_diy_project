@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 
 export default function MypageFavCard({favoritePost}) {
-  console.log(favoritePost);
+  // console.log(favoritePost);
     return (
       <Link href={`/recipe/${favoritePost.post_id}`}>
       <Box>

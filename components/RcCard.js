@@ -49,7 +49,7 @@ export default function RcCard({post}) {
              </Flex>
             <Text
               display="block"
-              color={useColorModeValue("gray.800", "white")}
+              color={useColorModeValue("#535354", "white")}
               fontWeight="bold"
               fontSize={["md","md","sm"]}
               mt={1}

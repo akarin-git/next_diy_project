@@ -2,7 +2,8 @@ import {
   Container,
   Box,
   Text,
-  Flex
+  Flex,
+  Heading
 } from "@chakra-ui/react";
 import Image from 'next/image';
 
@@ -11,7 +12,7 @@ export default function RecipeStep({post}) {
     // data の形　console.log(post[0].descriptionA)
     return (
         <>
-           <Container maxW="2xl" my="20">
+           <Container maxW="2xl" my="20" color="#535354">
 
            <Flex px="3">
             <Image
@@ -20,7 +21,9 @@ export default function RecipeStep({post}) {
                 src={'https://res.cloudinary.com/dk2uwbtnl/image/upload/c_scale,w_247/v1618539711/wed/Success_perspective_matte_s_bc5taa.png'}
             />
 
-                <Text pt={10} px={6}>作り方</Text>
+            
+            <Heading size="md" pt={10} mt="4" fontWeight="bold" color="#708090">作り方</Heading>
+
             </Flex>
 
         {/* 1---------------------------------------- */}

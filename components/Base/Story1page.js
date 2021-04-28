@@ -11,7 +11,7 @@ export default function Story1page() {
     return (
         <>
         {/* 親要素 */}
-        <Box w="90%" m="auto" mb="10" bg="#fffacd" p="3" borderRadius="20px">
+        <Box w="90%" m="auto" mb="10" bg="#fffacd" color="#535354" p="3" borderRadius="20px">
         
         <Box p={["0","0","5"]}>
 
