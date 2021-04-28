@@ -55,7 +55,7 @@ export default function Recipe({recipePosts}) {
         </Box>
         <Box mb="40">
         <Grid 
-            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(4, 1fr)" }} 
+            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(3, 1fr)",xl:"repeat(3, 1fr)" }} 
             gap={4}
             w={{base:"100%",md:"80%",lg:"80%",xl:"80%"}}
             m="auto"
