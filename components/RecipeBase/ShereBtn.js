@@ -11,7 +11,7 @@ export default function ShereBtn({post}) {
        </TwitterShareButton>
        </Box>
        <Box mr="2">
-       <FacebookShareButton url={`${process.env.SITE_URL}recipe${post[0].id}`}>
+       <FacebookShareButton url={`${process.env.SITE_URL}recipe/${post[0].id}`}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>
       </Box>
