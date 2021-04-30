@@ -27,7 +27,7 @@ export default function RecipeStep({post}) {
             </Flex>
 
         {/* 1---------------------------------------- */}
-           <Box my="10">
+           <Box my="10"  className="warap">
            <Text fontWeight="bold" mb="1">
            1 step
            </Text>
@@ -39,7 +39,7 @@ export default function RecipeStep({post}) {
             </Box>
         {/* 2---------------------------------------- */}
            {post[0].descriptionB ? (
-           <Box my="10">
+           <Box my="10" className="warap">
            <Text fontWeight="bold" mb="1">
            2 step
            </Text>
@@ -54,7 +54,7 @@ export default function RecipeStep({post}) {
            )}
         {/* 3---------------------------------------- */}
            {post[0].descriptionC ? (
-           <Box my="10">
+           <Box my="10" className="warap">
            <Text fontWeight="bold" mb="1">
            3 step
            </Text>
@@ -69,7 +69,7 @@ export default function RecipeStep({post}) {
            )}
         {/* 4---------------------------------------- */}
            {post[0].descriptionD ? (
-           <Box my="10">
+           <Box my="10" className="warap">
            <Text fontWeight="bold" mb="1">
            4 step
            </Text>
@@ -83,7 +83,7 @@ export default function RecipeStep({post}) {
            )}
         {/* 5---------------------------------------- */}
            {post[0].descriptionE ? (
-           <Box my="10">
+           <Box my="10" className="warap">
            <Text fontWeight="bold" mb="1">
            5 step
            </Text>
@@ -97,7 +97,7 @@ export default function RecipeStep({post}) {
            )}
         {/* 6---------------------------------------- */}
            {post[0].descriptionF ? (
-           <Box my="10">
+           <Box my="10" className="warap">
            <Text fontWeight="bold" mb="1">
            6 step
            </Text>
@@ -113,6 +113,13 @@ export default function RecipeStep({post}) {
         {/* ---------------------------------------- */}
 
             </Container> 
+             <style JSX>
+                {`
+                 .warap {
+                    white-space: pre-wrap;
+                 }
+                `}
+             </style>
         </>
     )
 }
